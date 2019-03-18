@@ -4,7 +4,7 @@
 
 # Tutorials
 
-- [Tutorial 1 - Create a pipeline on Onebox](tutorial1.md)
+- [Tutorial 1 - Create a pipeline on Onebox](./tutorials/tutorial1.md)
 
 # FAQ
 
