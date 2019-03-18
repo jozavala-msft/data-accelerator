@@ -1,4 +1,4 @@
-#Tutorial 1 
+# Tutorial 1 
 
 Once you have completed the local installation instructions here, you are ready to start setting up a pipeline locally.
 
@@ -8,7 +8,7 @@ In this tutorial, you'll learn to:
  - View the Metrics dashboard
  - Run existing samples 
 
-#Creating a Flow
+# Creating a Flow
  - Ensure the http://localhost:49080 site is opened to the DataX Portal
  - Click on "New" on the Flows tab, this will set up a basic flow.  
 ![New Flow](images/Tutorial1-1.png)
@@ -19,11 +19,11 @@ In this tutorial, you'll learn to:
 ![Flow Query](images/Tutorial1-3.png)
  - Click Deploy to start the flow.  That's it! 
 
-#View the metrics
+# View the metrics
  - You can open the metrics tab; this tab will help visualize your data and validate query changes.
 	![Metrics](images/Tutorial1-4.png)
 
-#Update the Schema of generated data
+# Update the Schema of generated data
 
 Next, we can update the schema of the test data:
 	· Open existing flow
@@ -45,11 +45,11 @@ Next, we can update the schema of the test data:
 	
 You now have the pipeline running with your custom data and able to view basic data on the Metrics dashboard.  See the next tutorial on how you can use the new data in Rules and setting up alerts!  See Tutorial 1 to add Rules and Alerts!
 
-#Samples
+# Samples
 
 The docker image has two samples, to start them, you can go to the Flow pages, and click "Deploy" (After making a change either in the query, or title of it).  This will start populating the metrics page for them.  You can use the Query or Rules tab as reference.
 
-#Data generation hints
+# Data generation hints
 
 Following data generation hints are supported (in local mode) based on data type via metadata tag:
 
