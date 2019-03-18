@@ -1,5 +1,3 @@
-# Tutorial 1 
-
 Once you have completed the local installation instructions here, you are ready to start setting up a pipeline locally.
 
 In this tutorial, you'll learn to:
