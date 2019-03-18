@@ -9,7 +9,7 @@ Local mode:
 - [Tutorial 2 - Add an Alert](tutoriallocal2)
 
 Cloud mode:
-- [Tutorial 1 - Set up inputs using GetSchema](tutorialcloud1)
+- [Tutorial 1 - Set up input and schema](tutorialcloud1)
 
 # FAQ
 
