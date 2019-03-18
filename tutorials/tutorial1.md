@@ -10,25 +10,25 @@ In this tutorial, you'll learn to:
 
 # Creating a Flow
  - Ensure the http://localhost:49080 site is opened to the DataX Portal
- - Click on "New" on the Flows tab, this will set up a basic flow.  
-![New Flow](images/Tutorial1-1.png)
+ - Click on "New" on the Flows tab, this will set up a basic flow:<br />
+ ![New Flow](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-1.png)
 
  - The Info tab has the Flow name.  We'll need that in the next step.
-![Flow Info](images/Tutorial1-2.png)
+![Flow Info](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-2.png)
  - Go to the tab Query, and replace the <flowname> with the flow name above
-![Flow Query](images/Tutorial1-3.png)
+![Flow Query](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-3.png)
  - Click Deploy to start the flow.  That's it! 
 
 # View the metrics
  - You can open the metrics tab; this tab will help visualize your data and validate query changes.
-	![Metrics](images/Tutorial1-4.png)
+	![Metrics](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-4.png)
 
 # Update the Schema of generated data
 
 Next, we can update the schema of the test data:
-	· Open existing flow
-	· Go to Input tab
-	· In the schema section, edit the text.  To add a value, add the following:
+ - Open existing flow
+ - Go to Input tab
+ - In the schema section, edit the text.  To add a value, add the following:
 		{
 			name : <name of the column>,
 			type : <type, can be double, int, string, etc>,
@@ -41,7 +41,7 @@ Next, we can update the schema of the test data:
 	NOTE: For double datatype, value should be double value like 15.1. Also due to issue with JSON editor which rounds off 0s after decimal, make sure the value after decimal is > 0. ie. 15.0 won't work, make it 15.1.
 	![Flow Schema](images/Tutorial1-5.png)
 
-	· Click save
+ - Click save
 	
 You now have the pipeline running with your custom data and able to view basic data on the Metrics dashboard.  See the next tutorial on how you can use the new data in Rules and setting up alerts!  See Tutorial 1 to add Rules and Alerts!
 
@@ -78,11 +78,11 @@ String , Array, Map (control the length of data generated)
 
 Apart from these data types, boolean and struct data types are also supported in local mode.
 
-#For best performance
+# For best performance
 For best performance, it is recommended to use the following settings for docker:
 	- CPU: 4
 	- Memory: 4 gigs or more
 
-![Docker Specs](images/Tutorial1-6.jpg)
+![Docker Specs](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-6.jpg)
 
 
