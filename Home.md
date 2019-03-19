@@ -22,7 +22,7 @@
 1. [Scaling docker host](Local-Tutorial-15-Scaling-the-docker-host)
 
 ## Cloud mode:
-1. [Create a pipeline in 5 minutes!](Creating-your-first-Flow-in-cloud-mode)
+1. [Create a pipeline in 5 minutes!](Creating-your-first-pipeline-in-5-minutes!)
 1. [Set up simple alert without writing any code](Set-up-simple-alert)
 1. [Set up aggregate alert without writing any code](Set-up-aggregate-alert)
 1. [Set up new outputs without writing any code](Set-up-new-outputs)
