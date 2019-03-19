@@ -9,15 +9,18 @@ In this tutorial, you'll learn to:
  - Open your Flow and go to the Reference tab
  - Add a new CSV/TSV file <br/>
 ![Add Reference file](./tutorials/images/referenceadd.png)
+ - Given a csv file that looks as such:<br/>
+![Add Reference file](./tutorials/images/referencetemp.png)
  - Set up your CSV by setting up:
     - Alias: this will be how to use the reference data in your query
     - Path: where to load the reference data from
     - Delimiter: data can be comma or tab limited
-    - Header: if your data has a header row
-![Add Reference file](./tutorials/images/referencesmyref.png)
+    - Header: if your data has a header row<br/>
+![Add Reference file](./tutorials/images/referencesmyref.PNG)
  - Open the Query tab of your flow
- - You can now join your streaming data to the reference data by doing a JOIN: JOIN myRefData ON myRefData.<columnName>
-![Add Reference file](./tutorials/images/referencesquery.png)
+ - You can now join your streaming data to the reference data by doing a JOIN: <br/>
+    - JOIN myRefData ON myRefData.<columnName><br/>
+![Add Reference file](./tutorials/images/referencequery.PNG)
  - Click Deploy
 
 Your data now has reference data joined to it.
