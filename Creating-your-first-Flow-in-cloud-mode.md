@@ -11,7 +11,7 @@ One you have completed the deployment of Data Accelerator to your subscription, 
 * Switch to the Input tab and select input type. Data Accelerator supports Eventhub and IoThub
 * Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub:<br />
  ![Input](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/InputEventhub.PNG)<br />
- ![Input](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/InputIoThub.PNG)
+ ![Input](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/InputIoT.PNG)
 * Click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data: <br />
  ![Schema](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/GetSchema.PNG)
 * Click "Deploy" button to save and run the Flow. That's it! You have created your first end to end data streaming pipe!
