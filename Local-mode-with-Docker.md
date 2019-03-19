@@ -7,7 +7,7 @@
     - docker run -d -p 5000:5000 -p 49080:2020 -v path:/app/aspnetcore <path>
     - Click 'Yes" when prompted to allow admin access.  
 
-  - On your machine, go to: http://localhost:49080/home to start DataX
+  - On your machine, go to: http://localhost:49080/home to start Data Accelerator
 
 # FAQ and troubleshooting:
  - Please refer to the [FAQ](FAQ).  
