@@ -27,3 +27,7 @@ _Input type:IoThub_<br/>
 # View Metrics
 Now switch to the Metrics tab and you will see metrics for rate of events coming in and number of events ingested!<br /><br />
  ![Deploy](./tutorials/images/newflowmetrics.PNG)<br/>
+
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
