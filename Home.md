@@ -1,6 +1,6 @@
 # Welcome to Data Accelerator Wiki!
-[Data Accelerator](home) dramatically simplifies onboarding to Streaming of Big Data on Spark. Get started in minutes on a rich, easy to use experience to help with creation, editing and management of streaming jobs.<br/>
-![Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/prop-race-car-data.svg)
+|[Data Accelerator](home) dramatically simplifies onboarding to Streaming of Big Data on Spark. Get started in minutes on a rich, easy to use experience to help with creation, editing and management of streaming jobs.|
+![Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/prop-race-car-data.svg)|
 
 # Installation guide
 1. [Local mode with Docker](Local-mode-with-Docker)
