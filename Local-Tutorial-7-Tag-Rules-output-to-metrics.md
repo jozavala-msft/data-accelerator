@@ -10,9 +10,9 @@ In this tutorial, you'll learn to:
 ![Add Rule Warm](./tutorials/images/addrulewarm.png)
  - In the Query tab, add the following, before the OUTPUT statements
 
-	--DataXQuery--
-	T1 = ProcessRules(DataXProcessedInput);
+	--DataXQuery--<br/>
+	T1 = ProcessRules(DataXProcessedInput);<br/>
  ![Rules Query](./tutorials/images/rulesquery.png)
  - Click Deploy
 
-T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow
+T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.
