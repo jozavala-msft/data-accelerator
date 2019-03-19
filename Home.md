@@ -44,4 +44,4 @@
 1. [Simulator](cloud-simulator)
 
 # FAQ
-1. (FAQ)
+1. [FAQ](FAQ)
