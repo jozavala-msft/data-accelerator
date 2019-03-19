@@ -10,6 +10,7 @@ In this tutorial, you'll learn to:
  - Add a new CSV/TSV file <br/>
 ![Add Reference file](./tutorials/images/referenceadd.png)
  - Given a csv file that looks as such:
+![Add Reference file](./tutorials/images/referencetemp.png)
  - Set up your CSV by setting up:
     - Alias: this will be how to use the reference data in your query
     - Path: where to load the reference data from
