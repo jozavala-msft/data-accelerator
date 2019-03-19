@@ -9,7 +9,7 @@ In this tutorial, you'll learn to:
  - Open your Flow and go to the Reference tab
  - Add a new CSV/TSV file <br/>
 ![Add Reference file](./tutorials/images/referenceadd.png)
- - Given a csv file that looks as such:
+ - Given a csv file that looks as such:<br/>
 ![Add Reference file](./tutorials/images/referencetemp.png)
  - Set up your CSV by setting up:
     - Alias: this will be how to use the reference data in your query
