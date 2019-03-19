@@ -5,25 +5,22 @@ Next, we can update the schema of the test data:
  - Open existing flow
  - Go to Input tab
  - In the schema section, edit the text.  To add a value, add the following:
-		{
-			name : <name of the column>,
-			type : <type, can be double, int, string, etc>,
-			nullable : <if value can be null, true or false>,
-			Metadata : { 
-				minValue : <for decimals, floor value for which the generated data will stay above>,
-				maxValue : <for decimals, ceiling value for which the generated data will stay under>
-			}
-		}
-	NOTE: For double datatype, value should be double value like 15.1. Also due to issue with JSON editor which rounds off 0s after decimal, make sure the value after decimal is > 0. ie. 15.0 won't work, make it 15.1.
+    - name : <name of the column>,
+    - type : <type, can be double, int, string, etc>,
+    - nullable : <if value can be null, true or false>,
+    - Metadata : { 
+    - minValue : <for decimals, floor value for which the generated data will stay above>,
+    - maxValue : <for decimals, ceiling value for which the generated data will stay under>
+    - 	}
+    - }
+
+NOTE: For double datatype, value should be double value like 15.1. Also due to issue with JSON editor which rounds off 0s after decimal, make sure the value after decimal is > 0. ie. 15.0 won't work, make it 15.1.
 	![Flow Schema](./tutorials/images/Tutorial1-5.png)
 
- - Click save
+ - Click Deploy
 	
-You now have the pipeline running with your custom data and able to view basic data on the Metrics dashboard.  See the next tutorial on how you can use the new data in Rules and setting up alerts!  See Tutorial 1 to add Rules and Alerts!
+You now have the pipeline running with your custom data and able to view basic data on the Metrics dashboard. 
 
-# Samples
-
-The docker image has two samples, to start them, you can go to the Flow pages, and click "Deploy" (After making a change either in the query, or title of it).  This will start populating the metrics page for them.  You can use the Query or Rules tab as reference.
 
 # Data generation hints
 
