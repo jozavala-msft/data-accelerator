@@ -9,17 +9,17 @@ In this tutorial, you'll learn to:
 # Creating a Flow
  - Ensure the http://localhost:49080 site is opened to the DataX Portal
  - Click on "New" on the Flows tab, this will set up a basic flow:<br />
- ![New Flow](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-1.png)
+ ![New Flow](./tutorials/images/Tutorial1-1.png)
 
  - The Info tab has the Flow name.  We'll need that in the next step.
-![Flow Info](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-2.png)
+![Flow Info](./tutorials/images/Tutorial1-2.png)
  - Go to the tab Query, and replace the <flowname> with the flow name above
-![Flow Query](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-3.png)
+![Flow Query](./tutorials/images/Tutorial1-3.png)
  - Click Deploy to start the flow.  That's it! 
 
 # View the metrics
  - You can open the metrics tab; this tab will help visualize your data and validate query changes.
-	![Metrics](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-4.png)
+	![Metrics](./tutorials/images/Tutorial1-4.png)
 
 # Update the Schema of generated data
 
@@ -81,6 +81,6 @@ For best performance, it is recommended to use the following settings for docker
 	- CPU: 4
 	- Memory: 4 gigs or more
 
-![Docker Specs](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/Tutorial1-6.jpg)
+![Docker Specs](./tutorials/images/Tutorial1-6.jpg)
 
 
