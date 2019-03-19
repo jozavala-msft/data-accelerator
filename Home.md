@@ -1,6 +1,8 @@
 # Welcome to the data-accelerator wiki!
 
 # Installation guide
+1. [Local mode with Docker](Local-mode-with-Docker)
+1. [Cloud deployment](Cloud-deployment)
 
 # Tutorials
 
