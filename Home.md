@@ -5,7 +5,7 @@
 # Tutorials
 
 ## Local mode:
-1. [Create a pipeline locally with no Azure dependencies in 5 minutes!](Local-Tutorial-1-Creating-your-first-Flow-in-local-mode)
+1. [Create a pipeline locally with no cloud dependencies in 5 minutes!](Local-Tutorial-1-Creating-your-first-Flow-in-local-mode)
 1. [Add an Alert](Local-Tutorial-2-Add-an-Alert)
 1. [Aggregated Alerts](Local-Tutorial-3-Advanced-Aggregate-alerts)
 1. [Output to disk](Local-Tutorial-4-Outputs-to-disk)
