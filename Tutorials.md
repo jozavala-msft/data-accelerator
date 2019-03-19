@@ -1,11 +1,9 @@
-# Welcome to the data-accelerator wiki!
+Learn how to use Data Accelerator step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. Data Accelerator provides a local mode, which allows you to run the pipeline locally without any cloud dependencies. This is great for quick understanding of the tool, though features are limited. Next, you can deploy this to Azure, and unleash the full power of Data Accelerator. 
 
-# Installation guide
-
-# Tutorials
+[Tutorials](Tutorials) will walk you through both, the local mode as well as the cloud mode, step by step.
 
 ## Local mode:
-1. [Create a pipeline on Onebox](Local-Tutorial-1-Creating-your-first-Flow-in-local-mode)
+1. [Create a pipeline locally with no cloud dependencies in 5 minutes!](Local-Tutorial-1-Creating-your-first-Flow-in-local-mode)
 1. [Add an Alert](Local-Tutorial-2-Add-an-Alert)
 1. [Aggregated Alerts](Local-Tutorial-3-Advanced-Aggregate-alerts)
 1. [Output to disk](Local-Tutorial-4-Outputs-to-disk)
@@ -42,6 +40,4 @@
 1. [Debugging](debugging)
 1. [Telemetry](telemetry)
 1. [Simulator](cloud-simulator)
-
-# FAQ
 
