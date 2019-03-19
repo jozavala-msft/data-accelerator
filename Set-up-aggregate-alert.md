@@ -8,9 +8,9 @@ In the previous example we walked through how to set up a simple alert. At times
 
 * With Sub type set to 'Aggregate' and Target table set to 'DataXProcessedInput' (which is the default input table), provide a description of the alert and add a Tag value. Any message/event satisfying the alert condition will be tagged with the value provided for Tag. <br/>
 
- ![New Rule](./tutorials/images/simplealert.PNG)<br/>
+ ![New Rule](./tutorials/images/aggregatealert.PNG)<br/>
 
-* Use the intuitive UI to set up the condition for firing an alert as shown above. For this example, the data ingested is home automation data. We want to be alerted anytime door for house number 150 is locked. Note, deviceDetails.status of 1 means locked, 0 means unlocked.  
+* Use the UI to set up the condition for firing an alert as shown above. For this example, if a lock is closed more than 3 times for a house then an alert is fired. This is done by selecting **COUNT(deviceDetails.status) > 3**. In addition to this, you can specify additional aggregations to perform, such as COUNT(deviceDetails.deviceId). Finally, specify the columns to GROUP BY. We have chosen to group by homeId. Note, deviceDetails.status of 1 means locked, 0 means unlocked.  
 
 * Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In future tutorials we will walkthrough how to set up other outputs. 
 
@@ -19,7 +19,7 @@ In the previous example we walked through how to set up a simple alert. At times
 
 # View Metrics
 Now, switch over to the Metrics tab and notice that there is a new table for 'CLOSEAlert', which will be fired each time the door of house number 150 is locked.<br/>
- ![Alert](./tutorials/images/closealert.PNG)
+ ![Alert](./tutorials/images/closecountalert.PNG)
 
 # Links
 * [Tutorials](Tutorials)
