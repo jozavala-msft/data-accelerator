@@ -21,4 +21,6 @@ In several cases, you want to be alerted when certain condition is met in the da
 Now, switch over to the Metrics tab and notice that there is a new table for 'CLOSEAlert', which will be fired each time the door of house number 150 is locked.<br/>
  ![Alert](./tutorials/images/closealert.PNG)
 
-
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
