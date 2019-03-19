@@ -2,9 +2,7 @@ Once you have completed the local installation instructions here, you are ready 
 
 In this tutorial, you'll learn to:
  - Create a Flow
- - Generate custom data
  - View the Metrics dashboard
- - Run existing samples 
 
 # Creating a Flow
  - Ensure the http://localhost:49080 site is opened to the DataX Portal
