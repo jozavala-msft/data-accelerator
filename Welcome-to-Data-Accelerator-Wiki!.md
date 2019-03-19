@@ -12,4 +12,4 @@ Learn how to use Data Accelerator step by step and get started setting up your b
 [Tutorials](Tutorials) will walk you through the tools, step by step.
 
 # FAQ
-1. For common issues and questions, check out our [FAQ](FAQ).
+For common issues and questions, check out our [FAQ](FAQ).
