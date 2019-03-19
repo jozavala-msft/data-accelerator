@@ -4,7 +4,7 @@
 
 # Tutorials
 
-Local mode:
+## Local mode:
 1. [Create a pipeline on Onebox](Local-Tutorial-1-Creating-your-first-Flow-in-local-mode)
 1. [Add an Alert](Local-Tutorial-2-Add-an-Alert)
 1. [Aggregated Alerts](Local-Tutorial-3-Advanced-Aggregate-alerts)
@@ -21,11 +21,11 @@ Local mode:
 1. [Customize the schema](Local-Tutorial-14-Custom-schema)
 1. [Scaling docker host](Local-Tutorial-15-Scaling-the-docker-host)
 
-Cloud mode:
+## Cloud mode:
 1. [Create a pipeline](Creating-your-first-Flow-in-cloud-mode)
 1. [Set up simple alert](Set-up-simple-alert)
 1. [Set up aggregate alert](Set-up-aggregate-alert)
-1. [Set up new outputs](Set-up-new outputs)
+1. [Set up new outputs](Set-up-new-outputs)
 1. [Tagging - Simple Rules](Tagging-simple-rules)
 1. [Tagging - Aggregate Rules](Tagging-aggregate-rules)
 1. [Tagged data flowing to CosmosDB](Tagged-data-flowing-to-CosmosDB)
