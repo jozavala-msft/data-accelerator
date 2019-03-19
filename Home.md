@@ -5,8 +5,8 @@
 # Tutorials
 
 Local mode:
-- [Tutorial 1 - Create a pipeline on Onebox](tutoriallocal1)
-- [Tutorial 2 - Add an Alert](tutoriallocal2)
+- [Tutorial 1 - Create a pipeline on Onebox](Local-Tutorial-1-Creation-your-first-flow-on-local)
+- [Tutorial 2 - Add an Alert](Local-Tutorial-2-Add-an-Alert)
 
 Cloud mode:
 - [Tutorial 1 - Set up input and schema](tutorialcloud1)
