@@ -7,9 +7,9 @@
 1. [Cloud deployment](Cloud-deployment)
 
 # Tutorials
-Learn how to use Data Accelerator step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. Data Accelerator provides a local mode, which allows you to run the pipeline locally without any cloud dependencies. This is great for quick understanding of the tool, though features are limited. Next, you can deploy this to Azure, and unleash the full power of Data Accelerator. 
+Learn how to use Data Accelerator step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. 
 
-[Tutorials](tutorials) will walk you through both, the local mode as well as the cloud mode, step by step.
+[Tutorials](Tutorials) will walk you through the tools, step by step.
 
 # FAQ
-1. [FAQ](FAQ)
+1. For common issues and questions, check out our [FAQ](FAQ).
