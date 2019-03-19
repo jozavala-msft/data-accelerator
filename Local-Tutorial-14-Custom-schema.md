@@ -15,7 +15,7 @@ Next, we can update the schema of the test data:
 			}
 		}
 	NOTE: For double datatype, value should be double value like 15.1. Also due to issue with JSON editor which rounds off 0s after decimal, make sure the value after decimal is > 0. ie. 15.0 won't work, make it 15.1.
-	![Flow Schema](images/Tutorial1-5.png)
+	![Flow Schema](./tutorials/images/Tutorial1-5.png)
 
  - Click save
 	
