@@ -21,6 +21,7 @@ Learn how to use Data Accelerator step by step and get started setting up your b
 
 ## Cloud mode:
 1. [Create a pipeline in 5 minutes!](Creating-your-first-pipeline-in-5-minutes!)
+1. [Live Query - Save hours by validating query in seconds!](Live-query)
 1. [Set up simple alert without writing any code](Set-up-simple-alert)
 1. [Set up aggregate alert without writing any code](Set-up-aggregate-alert)
 1. [Set up new outputs without writing any code](Set-up-new-outputs)
@@ -28,7 +29,6 @@ Learn how to use Data Accelerator step by step and get started setting up your b
 1. [Tagging - Aggregate Rules](Tagging-aggregate-rules)
 1. [Tagged data flowing to CosmosDB](Tagged-data-flowing-to-CosmosDB)
 1. [SQL Queries - More powerful queries using SQL](sql-query)
-1. [Live Query - Save hours by validating query in seconds!](Live-query)
 1. [Create new Metric chart](Create-new-metric)
 1. [Windowing functions](Windowing-functions)
 1. [Using Reference data](Reference-data)
