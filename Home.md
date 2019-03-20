@@ -8,7 +8,7 @@
 # Tutorials
 Learn how to use Data Accelerator step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. 
 
-[Tutorials](Tutorials) will walk you through the tools, step by step.
+[Tutorials](Tutorials) will walk you through the tools, step by step, how to create a Flow.
 
 # FAQ
 For common issues and questions, check out our [FAQ](FAQ).
