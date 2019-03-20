@@ -16,7 +16,7 @@ In the previous tutorial we saw how to Tag streaming data when certain condition
 
 ```sql
 	--DataXQuery--<br/>
-	T1 = ProcessAggregateRules(DataXProcessedInput);<br/>
+	T1 = ProcessAggregateRules(DataXProcessedInput);
 ```
 
  ![Rules Query](./tutorials/images/aggrulecode.PNG)
