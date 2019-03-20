@@ -36,7 +36,48 @@ DeviceInfo = SELECT
 
 OUTPUT DeviceInfo TO myCosmosDB;
 ```
-* You can use the full power of SQL and do JOINS, UNIONS, GROUP BYs, etc. Full documentation of [Spark SQL](https://spark.apache.org/sql/)
+* You can use the full power of SQL and do JOINS, UNIONS, GROUP BYs, etc. Full documentation of [Spark SQL](https://spark.apache.org/sql/). Example of some of the things possible.
+
+```sql
+    --Example CAST value to another type 
+    CAST(Properties.`user.isoptedin` AS Boolean) AS IsOptedIn, 
+    CAST(UNIX_TIMESTAMP(_SystemProperties.`x-opt-enqueued-time`, 'EEE MMM dd HH:mm:ss z yyyy') AS TIMESTAMP)  AS     EnqueuedTimeUtc,
+
+    --Example Formatting. In this example, phone number 4251234567 will be formatted to 425-123-4567. 
+    --Note, you can specify any SQL statement 
+    SUBSTRING(Properties.phoneNumber, 1, 3) + '-' 
+    + SUBSTRING(Properties.phoneNumber, 4, 3) + '-' 
+    + SUBSTRING(Properties.phoneNumber, 7, 4) AS PhoneNumber, 
+
+    --Example Add a property to the bag 
+    addProperty(Properties, 'datax.version', '1.2') AS Properties, 
+
+    --Example Add a column to the output called AnswerToLife with value 42 
+    42 AS AnswerToLife, 
+
+    -- Add Tags as key-value pairs in a bag
+    MAP("WindowsName", 
+     CASE 
+         WHEN Properties.`os.version` LIKE '10%' THEN 'Windows 10' 
+         WHEN Properties.`os.version` LIKE '8%' THEN 'Windows 8'  
+         WHEN Properties.`os.version` LIKE '7%' THEN 'Windows 7' 
+         ELSE 'Windows Unknown'
+     END,
+    "StartupPerf", 
+     CASE 
+         WHEN Measures.`startuptime` > 10 THEN 'SLOW' 
+         ELSE 'FAST'
+     END) 
+     AS Tags,
+
+    -- Add Tag as column
+    CASE 
+        WHEN Properties.`os.version` LIKE '10%' THEN 'Windows 10' 
+        WHEN Properties.`os.version` LIKE '8%' THEN 'Windows 8'  
+        WHEN Properties.`os.version` LIKE '7%' THEN 'Windows 7' 
+        ELSE 'Windows Unknown'
+    END AS WindowsVersion,
+```
 
 * To assist you with programming and avoid typos, you will get intellisense for the columns of the table. Simply write the name of the table and dot and hit Ctrl+Space to invoke intellisense. For those who have worked with long SQL queries and tables, will appreciate that this will save hours of frustration with typos!
 ![intellisense](./tutorials/images/intellisense.PNG)<br/>
