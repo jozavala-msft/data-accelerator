@@ -29,9 +29,9 @@ See the [wiki](https://github.com/Microsoft/data-accelerator/wiki) pages for fur
 Some of the best ways to contribute are to try things out, file issues, join in design conversations, and make pull-requests.
 
 * [Download the latest stable or in-development releases](download)
-* Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
 * Request new features on [GitHub](CONTRIBUTING.md)
 * Open a new issue on [GitHub](https://github.com/Microsoft/data-accelerator/issues)
+* Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
 * [Build Data Accelerator source code](CONTRIBUTING.md#build-and-run)
 * Check out the [contributing page](CONTRIBUTING.md) to see the best places to log issues and start discussions.
 
