@@ -15,9 +15,10 @@ T1 = SELECT * FROM DataXProcessedInput;
 ![Output](./tutorials/images/outputlq.PNG)<br/>
 
 - Now select SQL query and click 'Run' button on the top of the editor. This will run the query against sample data from the input stream and show the results in a few seconds in the Output section we just opened up!<br/>
-![LiveQuery](./tutorials/images/livequery.PNG)<br/>
+![LiveQuery](./tutorials/images/lq2.PNG)<br/>
 
-- Go ahead and write more queries and validate them immediately. 
+- Go ahead and write more queries, then simply select them and hit Run to validate them immediately. <br/>
+![LiveQuery](./tutorials/images/livequery.PNG)<br/>
 
 **Notes**
 - For the home automation Flow, the sample data is dropped at the time of deployment. However, if you want to refresh the sample, you can do so anytime, by clicking the "Resample" button and specifying how long you want to sample the data for. Default is set.
