@@ -10,7 +10,11 @@ Up until now we have focused on doing processing and setting up alerts without h
 T1 = SELECT * FROM DataXProcessedInput;
 ```
 
-* Each query is separated by comment "--DataXQuery--" and ends with a semi-colon. You can chain queries.
+* Besides the schema defined in the Input tab, each message coming in from Eventhub and IoThub will also have two additional columns: _SystemProperties and _Properties.
+
+* Each query is separated by comment "--DataXQuery--" and ends with a semi-colon. 
+
+* You can also chain queries.
 
 ```sql
 --DataXQuery--
