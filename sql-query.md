@@ -5,13 +5,16 @@ Up until now we have focused on doing processing and setting up alerts without h
 
 - Switch to the Query tab. This is where you can write all your SQL code. Data Accelerator supports full Spark SQL, and enhances it with few more keywords that you will learn about in future tutorials. For now, write a statement such as:<br/>
 
+```sql
 --DataXQuery--
 T1 = SELECT * FROM DataXProcessedInput;
+```
 
 * Each query is separated by comment "--DataXQuery--" and ends with a semi-colon. You can chain queries.
 
+```sql
 --DataXQuery--
-DeviceWindowedInput = SELECT 
+DeviceInputSummary = SELECT 
                         deviceDetails.deviceId,
                         deviceDetails.deviceType,
                         eventTimeStamp,
@@ -28,8 +31,18 @@ DeviceInfo = SELECT
                     MAX(eventTimeStamp) AS MaxEventTime,
                     MIN(status) AS MinReading,
                     MAX(status) AS MaxReading
-                FROM DeviceWindowedInput
+                FROM DeviceWindowedInputSummary
                 GROUP BY deviceId, deviceType, homeId;
 
 OUTPUT DeviceInfo TO myCosmosDB;
+```
+* You can use the full power of SQL and do JOINS, UNIONS, GROUP BYs, etc. Full documentation of [Spark SQL](https://spark.apache.org/sql/)
 
+* To assist you with programming and avoid typos, you will get intellisense for the columns of the table. Simply write the name of the table and dot and hit Ctrl+Space to invoke intellisense. For those who have worked with long SQL queries and tables, will appreciate that this will save hours of frustration with typos!
+![intellisense](./tutorials/images/intellisense.PNG)<br/>
+
+* Go ahead! Try out some queries and send the data sets to different sinks. You are on your way to create some powerful stream processing using SQL skills!
+
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
