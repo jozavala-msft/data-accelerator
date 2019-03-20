@@ -5,7 +5,7 @@ What if you could run your query against a sample of the incoming streaming data
 # Steps to follow
 - Open a Flow or create a new one using [first tutorial to create a pipeline in 5 minutes](Creating-your-first-pipeline-in-5-minutes!)
 
-- Write the following code in the Query tab. note DataXProcessedInput is the default table for the incoming data and has the schema defined in the Input tab. In addition it has _SystemProperties and _Properties <br/>
+- Write the following code in the Query tab. note DataXProcessedInput is the default table for the incoming data and has the schema defined in the Input tab. Each message coming in from Eventhub or IoThub will also have two additional columns: _SystemProperties and _Properties <br/>
 
 ```sql
 T1 = SELECT * FROM DataXProcessedInput;
