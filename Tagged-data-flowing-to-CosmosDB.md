@@ -11,14 +11,14 @@ In a [previous tutorial](Set-up-new-outputs) we had seen how to set up a new out
 OUTPUT T1 TO myCosmosDB; <br/>
 ![New Output](./tutorials/images/simplerulecode.PNG)<br/>
 
+* Click "Deploy" button. That's it! You have now created a rule for tagging. Each time a door is locked, the message will contain the Tag "DoorLocked". <br/>
+ ![Deploy](./tutorials/images/Deploy.PNG)
+
 **Notes**
 - If you had multiple data sets (T1, T2, ...), you could output all of them to the same output, like so:<br/>
 OUTPUT T1, T2, T3 TO myCosmosDB;
 - Similarly, if you wish to output a single data set to multiple output sinks, you can do that too, like so:<br/>
 OUTPUT T1 TO myCosmosDB, myBlob;
-
-* Click "Deploy" button. That's it! You have now created a rule for tagging. Each time a door is locked, the message will contain the Tag "DoorLocked". <br/>
- ![Deploy](./tutorials/images/Deploy.PNG)
 
 # View Data
 Now, switch over to the output sink, and notice the data flowing in with the Tags. 
