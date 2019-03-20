@@ -1,5 +1,5 @@
 ### Data Accelerator for Apache Spark - Open Source
-Data Accelerator for Apache Spark simplifies on-boarding to Streaming of Big Data.  It offers a rich, easy to use experience to help with creation, editing and management of Spark jobs on Azure HDInsights while enabling the full power of the Spark engine. 
+Data Accelerator for Apache Spark simplifies on-boarding to streaming of Big Data using spark.  It offers a no-code experience to build Rules and Alerts, as well as and numerous productivity improvements to develop and manage Spark SQL jobs on Azure HDInsights. 
 <p align="center"><img style="float: center;" src="https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/readme2.png"></p>
 
 Data Accelerator offers three level of experience
@@ -25,21 +25,17 @@ Once you are ready to deploy to Azure, you can use the deployment scripts and AR
 
 See the [wiki](https://github.com/Microsoft/data-accelerator/wiki) pages for further information on how to build, diagnose and maintain your data pipelines built using Data Accelerator for Spark.
 
-# How to Engage, Contribute and Give Feedback
+# Engage
 Some of the best ways to contribute are to try things out, file issues, join in design conversations, and make pull-requests.
 
 * [Download the latest stable or in-development releases](download)
+* Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
+* Request new features on [GitHub](CONTRIBUTING.md)
+* Open a new issue on [GitHub](https://github.com/Microsoft/data-accelerator/issues)
 * [Build Data Accelerator source code](CONTRIBUTING.md#build-and-run)
 * Check out the [contributing page](CONTRIBUTING.md) to see the best places to log issues and start discussions.
 
 Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
-
-# Feedback
-
- - Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
- - Request new features on [GitHub](CONTRIBUTING.md)
- - Open a new issue on [GitHub](https://github.com/Microsoft/data-accelerator/issues)
-Reporting security issues and bugs
 
 # Security issues
 Security issues and bugs should be reported privately, via email, to the Microsoft Security Response Center (MSRC) secure@microsoft.com. You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Further information, including the MSRC PGP key, can be found in the Security TechCenter.
