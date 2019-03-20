@@ -26,3 +26,7 @@ T1 will now contain the DataXProcessedInput data, along with tags from the rules
 
 # View Data
 Now, switch over to the output sink, and notice the data flowing in with the Tags. 
+
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
