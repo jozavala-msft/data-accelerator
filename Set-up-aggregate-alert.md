@@ -1,4 +1,4 @@
-In the previous example we walked through how to set up a simple alert. At times, there is a need for setting up an alert, not based on the current value, but an aggregate value (such as min, max, average, etc.). In this tutorial you will larn how to set up an alert for aggregated values, without writing any code. 
+In the previous example we walked through how to set up a simple alert. At times, there is a need for setting up an alert, not based on the current value, but an aggregate value (such as min, max, average, etc.). In this tutorial you will learn how to set up an alert for aggregated values, without writing any code. 
 
 # Steps to follow
 * Create a flow using [first tutorial to create a pipeline in 5 minutes](Creating-your-first-pipeline-in-5-minutes!). Note that in the Input tab, our batch interval defaults to 30 seconds i.e. events will be processed in intervals of 30 seconds.
