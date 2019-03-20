@@ -27,6 +27,7 @@ Learn how to use Data Accelerator step by step and get started setting up your b
 1. [Tagging - Simple Rules](Tagging-simple-rules)
 1. [Tagging - Aggregate Rules](Tagging-aggregate-rules)
 1. [Tagged data flowing to CosmosDB](Tagged-data-flowing-to-CosmosDB)
+1. [SQL Queries - More powerful queries using SQL](sql-query)
 1. [Live Query - Save hours by validating query in seconds!](live-query)
 1. [Create new Metric chart](create-new-metric)
 1. [Windowing functions](windowing-functions)
