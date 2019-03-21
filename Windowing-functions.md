@@ -34,6 +34,16 @@ Using this setting often has trade-offs between latency (i.e. how long you want 
 You can specify the wait time for late arriving data in 'Wait time for late arriving data' field in the input tab.<br/>
  ![Late arrival](./tutorials/images/latedata.PNG)<br/>
 
+#Time Column
+When using late arriving data or sliding window, you need to specify the time column to use for the windowing functions. This is specified on the input tab. <br/>
+ ![Timestamp](./tutorials/images/timestamp.PNG)<br/>
+
+#Normalization
+At times the incoming data may not have the time column in the expected format. For example, in the home automation sample, the _eventTime_ column comes in as string instead of timestamp. To fix this you can specify a normalization statement in SQL that will be applied to the incoming raw data before being processed to DataXProcessedInput which you can use to set up rules or alerts in the Rules tab, or to write SQL queries against in the Query tab. 
+
+To specify normalization, toggle 'Show Normalization' to on, and write the SQL statement above the default Raw.* statement. For the home automation sample, the normalization is shown below. This will be applied to the incoming data and be used for windowing functions.<br/>
+ ![Normalization](./tutorials/images/normalization.PNG)<br/>
+
 # Putting it all together
 Data Accelerator gives you very powerful windowing functions to accomplish most complex of tasks that can be easily expressed in the UI or inline in SQL with keywords. The home automation sample included with Data Accelerator makes use of these dials that you can explore further.
 
