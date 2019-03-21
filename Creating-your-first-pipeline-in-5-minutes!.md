@@ -12,7 +12,7 @@ One you have completed the deployment of Data Accelerator to your subscription, 
 
 * Switch to the Input tab and select input type you want to receive data from. Data Accelerator supports Eventhub and IoThub
 
-* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. You will get this information from [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, you will notice that an IoThub has also been provisioned that you can use for this example. Login to the [Azure portal](https://portal.azure.com), go to resources, and check the properties of IoThub to get this information. <br /><br />
+* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the properties of the IoThub to get the needed information. <br /><br />
 _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
