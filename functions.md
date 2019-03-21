@@ -40,3 +40,6 @@ To use the UDAF, you can pass in a table to the UDAF alias:
 
 You can test your query using the Run button after selecting your query.  Once you are satisfied with the changes, make sure to press 'Save' to store the changes and deploy. 
 
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
