@@ -12,13 +12,13 @@ One you have completed the deployment of Data Accelerator to your subscription, 
 
 * Switch to the Input tab and select input type you want to receive data from. Data Accelerator supports Eventhub and IoThub
 
-* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the properties of the IoThub to get the needed information. <br /><br />
+* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the properties of the IoThub to get the needed information. Note, sample data is already flowing into this IoThub. <br /><br />
 _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
  ![Input](./tutorials/images/InputIoT.PNG)<br/>
 
-* Click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data: <br /><br />
+* Click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data. The data is an example of home automation data. <br /><br />
  ![Schema](./tutorials/images/GetSchema.PNG)<br/>
 
 * Click "Deploy" button to save and run the Flow. That's it! You have created your first end to end data streaming pipe!<br /><br />
