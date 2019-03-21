@@ -10,9 +10,9 @@ One you have completed the deployment of Data Accelerator to your subscription, 
 * Click on "New" on the Flows tab, this will create a new Flow:<br /><br />
  ![New Flow](./tutorials/images/Tutorial1-1.png)
 
-* Switch to the Input tab and select input type. Data Accelerator supports Eventhub and IoThub
+* Switch to the Input tab and select input type you want to receive data from. Data Accelerator supports Eventhub and IoThub
 
-* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub:<br /><br />
+* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. You will get this information from [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, you will notice that an IoThub has also been provisioned that you can use for this example. Login to the [Azure portal](https://portal.azure.com), go to resources, and check the properties of IoThub to get this information. <br /><br />
 _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
