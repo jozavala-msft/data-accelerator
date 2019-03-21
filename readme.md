@@ -26,15 +26,17 @@ Once you are ready to deploy to Azure, you can use the deployment scripts and AR
 
 See the [wiki](https://github.com/Microsoft/data-accelerator/wiki) pages for further information on how to build, diagnose and maintain your data pipelines built using Data Accelerator for Spark.
 
-# Engage
-Some of the best ways to contribute are to try things out, file issues, join in design conversations, and make pull-requests.
+# Contributing
+Some of the best ways to contribute are to try things out, join in design conversations, and make pull-requests.
 
 * [Download the latest stable or in-development releases](download)
+* [Build Data Accelerator source code](CONTRIBUTING.md#build-and-run)
+* Check out the [contributing page](CONTRIBUTING.md) to see the best places to log issues and start discussions.
+
+# Feedback
 * Request new features on [GitHub](CONTRIBUTING.md)
 * Open a new issue on [GitHub](https://github.com/Microsoft/data-accelerator/issues)
 * Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
-* [Build Data Accelerator source code](CONTRIBUTING.md#build-and-run)
-* Check out the [contributing page](CONTRIBUTING.md) to see the best places to log issues and start discussions.
 
 Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
 
