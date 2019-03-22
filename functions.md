@@ -21,7 +21,7 @@ Similarly, to set up a user-defined function or UDF:
  - Open your Flow and go to the Functions Tab
  - Select UDF from the drop down in the Function tab.
  - You will need to provide following (this example is also included in the home automation sample)
-    - an alias, 
+    - an alias (in the example below we use **whoOpened**), 
     - Path to the jar file that implement the jUDF interface.  See an example below.  Note this jar file needs to be uploaded under the default container of the default blob of the Spark cluster.
     - The class name is the fully qualified path and classname, i.e. datax.sample.udf.UdfHelloWorld
 
