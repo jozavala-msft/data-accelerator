@@ -1,44 +1,72 @@
-Functions can extend query code by adding either Azure function or UDF/UDAF via Scala code in jars files.
+We have seen no code experience provided by Data Accelerator to set up Rules and Alerts, and also seen how you can do more complex queries using SQL and other capabilities like Windowing functions, etc. At times, for even more advanced scenarios, you may want to create function that you can invoke from SQL. Functions can extend query code by adding either Azure function or UDF/UDAF via Scala code in jars files.
 
 In this tutorial, you'll learn to:
  - Add an Azure Function
  - Add a Jar file to use as a UDF or UDAF
 
-
 # Adding an Azure function
 To set up an Azure function:
  - Open your Flow and go to the Functions Tab
  - Select add Azure Function from the Function tab<br/>
-	<image>
+![function](./tutorials/images/function.PNG)<br/>
  - The Alias will be how to reference the function in the Query tab
  - The Service Endpoint, API, Function key and Method type can be obtained from the Azure portal<br/>
-	<images>
+![function](./tutorials/images/azfunc.PNG)<br/>
 	
-You can now use the Azure Function in your query using the Alias as such, passing parameters such as values or column names as parameters
-	T2 = Select myAlias(param1, param2, …) FROM DataXProcessedInput;
+That's it! You can now use the Azure Function in your query using the Alias as such, passing parameters such as values or column names as parameters
+	T2 = Select myAzureFunction(param1, param2, …) FROM DataXProcessedInput;
 
 # Adding a Scala User Defined Function
 Similarly, to set up a user-defined function or UDF:
  - Open your Flow and go to the Functions Tab
  - Select UDF from the drop down in the Function tab.
- - You will need to provide 
+ - You will need to provide following (this example is also included in the home automation sample)
     - an alias, 
-    - Path to the jar file that implement the jUDF interface.  See an example in the Spark project here <>.  Note this jar file needs to be uploaded under the default container of the default blob of the Spark cluster.
+    - Path to the jar file that implement the jUDF interface.  See an example below.  Note this jar file needs to be uploaded under the default container of the default blob of the Spark cluster.
     - The class name is the fully qualified path and classname, i.e. datax.sample.udf.UdfHelloWorld
-	
+
+```scala
+package datax.sample.udf
+
+import org.apache.spark.sql.api.java.{UDF1 => jUDF}
+
+class UdfHelloWorld extends jUDF[String, String]{
+  override def call(p1: String): String = {
+    "hello, " + p1
+  }
+}
+```
 Once you have done so, you can use the UDF in your query, using a similar pattern as an Azure function.<br/>
-<images>
+
+```sql
+--DataXQuery--
+DeviceNotWindowedInputWithNameAndWho = SELECT 
+                        deviceId,
+                        deviceType,
+                        eventTimeStamp,
+                        homeId,
+                        status,
+                        deviceName,
+                        whoOpened(CAST(deviceId AS String)) AS whoOpened
+                    FROM DeviceNotWindowedInputWithName 
+```
 
 # Adding a Scala User-Defined Aggregated Function
-To set up a user-defined aggregated function:
+Similar to UDF, you can set up a UDAF (user-defined aggregated function):
  - Open your Flow and go to the Functions Tab
  - Select UDAF from the drop down.  
  - Similar settings as with UDF need to be provided.  The jar file also needs to be updated under the default container of the default blob of the Spark cluster
 
 To use the UDAF, you can pass in a table to the UDAF alias:
-	T3 = Select myUDAF(T1);
 
-You can test your query using the Run button after selecting your query.  Once you are satisfied with the changes, make sure to press 'Save' to store the changes and deploy. 
+```sql
+--DataXQuery--
+T1 = SELECT myUDAF(deviceDetails.deviceId)
+     FROM DataXProcessedInput
+     GROUP BY deviceDetails.homeId;
+```
+
+You can test your query using [Live query](Live-query) Run button after selecting your query.  Once you are satisfied with the changes, hit 'Deploy' to deploy your changes! 
 
 # Links
 * [Tutorials](Tutorials)
