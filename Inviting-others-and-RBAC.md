@@ -23,7 +23,7 @@ With Data Accelerator, you can invite others to view or create data pipelines in
 - You will see 2 applications: clientapp-* and serviceapp-*. For each app in turn, do the following:
     - Click on the app name
     - Click on the app name under Managed application in local directory<br/>
-![invite](./tutorials/images/aad5.PNG)<br/>
+![invite](./tutorials/images/aad5.png)<br/>
     - Click on 'Users and groups' and then on '+ Add user'
     - Select User and then the Role (DataXReader or DataXWriter). DataXReader gives read permissions ony, while DataXWriter has both read and write permssions.
     - Make sure to repeat the above steps for both clientapp-* and serviceapp-*
