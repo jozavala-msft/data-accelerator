@@ -6,7 +6,7 @@
 1. [Cloud deployment](Cloud-deployment)
 
 # Tutorials
-Learn how to use [Data Accelerator](data-accelerator) step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. 
+Learn how to use [Data Accelerator](data-accelerator) step by step and get started setting up your big data pipeline in minutes. [Data Accelerator](data-accelerator) provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. 
 
 [Tutorials](Tutorials) will walk you through the tools, step by step, how to create a Flow.
 
