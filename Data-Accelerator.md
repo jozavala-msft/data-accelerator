@@ -2,12 +2,14 @@ Data Accelerator is an end to end data pipeline used internally at Microsoft for
 
 Data Accelerator is built on Spark and supports streaming and batch processing. We are happy to open source all of the tooling and services we have built and can't wait to see how you put it to use for your scenarios! As Data Accelerator continues to be a critical pipeline for us, we will continue to develop in the open and welcome partnering with you and looking forward to your contributions and feedback. 
 
+# Processing
 **Data Accelerator enables 3 levels of processing:**
 - **No code experience** to set up end to end pipelines with alerting, tagging and data processing
 - When that is not enough, you can do more complex processing in **SQL**, without having to worry about Java or Scala, etc.
 - You can of course break the glass and go down to Scala if you so wish, by creating **user defined functions** and extensions.
 
-**Data Accelerator supports features you would come to expect, and more, for your scenarios such as **
+# Features
+**Data Accelerator supports features you would come to expect, and more, for your scenarios such as:**
 - Referencing data
 - Windowing functions (interval for processing, look back window, etc.)
 - Accumulator (to maintain state over stream processing)
@@ -22,3 +24,8 @@ Data Accelerator also enables **Live Query**, a feature that allows you to valid
 As you [learn](tutorials) to use Data Accelerator, hopefully, you will find the tools we have found useful over time, useful too. 
 
 Finally, to make it easy for you to try out Data Accelerator, without deploying anything to the cloud is to try it [locally](Local-mode-with-Docker). We have packaged the tools and service in a docker container so you can try out easily locally. While the local deployment does not have all of the features available in the full cloud deployment, it will give you a quick idea of the pipeline. 
+
+# Useful Links
+- [Home](home)
+- [Tutorials](tutorials)
+- [FAQ](faq)
