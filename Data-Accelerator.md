@@ -23,7 +23,7 @@ Data Accelerator also enables **Live Query**, a feature that allows you to valid
 
 As you [learn](tutorials) to use Data Accelerator, hopefully, you will find the tools we have found useful over time, useful too. 
 
-Finally, to make it easy for you to try out Data Accelerator, without deploying anything to the cloud is to try it [locally](Local-mode-with-Docker). We have packaged the tools and service in a docker container so you can try out easily locally. While the local deployment does not have all of the features available in the full cloud deployment, it will give you a quick idea of the pipeline. 
+Finally, to make it easy for you to try out Data Accelerator, without deploying anything to the cloud, we have enabled running the pipeline [locally](Local-mode-with-Docker). The tools and services have been packaged in a docker container so you can try out easily locally. While the local deployment does not have all of the features available in the full cloud deployment, it will give you a quick idea of the pipeline. 
 
 # Useful Links
 - [Home](home)
