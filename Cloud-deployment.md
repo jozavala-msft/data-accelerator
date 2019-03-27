@@ -1,4 +1,4 @@
-Unleash the full power of Data Accelerator by deploying it into your subscription in Azure by following the instructions below and get started setting up end to end data pipelines! 
+Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it into your subscription in Azure by following the instructions below and get started setting up end to end data pipelines! 
 
 # Prerequisites
  - Install Azure CLI from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
