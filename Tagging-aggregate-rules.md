@@ -15,7 +15,7 @@ In the previous tutorial we saw how to Tag streaming data when certain condition
 - In the Query tab, call ProcessAggregateRules() API and route the data to your desired output sink.
 
 ```sql
-	--DataXQuery--<br/>
+	--DataXQuery--
 	T1 = ProcessAggregateRules(DataXProcessedInput);
 ```
 
