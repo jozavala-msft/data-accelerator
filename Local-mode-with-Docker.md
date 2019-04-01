@@ -1,4 +1,4 @@
-To make it easy for you to try out Data Accelerator, without deploying anything to the cloud, we have enabled running the pipeline [locally](Local-mode-with-Docker). The tools and services have been packaged in a docker container so you can try out easily locally. While the local deployment does not have all of the features available in the full cloud deployment, it will give you a quick idea of the pipeline. 
+To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) and check the tutorials for [cloud mode](https://github.com/Microsoft/data-accelerator/wiki/Tutorials#cloud-mode). We have also enabled a "hello world" experience that you try out locally by running docker container. When running locally there are no dependencies on Azure, however, note that the functionality in local mode is very limited and only there to give you a very cursory overview of Data Accelerator. To run Data Accelerator locally, check out the instructions below and then check out the tutorials of [local mode](https://github.com/Microsoft/data-accelerator/wiki/Tutorials#local-mode).
 
 # Prerequisites:
  - Docker (To get more info on this, see the [FAQ](FAQ)). 
