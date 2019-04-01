@@ -1,6 +1,6 @@
 Learn how to use Data Accelerator step by step and get started setting up your big data pipeline in minutes. Data Accelerator provides all the tools necessary to to go from simple to complex requirements, all within easy-to-use portal. 
 
-To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) and check the tutorials for cloud mode below. We have also enabled a "hello world" experience that you try out locally by running docker container. When running locally there are no dependencies on Azure, however, note that the functionality in local mode is very limited and only there to give you a very cursory overview of Data Accelerator. [Deploy locally using these instructions](Local-mode-with-Docker) and then check out the tutorials of local mode below. 
+To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) and check the tutorials for cloud mode below. We have also enabled a "hello world" experience that you can try out locally by running a docker container. When running locally there are no dependencies on Azure, however, the functionality is very limited and only there to give you a very cursory overview of Data Accelerator. [Deploy locally using these instructions](Local-mode-with-Docker) and then check out the tutorials of local mode below. 
 
 [Tutorials](Tutorials) will walk you through both, the local mode as well as the cloud mode, step by step.
 
