@@ -33,4 +33,22 @@ _If you do not have access to the subscription where Data Accelerator is deploye
 - Ask you admin for the username and password of the HDInisghts cluster (your admin will need to follow the steps above), or ask the admin to give you permission to the subscription (or the Keyvault) and you can follow the steps above.
 
 
+- Once you login, you will see the error for your job along with logs table at the bottom. Click on the logs link to see the detailed logs of the job. 
+
+- You can also check out all the jobs in the cluster by clicking on 'Applications' on the left menu or filter the jobs to running, siled, etc. <br />
+ ![Jobs](./tutorials/images/hdimenu.PNG)
+
+- Opening log of a job that is finished, you may see message like this on the top of the log file. By default, you only see 4K bytes of the log. Click on the link provided to see the full logs. <br />
+ ![Jobs](./tutorials/images/log1.PNG)
+
+- Opening log of a running job, you may see this. Click on stderr to see the logs: <br />
+ ![Jobs](./tutorials/images/log2.PNG)
+
+- Be default, you will only see 4096 bytes. You can click on the link to see the full logs (however, it can be pretty huge and take a long time to load). Alternatively, notice that the URL ends with /livy/stderr/?start=-4096. You can change that to /livy/stderr/?start=-409600 to see more of the log, and you can continue to tweak the number if it helps to see more of the log to help you narrow down the issue. 
+
+# Conclusion
+With Data Accelerator's Jobs page, you can manage the job, and when you need to dig in to the logs to narrow down an issue, you can do so by clicking on the logs link and logging in to the HDInisghts cluster. 
+
+
+
 
