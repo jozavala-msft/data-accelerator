@@ -12,47 +12,8 @@
 	**Right click on Docker in the system tray Settings-->Advanced -->CPU: 4 cores; Memory: at least 4 GB (4096 MB).**
    **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
 ## Other useful commands
- - Run docker
-   ```
-   docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020  msint.azurecr.io/datax/dataxlocal:v2
-   ```
- - Give the below commands to look at the running containers
-    ```
-    docker ps
-    ```
-	- An example output
-				1) CONTAINER ID        IMAGE                                         COMMAND             CREATED             STATUS              PORTS                                                    NAMES
-				2) 051b1617a877        datax.azurecr.io/datax/dataxlocal   "finalrun.sh"       4 minutes ago       Up 4 minutes        0.0.0.0:2020->2020/tcp, 80/tcp, 0.0.0.0:5000->5000/tcp   dreamy_rubin
- - Give the below commands to look at the logs
-   ```
-   docker logs --tail 1000 dataxlocal (since in the doecker run command above the container name is 'dataxlocal')
-   or
-   docker logs --tail 1000 <<containerID for example: 051b1617a877> (for looking at the logs of any container)
-   ```
-  - For seeing continuous logs, 
-    ```
-    docker logs -f <containerId for example: dataxlocal>
-    ```
-## SSH into docker container
- - Running the below cmd will take you to the container's bash shell
-   ```
-	docker exec --rm -it <containerId>  /bin/bash
-	ls (look at the contents inside the root directory of the container)
-	cd <folder>
-   ```
+ - Visit the [docker documentation](https://docs.docker.com/engine/reference/commandline/docker/) for detailed commands
 ## Cleaning up:
- - Commands to give to stop and remove the container and volume on the host machine that is mapped to the container:
-	```	
-   docker ps (returns a list of all available containers)
-   docker stop <ContainerId> (Stops the specific container)
-   docker rm <ContainerId> (Removes the specific container)
-   ```
- - You can search for any existing / dangling volumes inside the container
-    ```
-    Docker volume ls
-    Docker volume prune (for removing all unused volumes. In case a )
-    Docker volume rm <<volumeName>> (as result(s) for "docker volume ls" command above)
-	```
  - If you wish to delete all dangling images from your machine and images that are not attached to any container
    ```
    Docker image prune -af
