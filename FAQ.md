@@ -1,78 +1,89 @@
-#  Local experience FAQ
-
-# How do I install docker? 
-	0. HyperV on Windows (Docker will enable this)
-	1. Install the client
-		a. Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows 
-		b. Linux: https://docs.docker.com/install/linux/docker-ce/ubuntu/  
-		c. Mac: https://docs.docker.com/docker-for-mac/install/
-	2. Go to hub.docker.com to sign up if you have not done so already.
-	3. Your machine will reboot. There will be a prompt to enable HyperV since docker installer enables HyperV for you. In order for the docker container to run successfully, HyperV is a prerequisite. You need to allow the HyperV to be enabled. You machine will reboot after this
-	4. Go to the system tray, you will see a ship icon (if you do not see the docker icon in the system tray, go to startà type "docker"à and click on it to start the docker desktop) and on hovering it will show that docker is starting post reboot. 
-	5. Once the docker icon is stable, you will be required to login. Do the below steps only after the docker icon is stable i.e. the docker has started successfully.
-	6. Docker Settings: 
-	Right click on Docker in the system trayàSettings->Advanced ->CPU: 4 cores; Memory: at least 4 GB (4096 MB).
-
-Other useful commands
-	1. Give the below commands to look at the query and service telemetry:
-	You can look at the logs by querying the container that is running
-		a. docker ps
-			i. An example output
+﻿#  Local experience FAQ
+## How do I install docker? 
+ - Go to hub.docker.com to sign up and login if you have not done so already.
+ - Install the docker client
+	- Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
+	- Linux: https://docs.docker.com/install/linux/docker-ce/ubuntu/  
+	- Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac
+ - Your machine will reboot. On Windows, there will be a prompt to enable HyperV since docker installer enables HyperV for you. **In order for the docker container to run successfully, HyperV is a prerequisite.** You need to allow the HyperV to be enabled. You machine will reboot after this.
+ - Go to the system tray, you will see a ship icon (if you do not see the docker icon in the system tray, go to start and type "docker" and click on it to start the docker desktop) and on hovering on the shop icon it will show that docker is starting post reboot. 
+ - Once the docker icon is stable, you will be required to login. Do the below steps only after the docker icon is stable i.e. the docker has started successfully.
+ - **docker Settings:** 
+	**Right click on Docker in the system tray Settings-->Advanced -->CPU: 4 cores; Memory: at least 4 GB (4096 MB).**
+   **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
+## Other useful commands
+ - Run docker
+   ```
+   docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020  msint.azurecr.io/datax/dataxlocal:v2
+   ```
+ - Give the below commands to look at the running containers
+    ```
+    docker ps
+    ```
+	- An example output
 				1) CONTAINER ID        IMAGE                                         COMMAND             CREATED             STATUS              PORTS                                                    NAMES
 				2) 051b1617a877        datax.azurecr.io/datax/dataxlocal   "finalrun.sh"       4 minutes ago       Up 4 minutes        0.0.0.0:2020->2020/tcp, 80/tcp, 0.0.0.0:5000->5000/tcp   dreamy_rubin
-		b. docker logs --tail 1000 <<containerID for example: 051b1617a877>
-		c. For seeing continuous logs, 
-			i. Docker logs -f <containerId>
-	2. In case metrics are not showing you may need to scale up your docker image:
-		a. Docker Settings: 
-		Right click on Docker in the system trayàSettings->Advanced ->CPU: 4 cores; Memory: at least 4 GB (4096 MB).
-
-# Cleaning up:
+ - Give the below commands to look at the logs
+   ```
+   docker logs --tail 1000 dataxlocal (since in the doecker run command above the container name is 'dataxlocal')
+   or
+   docker logs --tail 1000 <<containerID for example: 051b1617a877> (for looking at the logs of any container)
+   ```
+  - For seeing continuous logs, 
+    ```
+    docker logs -f <containerId for example: dataxlocal>
+    ```
+## SSH into docker container
+ - Running the below cmd will take you to the container's bash shell
+   ```
+	docker exec --rm -it <containerId>  /bin/bash
+	ls (look at the contents inside the root directory of the container)
+	cd <folder>
+   ```
+## Cleaning up:
  - Commands to give to stop and remove the container and volume on the host machine that is mapped to the container:
-		Notice that for metrics to refresh we need -v parameter above. It is recommended that the way to use this is: Once you stop the container, you need to explicitly remove the volume as well:
-   - docker ps (returns a list of all available containers)
-   - docker stop <ContainerId>
-   - docker rm <ContainerId>
-   - docker volume rm path -f
-			…  path is the volume that you give in the run command above. eg. /app/aspnetcore
-			
+	```	
+   docker ps (returns a list of all available containers)
+   docker stop <ContainerId> (Stops the specific container)
+   docker rm <ContainerId> (Removes the specific container)
+   ```
  - You can search for any existing / dangling volumes inside the container
-   - Docker volume ls
-   - Docker volume prune -f (for removing all unused volumes)
-   - Docker volume rm <<volumeName> as result(s) for "docker volume ls" command above>
-	
- - If you wish to delete all images from your machine
-   - Docker system prune -a
-		
-# SSH into docker container
-Running the below cmd will take you to the container's bash shell
-	docker exec -it <containerId>  /bin/bash
-	
-# How to Install ps 
-
-RUN below cmd from bash shell
-apt-get update && apt-get install -y procps
-
-How to list Java VMs (spark job runs as a Java VM)
-Run from bash shell
-jps
-
-e.g output  from jps (SparkSubmit is spark job)
-
-root@39e3ea3ed861:/app/aspnetcore# jps
-1985 SparkSubmit
-2451 Jps
-
-
+    ```
+    Docker volume ls
+    Docker volume prune (for removing all unused volumes. In case a )
+    Docker volume rm <<volumeName>> (as result(s) for "docker volume ls" command above)
+	```
+ - If you wish to delete all dangling images from your machine and images that are not attached to any container
+   ```
+   Docker image prune -af
+   ```
+## Look at Spark Logs
+   - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 #  ARM Deployment FAQ
+## How to Install ps 
+ - RUN below cmd from bash shell
+   ```
+   apt-get update && apt-get install -y procps
+   ```
 
-# Trouble shooting
+ - How to list Java VMs (spark job runs as a Java VM)
+   ```   
+   Run from bash shell
+   jps
+   ```
+   e.g output  from jps (SparkSubmit is spark job)
+
+    - root@39e3ea3ed861:/app/aspnetcore# jps
+    - 1985 SparkSubmit
+    - 2451 Jps
+
+## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
  - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment 
  - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your subscription admin to run these steps
  - If you see an error related to Azure login, your deployment may occur on a different account. Please make sure you log in Azure with the right information
 
-# FAQ
+## FAQ
  - I am a guest of a tenant, how can I deploy DataX?  You need to be a contributor of the tenant, please speak to your admin to gain access.
  - How many resources does the ARM template create?  We create 1 resource group for all 24 resources.
  - The same resource group can host 1 or more products but we recommend separate subscription for each instance for now
