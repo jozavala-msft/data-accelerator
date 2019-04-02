@@ -44,7 +44,11 @@ _If you do not have access to the subscription where Data Accelerator is deploye
 - Opening log of a running job, you may see this. Click on stderr to see the logs: <br />
  ![Jobs](./tutorials/images/log2.PNG)
 
-- Be default, you will only see 4096 bytes. You can click on the link to see the full logs (however, it can be pretty huge and take a long time to load). Alternatively, notice that the URL ends with /livy/stderr/?start=-4096. You can change that to /livy/stderr/?start=-409600 to see more of the log, and you can continue to tweak the number if it helps to see more of the log to help you narrow down the issue. 
+- For a running job you can also click on Application Master, then click on Streaming tab to see the streaming job execution details.<br/>
+ ![Jobs](./tutorials/images/appmaster.PNG)<br/>
+ ![Jobs](./tutorials/images/streaming.PNG)<br/>
+
+- By default, you will only see 4096 bytes. You can click on the link to see the full logs (however, it can be pretty huge and take a long time to load). Alternatively, notice that the URL ends with /livy/stderr/?start=-4096. You can change that to /livy/stderr/?start=-409600 to see more of the log, and you can continue to tweak the number if it helps to see more of the log to help you narrow down the issue. 
 
 # Conclusion
 With Data Accelerator's Jobs page, you can manage the job, and when you need to dig in to the logs to narrow down an issue, you can do so by clicking on the logs link and logging in to the HDInisghts cluster. 
