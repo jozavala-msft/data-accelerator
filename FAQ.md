@@ -1,4 +1,4 @@
-﻿#  Local experience FAQ
+﻿#  Local Deployment FAQ
 ## How do I install docker? 
  - Go to hub.docker.com to sign up and login if you have not done so already.
  - Install the docker client
