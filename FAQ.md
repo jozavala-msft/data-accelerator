@@ -21,30 +21,11 @@
 ## Look at Spark Logs
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 #  ARM Deployment FAQ
-## How to Install ps 
- - RUN below cmd from bash shell
-   ```
-   apt-get update && apt-get install -y procps
-   ```
-
- - How to list Java VMs (spark job runs as a Java VM)
-   ```   
-   Run from bash shell
-   jps
-   ```
-   e.g output  from jps (SparkSubmit is spark job)
-
-    - root@39e3ea3ed861:/app/aspnetcore# jps
-    - 1985 SparkSubmit
-    - 2451 Jps
-
 ## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
  - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment 
  - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your subscription admin to run these steps
  - If you see an error related to Azure login, your deployment may occur on a different account. Please make sure you log in Azure with the right information
-
-## FAQ
  - I am a guest of a tenant, how can I deploy DataX?  You need to be a contributor of the tenant, please speak to your admin to gain access.
  - How many resources does the ARM template create?  We create 1 resource group for all 24 resources.
  - The same resource group can host 1 or more products but we recommend separate subscription for each instance for now
