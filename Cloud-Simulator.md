@@ -18,7 +18,7 @@ The Cloud simulator provides data to an Event or IoT hub enabling developing rul
 * Notice the 'rulesData' property. This is where we define the data streams that the simulator should generate in order to trigger the rules condition. Here we set constant values for each property. Following lists out the supported properties -
   * **dataStream** - Stream of data that the simulator will generate.
   * **triggerConditions** - Array of rules triggering conditions.
-  * **parentJsonPropertyPath** - Parent JSON proerty path for which the value needs to be set
+  * **parentJsonPropertyPath** - Parent JSON property path for which the value needs to be set
   * **propertyName** - Property name for which the value needs to be set
   * **propertyType** - Property type for which the value needs to be set
   * **castAsString** - Flag to cast the value of non-string type property to string 
@@ -29,7 +29,7 @@ The Cloud simulator provides data to an Event or IoT hub enabling developing rul
   * **ruleTriggerValue** - Value of the property for which the rule will trigger an alert
   * **ruleNotTriggerValue** - Value of the property for which the rule will not trigger an alert
   * **ruleNotTriggerTimeInMinutes** - Instances in minutes where the rule is not expected to trigger an alert
-  * **utcAddSeconds** - Number of seconds to add to current utc time in case of a datetime type property
+  * **utcAddSeconds** - Number of seconds to add to current UTC time in case of a datetime type property
   * **datetimeStringFormat** - DateTime format in case of a datetime type property
 * Following is the list of some other properties used to shape up the simulation process
   * **rulesCounterRefreshInMinutes** - Time in minutes to reset the rules counter.
