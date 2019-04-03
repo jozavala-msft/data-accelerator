@@ -9,7 +9,7 @@
 
 	![resourceCreationFalse](./tutorials/images/resourceCreationFalse.png)
 	
-	- For details on how to create consumer group,
+- For details on how to create consumer group,
 	  - Consumer groups for IotHub: 
 	  - Azure Portal -> Iot Hubs -> Select Iot Hub -> Build-in endpoints -> Find Consumer groups section -> Provide a name in the textbox
 		
