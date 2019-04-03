@@ -9,14 +9,14 @@
 
 	![resourceCreationFalse](./tutorials/images/resourceCreationFalse.png)
 	
-- For details on how to create consumer group,
-	  - Consumer groups for IotHub: 
-	  - Azure Portal -> Iot Hubs -> Select Iot Hub -> Build-in endpoints -> Find Consumer groups section -> Provide a name in the textbox
+- For details on how to create consumer group:
+   - Consumer groups for IotHub:
+      - Azure Portal -> Iot Hubs -> Select Iot Hub -> Build-in endpoints -> Find Consumer groups section -> Provide a name in the textbox
 		
 	![resourceCreationFalse](./tutorials/images/iotHubConsumerGroup.png)
 
-	 - Consumer group for Event Hub: 
-	 - Azure Portal -> Event Hubs -> Select your Event Hubs Namespace -> Event Hubs -> Select your Event Hub -> Consumer groups -> + Consumer group -> Provide a name -> Click Create
+   - Consumer group for Event Hub: 
+      - Azure Portal -> Event Hubs -> Select your Event Hubs Namespace -> Event Hubs -> Select your Event Hub -> Consumer groups -> + Consumer group -> Provide a name -> Click Create
 		
 	![resourceCreationFalse](./tutorials/images/eventHubConsumerGroup.png)
 		
