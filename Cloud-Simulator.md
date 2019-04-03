@@ -35,6 +35,45 @@ The Cloud simulator provides data to an Event or IoT hub enabling developing rul
   * **rulesCounterRefreshInMinutes** - Time in minutes to reset the rules counter.
   * **simulationPeriodInMinute** - Period in minutes for how often the data will be simulated. Value set here as 1 will mean that data will be simulated every minute.
   * **numEventsPerBatch** - Number of events to simulate in each batch.
+* Following shows how to add a new property called temperature to the schema. <br /> <br />
+  Within 'properties' array in iotsample.json file add the following:
+```json
+{
+   "name": "temperature",
+   "type": "int",
+   "minRange": 60,
+   "maxRange": 75
+}
+```
+* Following shows how to add a new rule. In the scenario below, we will be changing the temperature value where the rule trigger value will be 80 and the ruleNotTriggerValue will be 70. <br /> <br />
+  Within 'rulesData' array in iotsample.json file add the following:
+```json
+{
+  "dataStream": "{\"deviceDetails\":{\"deviceId\":1,\"deviceType\":\"Heating\",\"eventTime\":\"05/16/2017 20:38:22\",\"homeId\":150,\"status\":1,\"temperature\":70}}",
+  "triggerConditions": [
+    {
+      "parentJsonPropertyPath": "deviceDetails",
+      "propertyName": "temperature",
+      "propertyType": "int",
+      "castAsString": false,
+      "ruleTriggerValue": 80,
+      "ruleNotTriggerValue": 70,
+      "ruleNotTriggerTimeInMinutes": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "parentJsonPropertyPath": "deviceDetails",
+      "propertyName": "eventTime",
+      "propertyType": "datetime",
+      "utcAddSeconds": "0",
+      "datetimeStringFormat": "MM/dd/yyyy HH:mm:ss"
+    }
+  ]  
+}
+```
 * Update the iotsample.json file to fit the data you need.
 * Open DataX.SimulatedData solution on Visual Studio in Admin Mode.
 * Update the PublishProfile and ApplicationParameters for DataX.SimulatedData service depending upon your environment so as to publish the service to your service fabric cluster.
