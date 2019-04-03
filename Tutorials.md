@@ -41,4 +41,5 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 1. [Inviting others and Roles based access](Inviting-others-and-RBAC)
 1. [Generate custom data with the Simulator](Cloud-Simulator)
 1. [Customize a Cloud Deployment](Arm-Parameters)
+1. [Use input EventHub/IotHub in a different tenant](Input-Different-Tenant)
 
