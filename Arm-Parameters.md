@@ -1,10 +1,10 @@
 # Basic Deployment
-* Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide TenantId and SubscriptionId. See Configuring the ARM template for details and options.
+* Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide TenantId and SubscriptionId.
 * For Windows OS, open a command prompt as an admin and run deploy.bat under DeploymentCloud/Deployment.DataX
 
 # Advanced scenarios
 ###  Use signed certificates for a production environment
-* The script will generate the selfsigned certificates by default but this is not recommended for a production environment. For a production environment. please get the signed certificates from a CA ready before you run the scripts.
+* The script will generate the self-signed certificates by default but this is not recommended for a production environment. For a production environment, please get the signed certificates from a CA ready before you run the scripts.
 * For the certificate creation:
 	* You will need three certificates: mainCert, reverseProxyCert and sslCert
 	* For Subject/Common Name: This will be your Service Fabric cluster endpoint (e.g.: <SFclusterName>.westus2.cloudapp.azure.com). 
@@ -15,13 +15,13 @@
 	* Update mainCert, reverseProxyCert and sslCert with the path of each certificate.
 		
 ### Use existing AAD apps
-* For DataX processing, two AAD apps will be used: A clientApp for the web site and a serviceApp for the service fabric service apps. The script will create the two apps by default. And once the deployment's done, you might need to get those apps admin-consented. Please ask your subscription owner. But if you already have the apps which are admin-consented, you can use them and no additional process will be needed. In order to use existing apps, please set the following properties as described.
+* For Data Accelerator processing, two AAD apps will be used: A clientApp for the web site and a serviceApp for the service fabric service apps. The script will create the two apps by default. And once the deployment's done, you might need to get an admin of your tenant to consent those apps. Please ask your tenant owner. If you already have the apps which are admin-consented, you can use them and no additional process will be needed. In order to use existing apps, please set the following properties as described.
 	* Update serviceAppName and clientAppName with your app names
 	* e.g.
 		* serviceAppName=myServiceApp
 		* clientAppName=myClientApp
 
-### Recover an existing DataX environment
+### Recover an existing Data Accelerator environment
 * If you need to recover an existing environment, there are two options. 
 	* The first option which is recommended is to build a new environment
 		* Delete the resource group of your environment 
@@ -32,7 +32,7 @@
 		 	* Set randomizeProductName=n
 		* Run the deploy,bat to build a new one
 	* And the other way is you can try to patch the environment but there is no guarantee that this will fix the problem in your environment.  
-		* Delete the problematic resources which broke the environment
+		* Delete the problematic resources is not working
 		* Use the same product name
 			* Use the product name to productName property
 			* Set randomizeProductName=n
@@ -41,7 +41,7 @@
 ### Install/update the app packages
 * If you want to deploy the new packages such as the service fabric apps and the web site to your existing environment, please follow the steps below.
 	* In common.parameters.txt,
-		* Please make sure all parameter values the same as what you used before
+		* Please make sure all parameter values are the same as to what you used before
 		* Use the same product name
 			* Use the product name to productName property
 			* Set randomizeProductName=n
@@ -55,7 +55,7 @@
 		* Run the deploy.bat
 
 ### Scale up by using bigger / high performance resources
-* For some resources such as Service Fabric, HDInsight and Redis, the default type/size is smaller.
+* For some resources such as Service Fabric, HDInsight and Redis, the default type and size are geared toward testing things out and is smaller.
 	* The default values are as follows
 	
 		* VM size for Service Fabric resource
