@@ -23,8 +23,8 @@ Run Data Accelerator locally by downloading and running docker container. Featur
        ```
        docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
        ```
-    - ###### Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
-    - ###### Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+   - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+   - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 # Running a job
  - To try out the sample:  Go to http://localhost:49080/config, select "BasicLocal" flow. 
  - Make an edit (for example, go to Query tab and enter a space in the editor), then Click ‘Deploy’
