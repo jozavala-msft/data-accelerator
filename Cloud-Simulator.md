@@ -86,10 +86,10 @@ The Cloud simulator provides data to an Event or IoT hub enabling developing rul
 * Go to your Flow, in the input tab click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data. This will update your Flow's schema to match the generated data<br />
  ![Schema](./tutorials/images/GetSchema.PNG)<br/>
 
-Your Flow schema will then take advantage of the new data coming in from the simulated data, and you'll be able to create rules and query it.
 
 * Click "Deploy" button to save and run the Flow. <br />
  ![Deploy](./tutorials/images/Deploy.PNG)<br/>
+Your Flow schema will then take advantage of the new data coming in from the simulated data, and you'll be able to create rules and query it.
 
 # Links
 * [Tutorials](Tutorials)
