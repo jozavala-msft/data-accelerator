@@ -10,19 +10,18 @@ Run Data Accelerator locally by downloading and running docker container. Featur
       ```
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac 
-      - **Clean up dangling unused images**
+     - **Clean up previous image(s) to avoid caching issues**
         ```
-        docker image prune -a
-        - This will prompt you:
-            WARNING! This will remove all images without at least one container associated to them.
-            Are you sure you want to continue? [y/N]
-            It is recommended to delete unused images so as to avoid caching issues
-        Enter: Y
+        docker images -a
+          1. This will list all the images on your box. 
+          2. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
+          3. Run the following command for each of the <ImageId> in 2:
+        docker image rm <ImageId>  
         ```
-   -  **Run docker container**    
-       ```
-       docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
-       ```
+     -  **Run docker container**    
+        ```
+        docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
+        ```
    - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
    - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 # Running a job
