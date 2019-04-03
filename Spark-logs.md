@@ -34,7 +34,7 @@ _If you do not have access to the subscription where Data Accelerator is deploye
 
 - Once you login, you will see the error for your job along with logs table at the bottom. Click on the logs link to see the detailed logs of the job. 
 
-- You can also check out all the jobs in the cluster by clicking on 'Applications' on the left menu or filter the jobs to running, siled, etc. <br />
+- You can also check out all the jobs in the cluster by clicking on 'Applications' on the left menu or filter the jobs to running, killed, etc. <br />
  ![Jobs](./tutorials/images/hdimenu.PNG)
 
 # Examining the logs
