@@ -2,7 +2,7 @@ Services and Web send AppInsight telemetry.  To access it, you can go to the por
 
 Useful queries:
 traces
-| where operation_ParentId contains"Nova-Service"
+| where operation_ParentId contains"DataX-Service"
 | orderby timestamp desc
 ​
 exceptions
