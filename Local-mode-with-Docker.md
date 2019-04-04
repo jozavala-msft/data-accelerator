@@ -10,13 +10,13 @@ Run Data Accelerator locally by downloading and running docker container. Featur
       ```
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
-     - **If already have Data Accelerator's cached docker image, and would like to get the latest, then you have to delete the image you have. To do so, follow steps below.**
+     - **To get the latest docker image, delete the one you have downloaded previously. To do so, follow these steps:**
         ```
         docker images -a
         ```
           1. This will list all the images on your box. 
           1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the <ImageId> in 2:
+          1. Run the following command for each of the <ImageId> in 2 to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
