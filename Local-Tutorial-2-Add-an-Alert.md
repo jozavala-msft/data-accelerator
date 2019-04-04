@@ -19,4 +19,7 @@ In this tutorial, you'll learn to:
  -  You can view the alerts you have set up by going to the Metrics tab.  Alerts will be displayed in a table on the metrics page.
 ![Add](./tutorials/images/alertwarmdashboard.png)
 
-You now have created a pipeline that creates alerts.  
+You now have update your pipeline to create alerts.  
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
