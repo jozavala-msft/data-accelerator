@@ -4,8 +4,8 @@ To unleash the full power of Data Accelerator, [deploy to Azure](https://github.
 Run Data Accelerator locally by downloading and running docker container. Features are very limited compared to cloud mode, but it gives you a cursory feel quickly.
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
-  - Once docker is installed and running, update the docker Settings: **Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 8 GB (8192 MB).**
-**![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
+  - Once docker is installed and running, update the docker Settings: **Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 8 GB (8192 MB).**<br/>
+**![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
 # Deployment
@@ -16,13 +16,13 @@ Run Data Accelerator locally by downloading and running docker container. Featur
         ```
           1. This will list all the images on your box. 
           1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the <ImageId> in 2 to remove them from the machine:
+          1. Run the following command for each of the <ImageId> in step b to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
         ```
  
-     -  **Run docker container. This will now bring down the latest image. If you didn't do the step above, then it will use the image you have downloaded already.**    
+     -  **Run docker container. This will now bring down the latest image. If you didn't remove image as described above, then it will use the image you have downloaded already.**    
         ```
         docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
         ```
