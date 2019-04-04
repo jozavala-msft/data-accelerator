@@ -21,3 +21,6 @@ In this tutorial, you'll learn to:
  - Click Deploy
 
 T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the previous tutorial.
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
