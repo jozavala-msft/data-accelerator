@@ -5,7 +5,7 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
  - Download the scripts and templates locally via this link: https://github.com/Microsoft/data-accelerator/DeploymentCloud/
 
 # Deployment
-1. Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide **TenantId** and **SubscriptionId**.  
+1. In common.parameters.txt under DeploymentCloud/Deployment.DataX, you only need to provide **TenantId** and **SubscriptionId**.  
 1. For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX:
 ```
  deploy.bat 
