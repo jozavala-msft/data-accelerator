@@ -21,8 +21,7 @@ _Input type:IoThub_<br/>
 - If the IoThub or Eventhub that you are connecting to lives in another resourcegroup, or in another subscription but same tenant, please provide the Subscription Id and Resource group name as well. <br /><br />
  ![Schema](./tutorials/images/subresource.PNG)<br/>
 
-- If the IoThub or Eventhub lives in another tenant instead, then do the following:
-   -  
+- If the IoThub or Eventhub lives in another tenant instead, then follow [these steps](https://github.com/Microsoft/data-accelerator/wiki/Use-Input-in-different-tenant) before proceeding.  
 
 * Click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data. The data is an example of home automation data. <br /><br />
  ![Schema](./tutorials/images/GetSchema.PNG)<br/>
