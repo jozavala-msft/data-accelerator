@@ -20,7 +20,7 @@ In this tutorial, you'll learn to:
  - Open the Query tab of your flow
  - You can now join your streaming data to the reference data by doing a JOIN: <br/>
 ```sql
-    - JOIN myRefData ON myRefData.<columnName>
+    JOIN myRefData ON myRefData.<columnName>
 ```
 ![Add Reference file](./tutorials/images/referencequery.PNG)
  - Click Deploy
