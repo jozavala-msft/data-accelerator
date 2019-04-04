@@ -21,6 +21,9 @@ In this tutorial, you'll learn to:
  - Click Deploy
 
 T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the previous tutorial.
-# Links
+
+* [Next tutorial : Aggregate Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-8-Tag-Aggregate-to-metrics)
+
+# Other Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
