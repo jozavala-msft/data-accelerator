@@ -1,5 +1,4 @@
-
- - If your input eventhub/IotHub is in a different tenant, you have to create the consumer groups manually and set the resource creation flag to False
+If your input Eventhub or IotHub is in a different tenant, you have to create the consumer groups used by Data Accelerator manually and set the resource creation flag to False in the configuration:
 	- Create two consumer groups: 
 		- dataxops: This is common and is needed for the features such as "Get schema" and "Live query"
 		- "_flowname_": Every flow needs an associated consumer group . When you create a new flow, please make sure you have a consumer group named the "_flowname_".
