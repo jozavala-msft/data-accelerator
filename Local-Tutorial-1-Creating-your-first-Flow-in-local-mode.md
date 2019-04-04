@@ -20,7 +20,7 @@ In this tutorial, you'll learn to:
 
 You have now created a pipeline with visualization of the incoming data.
 
-* [Next tutorial : Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-2-Add-an-Alert/_edit)
+* [Next tutorial : Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-2-Add-an-Alert/)
 
 # Other Links
 * [Tutorials](Tutorials)
