@@ -11,12 +11,12 @@ If your input Eventhub or IotHub is in a different tenant, you have to create th
 	
 - For details on how to create consumer group:
    - Consumer groups for IotHub:
-      - Azure Portal -> Iot Hubs -> Select Iot Hub -> Build-in endpoints -> Find Consumer groups section -> Provide a name in the textbox
+   - Azure Portal -> Iot Hubs -> Select Iot Hub -> Build-in endpoints -> Find Consumer groups section -> Provide a name in the textbox
 		
-	![resourceCreationFalse](./tutorials/images/iotHubConsumerGroup.png)
+![resourceCreationFalse](./tutorials/images/iotHubConsumerGroup.png)
 
-   - Consumer group for Event Hub: 
-      - Azure Portal -> Event Hubs -> Select your Event Hubs Namespace -> Event Hubs -> Select your Event Hub -> Consumer groups -> + Consumer group -> Provide a name -> Click Create
+- Consumer group for Event Hub: 
+  - Azure Portal -> Event Hubs -> Select your Event Hubs Namespace -> Event Hubs -> Select your Event Hub -> Consumer groups -> + Consumer group -> Provide a name -> Click Create
 		
-	![resourceCreationFalse](./tutorials/images/eventHubConsumerGroup.png)
+![resourceCreationFalse](./tutorials/images/eventHubConsumerGroup.png)
 		
