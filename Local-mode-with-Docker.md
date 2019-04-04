@@ -5,7 +5,7 @@ Run Data Accelerator locally by downloading and running docker container. Featur
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
   - Once docker is installed and running, update the docker Settings (Note if you run the docker with less resources, your experience may be degraded or processing may lag particularly around the sample Flow): <br/> 
-**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 8 GB (8192 MB).**<br/>
+**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**<br/>
 **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
