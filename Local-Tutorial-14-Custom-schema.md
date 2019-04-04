@@ -48,3 +48,6 @@ String , Array, Map (control the length of data generated)
       }
 ```
 Apart from these data types, boolean and struct data types are also supported in local mode.
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
