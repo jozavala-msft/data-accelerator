@@ -14,8 +14,8 @@ In this tutorial, you'll learn to:
 ```
 	--DataXQuery--<br/>
 	T1 = ProcessRules(DataXProcessedInput);
-        <br/>
-        OUTPUT T1 TO myOutput;<br/>
+
+        OUTPUT T1 TO myOutput;
 ```
  ![Rules Query](./tutorials/images/rulesquery.png)
  - Click Deploy
