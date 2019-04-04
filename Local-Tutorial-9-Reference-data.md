@@ -23,7 +23,7 @@ In this tutorial, you'll learn to:
 ```
  - Add an output statement to the code: <br/>
 ```sql
-    OUTPUT myTable TO myOutput;
+    OUTPUT extendedTemperature TO myOutput;
 ```
 ![Add Reference file](./tutorials/images/referencequery.PNG)
  - Click Deploy
