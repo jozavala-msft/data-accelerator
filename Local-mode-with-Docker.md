@@ -9,24 +9,26 @@ Run Data Accelerator locally by downloading and running docker container. Featur
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
 # Deployment
-   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac 
-     - **Clean up previous image(s) to avoid caching issues**
+   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+     - **If already have Data Accelerator's cached docker image, and would like to get the latest, then you have to delete the image you have. To do so, follow steps below.**
         ```
         docker images -a
         ```
           1. This will list all the images on your box. 
-          2. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          3. Run the following command for each of the <ImageId> in 2:
+          1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
+          1. Run the following command for each of the <ImageId> in 2:
 
         ```
         docker image rm <ImageId>  
         ```
-     -  **Run docker container**    
+ 
+     -  **Run docker container. This will now bring down the latest image. If you didn't do the step above, then it will use the image you have downloaded already.**    
         ```
         docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
         ```
    - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
    - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+
 # Running a job
  - To try out the sample:  Go to http://localhost:49080/config, select "BasicLocal" flow. 
  - Make an edit (for example, go to Query tab and enter a space in the editor), then Click ‘Deploy’
