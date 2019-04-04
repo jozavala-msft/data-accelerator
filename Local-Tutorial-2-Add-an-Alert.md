@@ -7,7 +7,7 @@ In this tutorial, you'll learn to:
  - Go to Rules tab, and click Add a "Tag Rule".  
 ![Add](./tutorials/images/addrule.png)
  -  Set a Description for the rule and a tag to describe the rule
- -  The target table is DataXProcessedInput, which is the table that DataX creates with the raw data.  Once you create new tables in the Query tab, the new tables will also be available to create rules and alerts against.
+ -  The target table is DataXProcessedInput, which is the table that DataX creates with the raw data.  (Note, once you create new tables in the Query tab, explained in subsequent tutorial, the new tables will also be available to create rules and alerts against.)
 ![Add](./tutorials/images/addrulewarm.png)
  
  -  In conditions, select the column of data to monitor and set the condition to measure against.  i.e. select 'temperature' in the column, select '>' and 60.  This would trigger the rule when the temperature value is above 60.
