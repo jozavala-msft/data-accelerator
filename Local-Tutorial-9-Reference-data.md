@@ -21,11 +21,12 @@ In this tutorial, you'll learn to:
 ```sql
     JOIN myRefData ON myRefData.temperature;
 ```
+![Add Reference file](./tutorials/images/referencequery.PNG)
+
  - Add an output statement to the code: <br/>
 ```sql
     OUTPUT extendedTemperature TO myOutput;
 ```
-![Add Reference file](./tutorials/images/referencequery.PNG)
  - Click Deploy
 
 Your data now has reference data joined to it.  You can view the results by looking at the local file output.  
