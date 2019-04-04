@@ -20,6 +20,8 @@ In this tutorial, you'll learn to:
 
 You have connected the Flow to a new output.  You can view the output data in the location you have setup.
 
-# Links
+* [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-5-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
+
+# Other Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
