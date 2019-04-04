@@ -74,14 +74,14 @@
 	
 	* e.g. 
 		* For Service fabric
-		* vmNodeTypeSize=Standard_D3_v2
-		* For details, please refer to https://azure.microsoft.com/en-us/pricing/details/service-fabric/
+		  * vmNodeTypeSize=Standard_D3_v2
+		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/service-fabric/
 	
 		* For HDInsight
-		* vmSizeSparkHeadnode=Standard_D12_V2
-		* vmSizeSparkWorkernode=Standard_D14_V2
-		* For details, please refer to https://azure.microsoft.com/en-us/pricing/details/hdinsight/
+		  * vmSizeSparkHeadnode=Standard_D12_V2
+		  * vmSizeSparkWorkernode=Standard_D14_V2
+		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/hdinsight/
 	
 		* For redis Cache, 
-		* redisCacheSize=Premium_P_3
-		* For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
+		  * redisCacheSize=Premium_P_3
+		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
