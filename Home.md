@@ -1,5 +1,5 @@
 # Welcome to Data Accelerator Wiki!
-[Data Accelerator](data-accelerator) dramatically simplifies onboarding to Streaming of Big Data on Spark. Get started in minutes on a rich, easy to use experience to help with creation, editing and management of streaming jobs via Flows. Microsoft uses Data Accelerator every day for processing streamed data from several products at Microsoft scale. <br/> <p align="center">![Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/prop-race-car-data.svg)<br/></p>
+[Data Accelerator](data-accelerator) dramatically simplifies onboarding to Streaming of Big Data on Spark. Get started in minutes on a rich, easy to use experience to help with creation, editing and management of streaming jobs via Flows. Various teams in Microsoft use Data Accelerator every day for processing streamed data from several products at Microsoft scale. <br/> <p align="center">![Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/prop-race-car-data.svg)<br/></p>
 
 # Installation guide
 To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) and check the tutorials for [cloud mode](https://github.com/Microsoft/data-accelerator/wiki/Tutorials#cloud-mode). 
