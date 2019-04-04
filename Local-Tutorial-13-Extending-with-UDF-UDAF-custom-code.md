@@ -51,6 +51,8 @@ T1 = SELECT myUDAF(myArray)
 
  - hit 'Deploy' to deploy your changes! 
 
+* [Next Tutorial : Custom Schema](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-14-Custom-schema)
+
 # Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
