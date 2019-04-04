@@ -9,7 +9,7 @@
  - Go to the system tray, you will see a ship icon (if you do not see the docker icon in the system tray, go to start and type "docker" and click on it to start the docker desktop) and on hovering on the shop icon it will show that docker is starting post reboot. 
  - Once the docker icon is stable, you will be required to login. Do the below steps only after the docker icon is stable i.e. the docker has started successfully.
  - **docker Settings:** 
-	**Right click on Docker in the system tray Settings-->Advanced -->CPU: 4 cores; Memory: at least 4 GB (4096 MB).**
+	**Right click on Docker in the system tray Settings-->Advanced -->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**
    **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
 ## Other useful commands
  - Visit the [docker documentation](https://docs.docker.com/engine/reference/commandline/docker/) for detailed commands
