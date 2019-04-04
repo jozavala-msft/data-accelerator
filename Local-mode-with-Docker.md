@@ -1,7 +1,7 @@
 # Installation
-To unleash the full power of Data Accelerator, [deploy to Azure](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment). **We have also enabled running Data Accelerator locally, without any cloud dependencies, however, the features are very limited.** To run Data Accelerator locally, follow Local deployment steps below.
+To unleash the full power of Data Accelerator, [deploy to Azure](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment). **We have also enabled running Data Accelerator locally, without any cloud dependencies, however, the features are very limited (no [Live Query](live-query), Auto Schema inference, etc.).** To run Data Accelerator locally, follow Local deployment steps below.
 # Local Deployment
-Run Data Accelerator locally by downloading and running docker container. Features are very limited compared to cloud mode, but it gives you a cursory feel quickly.
+Run Data Accelerator locally by downloading and running docker container. Even though the features are very limited compared to cloud mode, it gives you a cursory feel of the overall experience quickly.
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
   - Once docker is installed and running, update the docker Settings (Note if you run the docker with less resources, your experience may be degraded or processing may lag particularly around the sample Flow): <br/> 
