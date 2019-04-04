@@ -1,3 +1,5 @@
+For various kinds of analysis, business insights, technical insights, cohort analysis, etc. it is important to analyze and "Tag" the streaming data. Downstream processing can then take advantage of these tags for immediate action or down the road insights. 
+
 In this tutorial, you'll learn to:
  - Create a tag rule without writing code
 
