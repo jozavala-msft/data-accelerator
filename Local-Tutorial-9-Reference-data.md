@@ -31,7 +31,8 @@ In this tutorial, you'll learn to:
 
 Your data now has reference data joined to it.  You can view the results by looking at the local file output.  
 
-# Links
+* [Next tutorial : Windowing](https://github.com/Microsoft/data-accelerator/wiki/Windowing-functions)
+
+# Other Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
-
