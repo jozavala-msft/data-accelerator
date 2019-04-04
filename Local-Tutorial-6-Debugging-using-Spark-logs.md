@@ -28,7 +28,7 @@ docker logs -f --tail 1000 <<containerID for example: 051b1617a877>>
 
 This will help diagnose issues, see exceptions and callstacks and confirm jobs are running properly.
 
-* [Next tutorial : Rules](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-7-Tag-Rules-output-to-local-file)
+* [Next tutorial : Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-7-Tag-Rules-output-to-local-file)
 
 # Other Links
 * [Tutorials](Tutorials)
