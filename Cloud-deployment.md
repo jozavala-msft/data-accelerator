@@ -2,7 +2,7 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
 
 # Prerequisites
  - Install Azure CLI from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
- - Download the scripts and templates locally via this link: 
+ - Download the scripts and templates locally via this link: https://github.com/Microsoft/data-accelerator/DeploymentCloud/
 
 # Deployment
  - Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide TenantId and SubscriptionId.  See Configuring the ARM template for details and options.
