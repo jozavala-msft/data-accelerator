@@ -11,8 +11,7 @@ In this tutorial, you'll learn to:
 
  - The Info tab has the Flow name.  We'll need that in the next step.
 ![Flow Info](./tutorials/images/Tutorial1-2.png)
- - Go to the tab Query, and replace the <flowname> with the flow name above
-![Flow Query](./tutorials/images/Tutorial1-3.png)
+
  - Click Deploy to start the flow.  That's it! 
 
 # View the metrics
