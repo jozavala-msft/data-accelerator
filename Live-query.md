@@ -28,6 +28,10 @@ T1 = SELECT * FROM DataXProcessedInput;
 
 - Depending on the number of Flows and debugging sessions running on the cluster, and the capacity of the cluster itself in terms of cores and memory, you could run out of capacity to instantiate more debugging sessions. When this happens, you get error message such as "Session ended" or "Unable to instantiate kernel". When you run into this situation, you can choose to kill all the debugging sessions that are active by clicking on 'Clear All Kernels', thus freeing up the cluster and allowing you to get a session. Note, this will not kill the Flows deployed, but only the debugging sessions. 
 
+# Notes
+ - Live Query does not support the aliases like CreateMetrics or ProcessRules.  
+ - If you see a 404 error or 'session # not found', please use the "Refresh" button to instanciate a new kernel
+
 # Feedback
 Let us know what you think about this feature, what worked, and what else you would like to see. 
 
