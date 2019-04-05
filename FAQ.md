@@ -18,7 +18,8 @@
    ```
    docker image prune -af
    ```
-## ssh into the container to view output in case you have specified that in your flow
+## View output within a docker container
+You can view files within a container by using SSH to connect into the container.  This is useful to view output in case you have specified that in your flow.  
  - If you wish to view data from output
    ```
    docker exec -it dataxlocal /bin/bash
@@ -31,6 +32,15 @@
     ```
     cat <filename>
     ```
+# Copy files into or from a docker container
+To copy files into the container, use the following
+```
+docker cp myfile.txt dataxlocal:/app/aspnetcore/myfile.txt
+```
+To copy files out of the container, use the following
+```
+docker cp dataxlocal:/app/aspnetcore/myfile.txt myfile.txt
+```
 ## Look at Spark Logs
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 #  ARM Deployment FAQ
