@@ -16,7 +16,16 @@
 ## Cleaning up:
  - If you wish to delete all dangling images from your machine and images that are not attached to any container
    ```
-   Docker image prune -af
+   docker image prune -af
+   ```
+## ssh into the container:
+ - If you wish to view data from output
+   ```
+   docker exec -it dataxlocal /bin/bash
+   ```
+  - View the contents of a folder
+   ```
+   ls
    ```
 ## Look at Spark Logs
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
