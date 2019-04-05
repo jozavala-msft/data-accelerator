@@ -9,7 +9,7 @@ In this tutorial, you'll learn to:
  - Open the Output Tab to configure an output and select Add 'Local' <br/>
  ![New output](./tutorials/images/outputaddlocal.PNG)
    - For Alias, input "myOutput"; this is how the output will be referred to throughout the Flow, 
-   - For folder, you can input 'file:///c:/output'; this is the folder data will go to
+   - For folder, you can input '/app/myFolder'; this is the folder data will go to within the docker container
    - Format will be JSON
    - You can decide to use GZIP compression or none as well <br/>
  ![New output](./tutorials/images/outputaddlocalinfo.PNG)
