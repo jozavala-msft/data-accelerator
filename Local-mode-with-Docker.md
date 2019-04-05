@@ -44,7 +44,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
     ###### To learn more, see the [tutorial on logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 
 # SSH into the docker container
-      ```
+   -  ```
       docker exec -it dataxlocal /bin/bash
       ```
 
