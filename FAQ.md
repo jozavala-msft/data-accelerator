@@ -19,7 +19,7 @@
    docker image prune -af
    ```
 ## View output within a docker container
-You can view files within a container by using SSH to connect into the container.  This is useful to view output in case you have specified that in your flow.  
+You can view files within a container by statrting a bash session inside the container.  This is useful to view output in case you have that specified in your flow.  
  - If you wish to view data from output
    ```
    docker exec -it dataxlocal /bin/bash
