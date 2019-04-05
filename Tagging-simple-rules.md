@@ -16,7 +16,7 @@ For various kinds of analysis, business insights, technical insights, cohort ana
 
 	--DataXQuery--<br/>
 	T1 = ProcessRules(DataXProcessedInput);<br/>
- ![Rules Query](./tutorials/images/simplerulecode.png)
+ ![Rules Query](./tutorials/images/simplerulecode.PNG)
 
 * Click "Deploy" button. That's it! You have now created a rule for tagging. T1 will contain data from DataXProcessedInput along with tags. Each time a door is locked, the message will contain the Tag "DoorLocked". <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)

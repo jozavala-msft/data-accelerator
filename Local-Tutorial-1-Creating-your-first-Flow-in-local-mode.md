@@ -11,8 +11,7 @@ In this tutorial, you'll learn to:
 
  - The Info tab has the Flow name.  We'll need that in the next step.
 ![Flow Info](./tutorials/images/Tutorial1-2.png)
- - Go to the tab Query, and replace the <flowname> with the flow name above
-![Flow Query](./tutorials/images/Tutorial1-3.png)
+
  - Click Deploy to start the flow.  That's it! 
 
 # View the metrics
@@ -20,3 +19,9 @@ In this tutorial, you'll learn to:
 	![Metrics](./tutorials/images/Tutorial1-4.png)
 
 You have now created a pipeline with visualization of the incoming data.
+
+* [Next tutorial : Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-2-Add-an-Alert/)
+
+# Other Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
