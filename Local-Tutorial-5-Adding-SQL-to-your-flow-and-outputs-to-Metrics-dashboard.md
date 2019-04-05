@@ -31,3 +31,9 @@ In this tutorial, you'll learn to:
  - The Run button lets you query incoming data in line and get results instantly.  (This functionality is only available in a Azure deployment.  See the Cloud SQL Tutorial to learn more.)
 
 You can now continue to iterate on your query to add more logic and validate the changes on the Metrics dashboard.
+
+* [Next tutorial : Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
+
+# Other Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 

@@ -28,7 +28,7 @@ T1 will now contain the DataXProcessedInput data, along with tags from the rule 
  ![Deploy](./tutorials/images/Deploy.PNG)
 
 # View Data
-Now, switch over to the output sink, and notice the data flowing in with the Tags. 
+Now, switch over to the output sink (blob), and notice the data flowing in with the Tags. 
 
 # Links
 * [Tutorials](Tutorials)

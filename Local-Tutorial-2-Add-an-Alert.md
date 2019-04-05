@@ -20,6 +20,8 @@ In this tutorial, you'll learn to:
 ![Add](./tutorials/images/alertwarmdashboard.png)
 
 You now have update your pipeline to create alerts.  
-# Links
+* [Next tutorial : Aggregate Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-3-Advanced-Aggregate-alerts)
+
+# Other Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 

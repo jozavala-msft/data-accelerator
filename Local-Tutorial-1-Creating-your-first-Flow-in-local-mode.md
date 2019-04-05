@@ -19,3 +19,9 @@ In this tutorial, you'll learn to:
 	![Metrics](./tutorials/images/Tutorial1-4.png)
 
 You have now created a pipeline with visualization of the incoming data.
+
+* [Next tutorial : Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-2-Add-an-Alert/)
+
+# Other Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 

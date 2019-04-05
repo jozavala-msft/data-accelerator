@@ -57,16 +57,15 @@ Similar to UDF, you can set up a UDAF (user-defined aggregated function):
  - Select UDAF from the drop down.  
  - Similar settings as with UDF need to be provided.  The jar file also needs to be updated under the default container of the default blob of the Spark cluster
 
-To use the UDAF, you can pass in a table to the UDAF alias:
+To use the UDAF, you can pass in an array to the UDAF alias:
 
 ```sql
 --DataXQuery--
-T1 = SELECT myUDAF(deviceDetails.deviceId)
-     FROM DataXProcessedInput
-     GROUP BY deviceDetails.homeId;
+T4 = SELECT myUDAF(DataXProcessedInput)
+     FROM DataXProcessedInput;
 ```
 
-You can test your query using [Live query](Live-query) Run button after selecting your query.  Once you are satisfied with the changes, hit 'Deploy' to deploy your changes! 
+- Hit 'Deploy' to deploy your changes! 
 
 # Links
 * [Tutorials](Tutorials)

@@ -1,32 +1,35 @@
 # Installation
-To unleash the full power of Data Accelerator, [deploy to Azure](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment). **We have also enabled running Data Accelerator locally, without any cloud dependencies, however, the features are very limited.** To run Data Accelerator locally, follow Local deployment steps below.
+To unleash the full power of Data Accelerator, [deploy to Azure](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment). We have also enabled running Data Accelerator locally, without any cloud dependencies, however, the features are very limited (no [Live Query](live-query), Auto Schema inference, etc.). To run Data Accelerator locally, follow Local deployment steps below.
 # Local Deployment
-Run Data Accelerator locally by downloading and running docker container. Features are very limited compared to cloud mode, but it gives you a cursory feel quickly.
+Run Data Accelerator locally by downloading and running docker container. Even though the features are very limited compared to cloud mode, it gives you a cursory feel of the overall experience quickly.
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
-  - Once docker is installed and running, update the docker Settings: **Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 8 GB (8192 MB).**
-**![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
+  - Once docker is installed and running, update the docker Settings (Note if you run the docker with less resources, your experience may be degraded or processing may lag particularly around the sample Flow): <br/> 
+**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**<br/>
+**![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
 # Deployment
-   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac 
-     - **Clean up previous image(s) to avoid caching issues**
+   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+     - **To get the latest docker image, delete the one you have downloaded previously. To do so, follow these steps:**
         ```
         docker images -a
         ```
           1. This will list all the images on your box. 
-          2. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          3. Run the following command for each of the <ImageId> in 2:
+          1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
+          1. Run the following command for each of the <ImageId> in step b to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
         ```
-     -  **Run docker container**    
+ 
+     -  **Run docker container. This will now bring down the latest image. If you didn't remove image as described above, then it will use the image you have downloaded already.**    
         ```
-        docker run --rm --name dataxlocal -d -p 5000:5000 -p 49080:2020 -p 4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
+        docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
         ```
    - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
    - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+
 # Running a job
  - To try out the sample:  Go to http://localhost:49080/config, select "BasicLocal" flow. 
  - Make an edit (for example, go to Query tab and enter a space in the editor), then Click ‘Deploy’
@@ -39,6 +42,11 @@ Run Data Accelerator locally by downloading and running docker container. Featur
     docker logs --tail 1000 dataxlocal
     ```
     ###### To learn more, see the [tutorial on logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
+
+# SSH into the docker container
+   -  ```
+      docker exec -it dataxlocal /bin/bash
+      ```
 
 # Stopping the docker container
  - When finished with the container, run the following stop the container to free up used resources.

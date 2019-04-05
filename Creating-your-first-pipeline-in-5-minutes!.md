@@ -12,11 +12,16 @@ One you have completed the deployment of Data Accelerator to your subscription, 
 
 * Switch to the Input tab and select input type you want to receive data from. Data Accelerator supports Eventhub and IoThub
 
-* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the properties of the IoThub to get the needed information. Note, sample data is already flowing into this IoThub. <br /><br />
+* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the 'Built-in endpoints' of the IoThub to get the needed information. Note, sample data is already flowing into this IoThub. <br /><br />
 _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
  ![Input](./tutorials/images/InputIoT.PNG)<br/>
+
+- If the IoThub or Eventhub that you are connecting to lives in another resourcegroup, or in another subscription but same tenant, please provide the Subscription Id and Resource group name as well. <br /><br />
+ ![Schema](./tutorials/images/subresource.PNG)<br/>
+
+- If the IoThub or Eventhub lives in another tenant instead, then follow [these steps](https://github.com/Microsoft/data-accelerator/wiki/Use-Input-in-different-tenant) before proceeding.  
 
 * Click "GetSchema" button. This will sample the data for the number of seconds specified and infer the schema of the incoming data. The data is an example of home automation data. <br /><br />
  ![Schema](./tutorials/images/GetSchema.PNG)<br/>
