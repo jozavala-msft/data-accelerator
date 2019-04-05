@@ -49,7 +49,7 @@ T1 = SELECT myUDAF(myArray)
      FROM DataXProcessedInput;
 ```
 
- - Hit 'Deploy' to deploy your changes! 
+Hit 'Deploy' to deploy your changes! 
 
 * [Next Tutorial : Custom Schema](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-14-Custom-schema)
 
