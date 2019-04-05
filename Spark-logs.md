@@ -54,6 +54,8 @@ _If you do not have access to the subscription where Data Accelerator is deploye
 # Conclusion
 With Data Accelerator's Jobs page, you can manage the job, and when you need to dig in to the logs to narrow down an issue, you can do so by clicking on the logs link and logging in to the HDInisghts cluster. 
 
-
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
 
 
