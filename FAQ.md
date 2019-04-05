@@ -24,9 +24,9 @@
    docker exec -it dataxlocal /bin/bash
    ```
   - View the contents of a folder
-   ```
-   ls
-   ```
+    ```
+    ls
+    ```
 ## Look at Spark Logs
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 #  ARM Deployment FAQ
