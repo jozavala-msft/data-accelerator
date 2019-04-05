@@ -29,9 +29,9 @@ Once you have done so, you can use the UDF in your query,
 ```sql
 --DataXQuery--
 T3 = SELECT 
-                        *
-                        myUDFFunction("myName") AS udfresult
-                    FROM T2
+        *,
+        myUDFFunction("myName") AS udfresult
+     FROM T2
 ```
 
 # Adding a Scala User-Defined Aggregated Function
@@ -49,7 +49,7 @@ T1 = SELECT myUDAF(myArray)
      FROM DataXProcessedInput;
 ```
 
- - hit 'Deploy' to deploy your changes! 
+ - Hit 'Deploy' to deploy your changes! 
 
 * [Next Tutorial : Custom Schema](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-14-Custom-schema)
 
