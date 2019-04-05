@@ -18,7 +18,7 @@
    ```
    docker image prune -af
    ```
-## ssh into the container:
+## ssh into the container to view output in case you have specified that in your flow
  - If you wish to view data from output
    ```
    docker exec -it dataxlocal /bin/bash
