@@ -18,7 +18,10 @@ In this tutorial, you'll learn to:
  ![New output](./tutorials/images/outputquery.PNG)
  - Click Deploy.  
 
-You have connected the Flow to a new output.  You can view the output data in the location you have setup.
+You have connected the Flow to a new output.  
+
+# Viewing the data
+The data is being output within the container.  In order to view it, you need to connect (bash) into the container.  See the [FAQ](FAQ).
 
 * [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-5-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
 
