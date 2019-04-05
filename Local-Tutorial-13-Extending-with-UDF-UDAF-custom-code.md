@@ -11,7 +11,7 @@ To set up a user-defined function or UDF:
  - Select UDF from the drop down in the Function tab.
  - You will need to provide 
     - an alias, For example 'myUDFFunction'
-    - Path to the jar file that implement the jUDF interface. See an example below.  For example:  'file:///c:/myUDF.jar'
+    - Path to the jar file that implement the jUDF interface. See an example below.  For example:  '/app/myUDF.jar'
     - The class name is the fully qualified path and classname, i.e. datax.sample.udf.UdfHelloWorld
 
 ```scala
