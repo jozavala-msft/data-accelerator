@@ -20,3 +20,6 @@ If your input Eventhub or IotHub is in a different tenant, you have to create th
 		
 ![resourceCreationFalse](./tutorials/images/eventHubConsumerGroup.png)
 		
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
