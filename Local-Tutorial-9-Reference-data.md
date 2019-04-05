@@ -8,7 +8,7 @@ In this tutorial, you'll learn to:
  - Open your Flow and go to the Reference tab
  - Add a new CSV/TSV file <br/>
 ![Add Reference file](./tutorials/images/referenceadd.png)
- - Given a csv file that looks as such located in /app/myRefData.csv in the container<br/>
+ - Given a csv file that looks as such located in /app/myRefData.csv in the container<br/>.  See [FAQ](FAQ) how to upload a file to your docker.
 ![Add Reference file](./tutorials/images/referencetemp.PNG)
  - Set up your CSV by setting up:
     - Alias: this will be how to use the reference data in your query, for example: myRefData
