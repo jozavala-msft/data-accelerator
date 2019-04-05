@@ -85,3 +85,7 @@
 		* For redis Cache, 
 		  * redisCacheSize=Premium_P_3
 		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
+
+# Links
+* [Tutorials](Tutorials)
+* [Wiki Home](Home) 
