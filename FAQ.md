@@ -46,8 +46,12 @@ docker cp dataxlocal:/app/aspnetcore/myfile.txt myfile.txt
 #  ARM Deployment FAQ
 ## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
- - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment 
- - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your subscription admin to run these steps
+ - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment: 
+```
+adminSteps.ps1 
+(along with the generated configuration file (copy the whole folder))
+````
+ - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your tenant admin to run admin steps
  - If you see an error related to Azure login, your deployment may occur on a different account. Please make sure you log in Azure with the right information
  - I am a guest of a tenant, how can I deploy DataX?  You need to be a contributor of the tenant, please speak to your admin to gain access.
  - How many resources does the ARM template create?  We create 1 resource group for all 24 resources.
