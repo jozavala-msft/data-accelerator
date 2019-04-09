@@ -91,7 +91,7 @@ To remove an existing Accumulator table, you must connect to the head node of th
  - Delete hdfs folder
 ```
 	>hdfs dfs -rm -r <hdfs folder path>
-``` 
+```
 
 Example:
 ```
