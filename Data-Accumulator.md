@@ -69,7 +69,9 @@ Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeO
  ![Alert](./tutorials/images/accumulatorchart.PNG)
 
 # Persistence
-Accumulator tables are persisted in memory, and on disk of the HDInsight cluster.  They exists as singletons for the cluster, so it is possible to run into conflicts if two jobs use the same name.  Make sure to use unique names for the Accumulator tables between Flows. Once you have set a schema for an Accumulator table, you can no longer change it.
+Accumulator tables are persisted in memory, and on disk of the HDInsight cluster.  They exists as singletons for the cluster, so it is possible to run into conflicts if two jobs use the same name.  Few things to follow:
+  - Make sure to use unique names for the Accumulator tables between Flows. 
+  - Once you have set a schema for an Accumulator table, you can no longer change it. You'll have to change name or delete the table.  See below.
 
 To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line:
  - SSH into the head node of the HDInsight cluster ( Use either putty or other SSH utility tools. Instructions on how to SSH is at https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-linux-ambari-ssh-tunnel)
