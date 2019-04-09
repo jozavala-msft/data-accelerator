@@ -91,9 +91,9 @@ To remove an existing Accumulator table, you must connect to the head node of th
  - Delete hdfs folder
 ```
 	>hdfs dfs -rm -r <hdfs folder path>
-```	 
+``` 
 
- - Example:
+Example:
 ```
 	>hdfs dfs -rm -r hdfs://mycluster/datax/myFlow/myAccmulationTable
 ```
