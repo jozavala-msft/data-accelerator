@@ -38,7 +38,7 @@ GarageDoorAccumalator = SELECT
 
 ```sql
 --DataXQuery--
-  iotdevice_GarageDoor_accumulated = SELECT
+  iotdevicesample_GarageDoor_accumulated = SELECT
         deviceId,
         deviceType,
         homeId,
@@ -53,7 +53,7 @@ GarageDoorAccumalator = SELECT
 ```sql
 --DataXQuery--
  House150Data = SELECT COUNT(DISTINCT eventTime) AS totalTime                   
-                FROM iotdevice_GarageDoor_accumulated                  
+                FROM iotdevicesample_GarageDoor_accumulated
                 WHERE homeId = 150 AND status=0;
 
 House150GarageTotalTimeOpen = CreateMetric(House150Data, totalTime);
