@@ -15,7 +15,7 @@ CREATE TABLE iotdevicesample_GarageDoor_accumulated_tutorial
 
 ```sql
 --DataXQuery--
-GarageDoorAccumalator = SELECT 
+GarageDoorAccumulator = SELECT 
                             deviceDetails.deviceId,
                             deviceDetails.deviceType,
                             deviceDetails.homeId,
@@ -45,7 +45,7 @@ GarageDoorAccumalator = SELECT
         eventTime,
         status  
     FROM
-        GarageDoorAccumalator;
+        GarageDoorAccumulator;
 ```
 
 - That's it! You have now created an accumulator which tracks the device status over time. Now, let's plot this data for house #150. 
