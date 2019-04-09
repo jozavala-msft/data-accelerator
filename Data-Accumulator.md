@@ -7,7 +7,7 @@ We will walk through the example described above: determining how long the garag
 
 ```sql
 --DataXStates--
-CREATE TABLE iotdevicesample_GarageDoor_accumulated
+CREATE TABLE iotdevicesample_GarageDoor_accumulated_tutorial
     (deviceId long, deviceType string, homeId long, eventTime Timestamp, status long);
 ``` 
 
@@ -22,7 +22,7 @@ GarageDoorAccumalator = SELECT
                             deviceDetails.eventTime,
                             deviceDetails.status
                         FROM DataXProcessedInput
-                        WHERE deviceType = 'GarageDoorLock'
+                        WHERE deviceDetails.deviceType = 'GarageDoorLock'
                         UNION ALL
                         SELECT 
                             deviceId,
@@ -30,7 +30,7 @@ GarageDoorAccumalator = SELECT
                             homeId,
                             eventTime,
                             status
-                        FROM iotdevicesample_GarageDoor_accumulated
+                        FROM iotdevicesample_GarageDoor_accumulated_tutorial
                         WHERE hour(eventTime) = hour(current_timestamp());
 ```
 
@@ -38,7 +38,7 @@ GarageDoorAccumalator = SELECT
 
 ```sql
 --DataXQuery--
-  iotdevicesample_GarageDoor_accumulated = SELECT
+  iotdevicesample_GarageDoor_accumulated_tutorial = SELECT
         deviceId,
         deviceType,
         homeId,
@@ -53,7 +53,7 @@ GarageDoorAccumalator = SELECT
 ```sql
 --DataXQuery--
  House150Data = SELECT COUNT(DISTINCT eventTime) AS totalTime                   
-                FROM iotdevicesample_GarageDoor_accumulated
+                FROM iotdevicesample_GarageDoor_accumulated_tutorial
                 WHERE homeId = 150 AND status=0;
 
 House150GarageTotalTimeOpen = CreateMetric(House150Data, totalTime);
@@ -67,6 +67,36 @@ OUTPUT House150GarageTotalTimeOpen TO Metrics;
 # View Metrics
 Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeOpen, which shows the total time the garage door has been open in the hour. Also notice, that it will reset to 0 at the start of the hour. <br/>
  ![Alert](./tutorials/images/accumulatorchart.PNG)
+
+# Persistence
+Accumulator tables are persisted in memory, and on disk of the HDInsight cluster.  They exists as singletons for the cluster, so it is possible to run into conflicts if two jobs use the same name.  Make sure to use unique names for the Accumulator tables between Flows. Once you have set a schema for an Accumulator table, you can no longer change it.
+
+To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line:
+ - SSH into the head node of the HDInsight cluster ( Use either putty or other SSH utility tools. Instructions on how to SSH is at https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-linux-ambari-ssh-tunnel)
+ - View files
+```
+	>hdfs dfs -ls hdfs://mycluster/datax/<flowName>/<accumulationTableName>/
+```
+ - Download files
+```
+	>hdfs dfs -get hdfs://mycluster/<path>   <local path>
+```
+ - Upload file
+```
+	>hdfs dfs -put <local path>   <remote path>
+```
+
+ - Delete hdfs folder
+```
+	>hdfs dfs -rm -r <hdfs folder path>
+```	 
+
+Example:
+```
+	>hdfs dfs -rm -r hdfs://mycluster/datax/myFlow/myAccmulationTable
+```
+
+For more details on hdfs refer to https://hortonworks.com/hadoop-tutorial/using-commandline-manage-files-hdfs/
 
 # Links
 * [Tutorials](Tutorials)
