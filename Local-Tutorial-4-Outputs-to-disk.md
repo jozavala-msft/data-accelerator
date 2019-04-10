@@ -38,7 +38,8 @@ You can view files within a container by statrting a bash session inside the con
     ```
     cat <filename>
     ```
-* [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-5-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
+
+##* [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-5-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
 
 # Other Links
 * [Tutorials](Tutorials)
