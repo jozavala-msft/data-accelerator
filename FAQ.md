@@ -28,6 +28,10 @@ You can view files within a container by statrting a bash session inside the con
     ```
     ls
     ```
+  - Navigate to a particular folder
+    ```
+    cd
+    ```
   - View the contents of a file
     ```
     cat <filename>
