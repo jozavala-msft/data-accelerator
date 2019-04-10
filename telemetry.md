@@ -19,13 +19,13 @@ In the Data Accelerator portal if you are trying to [GetSchema](https://github.c
     | where operation_Name  contains "POST SchemaInference/GetInputSchema"
     ```
 
-** Want to enhance what's getting logged in the backend services?**
+## Want to enhance what's getting logged in the backend services?
 We are using the ILogger implementation and the ILogger instance (_logger) is available in each of the classes in the backend services. 
 Example: 
   ```
   _logger.LogInformation($"Event count = {events.Count}");
   ```
-**Want to filter telemetry that is being sent?**
+## Want to filter telemetry that is being sent?**
 For DataX.Flow services You can filter additional telemetry in Startup.cs. This will require a redeployment of the services.
 More details on ILogger and ApplicationInsights at the below links:
   - [ILogger](https://docs.microsoft.com/en-us/azure/azure-monitor/app/ilogger)
