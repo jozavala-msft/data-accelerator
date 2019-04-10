@@ -17,7 +17,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
         ```
           1. This will list all the images on your box. 
           1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the <ImageId> in step b to remove them from the machine:
+          1. Run the following command for each of the <<ImageId>> in step b to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
