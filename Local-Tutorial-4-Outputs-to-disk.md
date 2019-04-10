@@ -21,7 +21,7 @@ In this tutorial, you'll learn to:
 You have connected the Flow to a new output.  
 
 ## View output within a docker container
-You can view files within a container by statrting a bash session inside the container.  This is useful to view output in case you have that specified in your flow.  
+You can view files within a container by statrting a bash session inside the container.  This is useful to view output in case you have that specified in your flow. You can cd into the folder you specified when adding a local output location, say, Local Folder URI (e.g. /app/aspnetcore/output)
  - If you wish to view data from output
    ```
    docker exec -it dataxlocal /bin/bash
@@ -30,13 +30,14 @@ You can view files within a container by statrting a bash session inside the con
     ```
     ls
     ```
+  - Navigate to a particular folder
+    ```
+    cd <folder name>
+    ```
   - View the contents of a file
     ```
     cat <filename>
     ```
-# Viewing the data
-The data is being output within the container.  In order to view it, you need to connect (bash) into the container.  See the [FAQ](FAQ).
-
 * [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-5-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
 
 # Other Links
