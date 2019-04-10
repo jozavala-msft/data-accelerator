@@ -30,7 +30,7 @@ You can view files within a container by statrting a bash session inside the con
     ```
   - Navigate to a particular folder
     ```
-    cd
+    cd <folder name>
     ```
   - View the contents of a file
     ```
