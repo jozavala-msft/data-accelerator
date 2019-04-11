@@ -48,7 +48,6 @@ For each of the backend services, for example, DataX.Flow service you can filter
         // Additional filtering For category starting in "Microsoft",
         // only Warning or above will be sent to Application Insights.
         logging.AddFilter<ApplicationInsightsLoggerProvider>("Microsoft", LogLevel.Warning);
-
      }
    ```  
 Please note: This will require a redeployment of the services.
