@@ -13,8 +13,8 @@ In this case, you are in the Input tab on Data Accelerator portal. Let's say if 
     | order by timestamp desc 
     | where operation_Name  contains "POST SchemaInference/GetInputSchema"
     ```
-    Example output:
-    ![Data Accelerator](./tutorials/images/AIErrorResult.PNG)
+Example output:
+![Data Accelerator](./tutorials/images/AIErrorResult.PNG)
     
     
   - Look at the traces logs:
