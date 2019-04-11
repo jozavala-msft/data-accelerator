@@ -14,7 +14,7 @@ In this case, you are in the Input tab on Data Accelerator portal. Let's say if 
     | where operation_Name  contains "POST SchemaInference/GetInputSchema"
     ```
     Example output:
-    ![Data Accelerator](./tutorials/images/AIErrorResult.PNG)<br/></p>
+    ![Data Accelerator](./tutorials/images/AIErrorResult.PNG)
     
     
   - Look at the traces logs:
