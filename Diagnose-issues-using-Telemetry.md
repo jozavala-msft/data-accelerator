@@ -23,7 +23,7 @@ Example output:
     | where operation_ParentId contains "datax-service" 
     | where operation_Name  contains "POST SchemaInference/GetInputSchema"
     ```
-## Scenario 2: Live Query Initialization
+## Scenario 2: Live Query: Jupyter Kernel Initialization
 Please refer to the tutorial on [Live Query](https://github.com/Microsoft/data-accelerator/wiki/Live-query#steps-to-follow) Once you click on an existing flow, the Jupyter kernel is initialized. If there was an error / exception while the kernel was getting initialized, you will see an error on the query tab. For more details, you can go to ApplicationInsights on the Azure portal and issue the below queries to look at the telemetry data. This will help you debug the issue. The recommendation is that if the kernel has not initialized correctly. Steps to follow:
   - Click on GetSchema in the Input tab. If there is an error, check Application Insights Telemetry to debug why GetSchema is failing
   -  Once GetSchema succeeds, this will automatically trigger kernel initialization. If there is an error, go to the Azure portal --> ApplicationInsights resource and click on [Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/app/analytics).
@@ -33,7 +33,6 @@ Please refer to the tutorial on [Live Query](https://github.com/Microsoft/data-a
     exceptions 
     | order by timestamp desc 
     | where operation_Name contains "POST InteractiveQuery/CreateAndInitializeKernel"
-
     ```
 Example output:
 ![Data Accelerator](./tutorials/images/AIErrorResult.PNG)
