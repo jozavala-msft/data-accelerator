@@ -51,6 +51,6 @@ For each of the backend services, for example, DataX.Flow service you can filter
      }
    ```  
 Please note: This will require a redeployment of the services.
-More details on ILogger and ApplicationInsights at the below links:
+##### More details on ILogger and ApplicationInsights at the below links:
   - [ILogger](https://docs.microsoft.com/en-us/azure/azure-monitor/app/ilogger)
   - [Filter Rules in code](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-2.2#filter-rules-in-code)
