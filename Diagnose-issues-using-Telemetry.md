@@ -36,20 +36,20 @@ Whereever you feel that the logs should be added, a similar call can be made.
 For each of the backend services, for example, DataX.Flow service you can filter additional telemetry in StartUpUtil.cs.
    ```
    services.AddLogging(logging =>
-            {
-                try
-                {
-                    // In order to log ILogger logs
-                    logging.AddApplicationInsights();
-                    // Optional: Apply filters to configure LogLevel Information or above is sent to
-                    // ApplicationInsights for all categories.
-                    logging.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
+   {
+     try
+     {
+        // In order to log ILogger logs
+        logging.AddApplicationInsights();
+        // Optional: Apply filters to configure LogLevel Information or above is sent to
+        // ApplicationInsights for all categories.
+        logging.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
 
-                    // Additional filtering For category starting in "Microsoft",
-                    // only Warning or above will be sent to Application Insights.
-                    logging.AddFilter<ApplicationInsightsLoggerProvider>("Microsoft", LogLevel.Warning);
+        // Additional filtering For category starting in "Microsoft",
+        // only Warning or above will be sent to Application Insights.
+        logging.AddFilter<ApplicationInsightsLoggerProvider>("Microsoft", LogLevel.Warning);
 
-                }
+     }
    ```  
 Please note: This will require a redeployment of the services.
 More details on ILogger and ApplicationInsights at the below links:
