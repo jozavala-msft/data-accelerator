@@ -14,7 +14,6 @@ In this case, you are in the Input tab on Data Accelerator portal. Let's say if 
     | where operation_Name  contains "POST SchemaInference/GetInputSchema"
     ```
     Example output:
-![Docker Specs](./tutorials/images/Tutorial1-6.jpg)
     ![Data Accelerator](./tutorials/images/AIErrorResult.PNG)
     
     
