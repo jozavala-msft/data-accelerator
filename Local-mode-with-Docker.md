@@ -5,7 +5,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
   - Once docker is installed and running, update the docker Settings (Note if you run the docker with less resources, your experience may be degraded or processing may lag particularly around the sample Flow): <br/> 
-**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**<br/>
+**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 4 GB (4096 MB).**<br/>
 **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
@@ -16,8 +16,8 @@ Run Data Accelerator locally by downloading and running docker container. Even t
         docker images -a
         ```
           1. This will list all the images on your box. 
-          1. Note the <ImageId> for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the <ImageId> in step b to remove them from the machine:
+          1. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
+          1. Run the following command for each of the **ImageId** in step b to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
@@ -25,7 +25,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
  
      -  **Run docker container. This will now bring down the latest image. If you didn't remove image as described above, then it will use the image you have downloaded already.**    
         ```
-        docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v2
+        docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
         ```
    - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
    - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
@@ -42,6 +42,11 @@ Run Data Accelerator locally by downloading and running docker container. Even t
     docker logs --tail 1000 dataxlocal
     ```
     ###### To learn more, see the [tutorial on logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
+
+# SSH into the docker container
+   -  ```
+      docker exec -it dataxlocal /bin/bash
+      ```
 
 # Stopping the docker container
  - When finished with the container, run the following stop the container to free up used resources.

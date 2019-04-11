@@ -16,15 +16,46 @@
 ## Cleaning up:
  - If you wish to delete all dangling images from your machine and images that are not attached to any container
    ```
-   Docker image prune -af
+   docker image prune -af
    ```
+## View output within a docker container
+You can view files within a container by statrting a bash session inside the container.  This is useful to view output in case you have that specified in your flow. You can cd into the folder you specified when adding a local output location, say, Local Folder URI (e.g. /app/aspnetcore/output)
+ - If you wish to view data from output
+   ```
+   docker exec -it dataxlocal /bin/bash
+   ```
+  - View the contents of a folder
+    ```
+    ls
+    ```
+  - Navigate to a particular folder
+    ```
+    cd <folder name>
+    ```
+  - View the contents of a file
+    ```
+    cat <filename>
+    ```
+# Copy files into or from a docker container
+To copy files into the container, use the following
+```
+docker cp myfile.txt dataxlocal:/app/aspnetcore/myfile.txt
+```
+To copy files out of the container, use the following
+```
+docker cp dataxlocal:/app/aspnetcore/myfile.txt myfile.txt
+```
 ## Look at Spark Logs
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
 #  ARM Deployment FAQ
 ## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
- - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment 
- - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your subscription admin to run these steps
+ - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment: 
+```
+adminSteps.ps1 
+(along with the generated configuration file (copy the whole folder))
+````
+ - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your tenant admin to run admin steps
  - If you see an error related to Azure login, your deployment may occur on a different account. Please make sure you log in Azure with the right information
  - I am a guest of a tenant, how can I deploy DataX?  You need to be a contributor of the tenant, please speak to your admin to gain access.
  - How many resources does the ARM template create?  We create 1 resource group for all 24 resources.

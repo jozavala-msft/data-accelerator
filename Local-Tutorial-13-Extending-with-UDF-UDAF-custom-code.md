@@ -11,7 +11,7 @@ To set up a user-defined function or UDF:
  - Select UDF from the drop down in the Function tab.
  - You will need to provide 
     - an alias, For example 'myUDFFunction'
-    - Path to the jar file that implement the jUDF interface. See an example below.  For example:  'file:///c:/myUDF.jar'
+    - Path to the jar file that implement the jUDF interface. See an example below.  For example:  '/app/myUDF.jar' within the docker container.
     - The class name is the fully qualified path and classname, i.e. datax.sample.udf.UdfHelloWorld
 
 ```scala
@@ -29,9 +29,9 @@ Once you have done so, you can use the UDF in your query,
 ```sql
 --DataXQuery--
 T3 = SELECT 
-                        *
-                        myUDFFunction("myName") AS udfresult
-                    FROM T2
+        *,
+        myUDFFunction("myName") AS udfresult
+     FROM T2
 ```
 
 # Adding a Scala User-Defined Aggregated Function
@@ -49,7 +49,7 @@ T1 = SELECT myUDAF(myArray)
      FROM DataXProcessedInput;
 ```
 
- - hit 'Deploy' to deploy your changes! 
+Hit 'Deploy' to deploy your changes! 
 
 * [Next Tutorial : Custom Schema](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-14-Custom-schema)
 
