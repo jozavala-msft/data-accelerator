@@ -30,8 +30,7 @@ GarageDoorAccumulator = SELECT
                             homeId,
                             eventTime,
                             status
-                        FROM iotdevicesample_GarageDoor_accumulated_tutorial
-                        WHERE hour(eventTime) = hour(current_timestamp());
+                        FROM iotdevicesample_GarageDoor_accumulated_tutorial;
 ```
 
 - Next, save this temp table above which has the accumulated data back to our persistent accumulator table as shown below.
@@ -65,7 +64,7 @@ OUTPUT House150GarageTotalTimeOpen TO Metrics;
  ![Deploy](./tutorials/images/Deploy.PNG)
 
 # View Metrics
-Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeOpen, which shows the total time the garage door has been open in the hour. Also notice, that it will reset to 0 at the start of the hour. <br/>
+Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeOpen, which shows the total time the garage door has been open in the hour. <br/>
  ![Alert](./tutorials/images/accumulatorchart.PNG)
 
 # Persistence
