@@ -49,7 +49,7 @@ String , Array, Map (control the length of data generated)
 ```
 Apart from these data types, boolean and struct data types are also supported in local mode.
 
-* [Next Tutorial : Scaling the host](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-15-Scaling-the-docker-host)
+* [Next Tutorial : Scaling the host](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-13-Scaling-the-docker-host)
 
 # Links
 * [Tutorials](Tutorials)
