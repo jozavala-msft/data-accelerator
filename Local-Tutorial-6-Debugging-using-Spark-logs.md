@@ -16,7 +16,7 @@ In this tutorial, you'll learn to:
 
 This will help diagnose issues, see exceptions and callstacks and confirm jobs are running properly.
 
-* [Next tutorial : Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-7-Tag-Rules-output-to-local-file)
+* [Next tutorial : Tag Rules](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-7-Tag-Rules-output-to-local-file)
 
 # Other Links
 * [Tutorials](Tutorials)
