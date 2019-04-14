@@ -47,7 +47,7 @@ To specify normalization, toggle 'Show Normalization' to on, and write the SQL s
 # Putting it all together
 Data Accelerator gives you very powerful windowing functions to accomplish most complex of tasks that can be easily expressed in the UI or inline in SQL with keywords. The home automation sample included with Data Accelerator makes use of these dials that you can explore further.
 
-* [Next Tutorial : Custom Code](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-13-Extending-with-UDF-UDAF-custom-code)
+* [Next Tutorial : Custom Code](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-11-Extending-with-UDF-UDAF-custom-code)
 
 # Links
 * [Tutorials](Tutorials)
