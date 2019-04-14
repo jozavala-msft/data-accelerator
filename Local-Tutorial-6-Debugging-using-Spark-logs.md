@@ -10,9 +10,9 @@ In this tutorial, you'll learn to:
      docker logs --tail 1000 dataxlocal
      ```
   - If you want to see the logs continuously be updated, you can use the '-f' flag:  
-    ```
-    docker logs -f --tail 1000 dataxlocal
-    ```
+     ```
+     docker logs -f --tail 1000 dataxlocal
+     ```
 
 This will help diagnose issues, see exceptions and callstacks and confirm jobs are running properly.
 
