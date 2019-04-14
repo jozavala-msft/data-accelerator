@@ -15,9 +15,9 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 1. [Add Aggregated Tags to your data](Local-Tutorial-8-Tag-Aggregate-to-metrics)
 1. [Use Reference Data to augment streaming data](Local-Tutorial-9-Reference-data)
 1. [Use Time Windowing to alert on larger window of data](Windowing-functions)
-1. [Use UDF and UDAF to call Scala code](Local-Tutorial-13-Extending-with-UDF-UDAF-custom-code)
-1. [Customize the schema](Local-Tutorial-14-Custom-schema)
-1. [Scale docker host](Local-Tutorial-15-Scaling-the-docker-host)
+1. [Use UDF and UDAF to call Scala code](Local-Tutorial-11-Extending-with-UDF-UDAF-custom-code)
+1. [Customize the schema](Local-Tutorial-12-Custom-schema)
+1. [Scale docker host](Local-Tutorial-13-Scaling-the-docker-host)
 
 ## Cloud mode:
 1. [Create a pipeline in 5 minutes!](Creating-your-first-pipeline-in-5-minutes!)
