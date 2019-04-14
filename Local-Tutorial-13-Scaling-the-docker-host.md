@@ -1,10 +1,10 @@
 
 # For best performance
 For best performance, it is recommended to use the following settings for docker:
- - CPU: 4
+ - CPU: 6
  - Memory: 4 gigs or more
 
-![Docker Specs](./tutorials/images/Tutorial1-6.jpg)
+![Docker Specs](./tutorials/images/AdvancedDockerSettings.jpg)
 
 # Links
 * [Tutorials](Tutorials)
