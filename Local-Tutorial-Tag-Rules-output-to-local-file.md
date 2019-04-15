@@ -22,7 +22,7 @@ In this tutorial, you'll learn to:
 
 T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the previous tutorial.
 
-* [Next tutorial : Aggregate Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-8-Tag-Aggregate-to-metrics)
+* [Next tutorial : Aggregate Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Tag-Aggregate-to-metrics)
 
 # Other Links
 * [Tutorials](Tutorials)
