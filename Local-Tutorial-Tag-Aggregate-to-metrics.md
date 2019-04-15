@@ -23,7 +23,7 @@ T2 will now contain the DataXProcessedInput data, along with tags from the rule 
 * Click "Deploy" button. That's it! You have now created an aggregate rule for tagging that will be output to disk.  <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
 
-* [Next tutorial : Reference Data](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
+* [Next tutorial : SQL Queries](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
 
 # Other Links
 * [Tutorials](Tutorials)
