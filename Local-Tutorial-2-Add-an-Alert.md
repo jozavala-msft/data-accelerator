@@ -6,7 +6,7 @@ Often, you want to be alerted based on certain conditions being met in the strea
  - Open your Flow
  - Go to Rules tab, and click Add a "Tag Rule".  
 ![Add](./tutorials/images/addrule.png)
- -  Set a Description for the rule and a tag to describe the rule
+ -  Set a Description for the rule and a Tag to describe the rule
  -  The target table is DataXProcessedInput, which is the default table that DataX creates with the raw data.  (Note, once you create new tables in the Query tab, explained in subsequent tutorial, the new tables will also be available to create rules and alerts against.)
 ![Add](./tutorials/images/addrulewarm.png)
  
