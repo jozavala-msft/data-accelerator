@@ -1,4 +1,4 @@
-The output tab let's you configure outputs to route data to.
+The output tab let's you configure outputs to route data to. Since we are in local mode, we will see how to output the data to the local file system. In the cloud mode (i.e. once Data Accelerator is deployed to Azure), you would be able to output data to various other sinks such as Azure blobs, CosmosDB, etc. 
 
 In this tutorial, you'll learn to:
  - Add an output location
