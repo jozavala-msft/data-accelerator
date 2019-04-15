@@ -11,7 +11,13 @@ Run Data Accelerator locally by downloading and running docker container. Even t
       ```
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
-     - **To get the latest docker image, delete the one you have downloaded previously. To do so, follow these steps:**
+
+        ```
+        docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
+        ```
+
+   - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
+
         ```
         docker images -a
         ```
@@ -23,11 +29,8 @@ Run Data Accelerator locally by downloading and running docker container. Even t
         docker image rm <ImageId>  
         ```
  
-     -  **Run docker container. This will now bring down the latest image. If you didn't remove image as described above, then it will use the image you have downloaded already.**    
-        ```
-        docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
-        ```
    - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+
    - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 
 # Running a job
