@@ -1,4 +1,4 @@
-Once you have completed the local installation instructions here, you are ready to start setting up a pipeline locally.
+Once you have completed the [installing locally](https://github.com/Microsoft/data-accelerator/wiki/Local-mode-with-Docker), you are ready to start setting up a pipeline locally.
 
 In this tutorial, you'll learn to:
  - Create a Flow
