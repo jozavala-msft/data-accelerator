@@ -20,7 +20,7 @@ Often, you want to be alerted based on certain conditions being met in the strea
 ![Add](./tutorials/images/alertwarmdashboard.png)
 
 You now have update your pipeline to create alerts.  
-* [Next tutorial : Aggregate Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-3-Advanced-Aggregate-alerts)
+* [Next tutorial : Aggregate Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Advanced-Aggregate-alerts)
 
 # Other Links
 * [Tutorials](Tutorials)
