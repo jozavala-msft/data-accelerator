@@ -32,7 +32,7 @@ You can view files within a container by statrting a bash session inside the con
     ```
     ls
     ```
-  - Navigate to a particular folder
+  - Navigate to a particular folder. Inside it, you will notice that the data is stored in folders based on YYYY/MM/dd/hh/mm/<batch interval> and contains a single file per output. 
     ```
     cd <folder name>
     ```
