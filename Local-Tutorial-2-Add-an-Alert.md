@@ -1,4 +1,4 @@
-In this tutorial, you'll learn to:
+Often, you want to be alerted based on certain conditions being met in the streaming data. Data Accelerator makes it very easy to do so, without having to write any code. In this tutorial, you'll learn to:
  - Create a an alert and an aggregated alert without writing code
 
 # Creating an alert
