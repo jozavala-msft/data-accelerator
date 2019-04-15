@@ -32,11 +32,11 @@ You can view files within a container by statrting a bash session inside the con
     ```
     ls
     ```
-  - Navigate to a particular folder. Inside it, you will notice that the data is stored in folders based on YYYY/MM/dd/hh/mm/<batch interval> and contains a single file per output. 
+  - Navigate to a particular folder. Inside it, you will notice that the data is stored in folders based on YYYY/MM/dd/hh/mm/_batch-interval_ and contains a single file per output. Example: cd /myOutput/2019/04/23/45/234800
     ```
     cd <folder name>
     ```
-  - View the contents of a file
+  - View the contents of a file. Example: cat part-0.json
     ```
     cat <filename>
     ```
