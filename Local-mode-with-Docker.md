@@ -21,17 +21,16 @@ Run Data Accelerator locally by downloading and running docker container. Even t
         ```
         docker images -a
         ```
-          1. This will list all the images on your box. 
-          1. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the **ImageId** in step b to remove them from the machine:
+
+* This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine:
 
         ```
         docker image rm <ImageId>  
         ```
- 
-   - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
 
-   - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+* Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+
+* Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 
 # Running a job
  - To try out the sample:  Go to http://localhost:49080/config, select "BasicLocal" flow. 
