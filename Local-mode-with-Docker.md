@@ -10,7 +10,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
 # Deployment
-   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+   - Run the below commands as admin in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
 
         ```
         docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
