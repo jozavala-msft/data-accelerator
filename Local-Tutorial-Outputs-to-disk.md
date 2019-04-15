@@ -17,7 +17,7 @@ In this tutorial, you'll learn to:
 ```sql 
 OUTPUT extendedTemperature TO myOutput;
 ```
- ![New output](./tutorials/images/outputquery.PNG)<br/>
+ ![New output](./tutorials/images/outputcode.PNG)<br/>
  - Click Deploy.  
 
 You have connected the Flow to a new output.  
