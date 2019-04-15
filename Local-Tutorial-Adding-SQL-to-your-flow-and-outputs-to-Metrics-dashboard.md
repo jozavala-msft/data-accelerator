@@ -32,7 +32,7 @@ In this tutorial, you'll learn to:
 
 You can now continue to iterate on your query to add more logic and validate the changes on the Metrics dashboard.
 
-* [Next tutorial : Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
+* [Next tutorial : Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Debugging-using-Spark-logs)
 
 # Other Links
 * [Tutorials](Tutorials)
