@@ -19,7 +19,7 @@ In the previous example we walked through how to set up a simple alert. At times
 # View Metrics
 Now, switch over to the Metrics tab and notice that there is a new table for 'Alert'<br/>
 
-* [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-4-Outputs-to-disk)
+* [Next tutorial : Output](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk)
 
 # Other Links
 * [Tutorials](Tutorials)
