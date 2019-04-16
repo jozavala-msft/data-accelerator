@@ -27,6 +27,10 @@ Run Data Accelerator locally by downloading and running docker container. Even t
             ````
             docker image rm <ImageId>  
             ````
+* Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+
+* Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+
 # Deployment With Security using Basic Auth
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
    - Refer to [Nginx readme](https://hub.docker.com/r/beevelop/nginx-basic-auth/) 
