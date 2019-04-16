@@ -1,4 +1,4 @@
-The Spark jobs has detailled logs; you can access them via the docker logs command.
+If you run into issues with your job, you will want to dig into the job logs to determine the cause. The Spark jobs has detailed logs; you can access them via the docker logs command.
 
 In this tutorial, you'll learn to:
  - View docker logs
