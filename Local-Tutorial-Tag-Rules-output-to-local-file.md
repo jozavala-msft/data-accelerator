@@ -10,7 +10,7 @@ In this tutorial, you'll learn to:
  - Set a Description for the rule and a tag to describe the rule.  This will be additional metadata being added to rows of the input table DataXProcessInput.
  - In conditions, select the column of data to monitor and set the condition to measure against.  i.e. select 'temperature' in the column, select '>' and 60.  This would trigger the rule when the temperature value is above 60.
 ![Add Rule Warm](./tutorials/images/addrulewarm.png)
- - In the Query tab, add the following, before the other OUTPUT statement:
+ - In the Query tab, call ProcessRules() API and route the data to your desired output sink:
 ```sql
 	--DataXQuery--
 	T1 = ProcessRules(DataXProcessedInput);
@@ -20,7 +20,7 @@ In this tutorial, you'll learn to:
  ![Rules Query](./tutorials/images/rulesquery.png)
  - Click Deploy
 
-T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the previous tutorial.
+T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the [previous tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).
 
 * [Next tutorial : Aggregate Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Tag-Aggregate-to-metrics)
 
