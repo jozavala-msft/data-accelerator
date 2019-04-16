@@ -40,9 +40,10 @@ Numbers (int, long, float, double)
   "metadata": {
         "useCurrentTimeMillis": true
       }
+```
 
 String , Array, Map (control the length of data generated)
-
+```javascript
  "metadata": {
         "maxLength": 9
       }
