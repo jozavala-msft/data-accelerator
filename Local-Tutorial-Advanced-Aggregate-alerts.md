@@ -2,7 +2,7 @@ In the previous example we walked through how to set up a simple alert. At times
 
 # Steps to follow
 * Open your flow 
-* To make the data more interesting, we will use the event schema below. This is the same schema that is also used by the HomeAutomationLocal sample. Copy this schema and paste it in your flow.
+* To make the data more interesting, we will use the event schema below. This is the same schema that is also used by the HomeAutomationLocal sample. Copy this schema and paste it in your flow, and delete any existing queries in the Query tab.
 
 ```javascript
 {
