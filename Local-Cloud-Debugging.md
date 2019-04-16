@@ -126,6 +126,9 @@ to our website's ```node_modules``` folder. This will cause your website to reco
 This ```localdevpatch.bat``` script assumes that the website GIT repo and this packages GIT repo share the same parent folder.
 If this is not the case, please change the paths of the script locally on your computer.
 
+# Spark DataProcessing
+To build the spark packages, install maven on your local box. On individual package run 'mvn package' 
+
 # Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
