@@ -17,7 +17,7 @@ In this tutorial, you'll learn to:
 
         OUTPUT T1 TO myOutput;
 ```
- ![Rules Query](./tutorials/images/localsimplequery.png)
+ ![Rules Query](./tutorials/images/localsimplequery.PNG)
  - Click Deploy
 
 T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the [previous tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).
