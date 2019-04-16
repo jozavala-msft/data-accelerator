@@ -21,6 +21,19 @@ RolesCheck.EnsureReader(Request, _isLocal);
 * Set the platform for the solution to x64 and F5
 * On browser open - http://localhost:8461/api/flow/getall/min
 
+## DataX.Gateway
+* Open DataX.Gateway.sln in VisualStudio (Run Visual Studio as admin)
+* In DataX.Gateway project, open Local.1Node.xml file under ApplicationParameters folder
+* Set values for the following parameters:
+  * AllowedUserRoles
+  * AppInsightsIntrumentationKey
+  * Audience
+  * ClientId
+  * ReverseProxySslThumbprint
+  * ServiceKeyvaultName
+  * SSL_Cert_Thumbprint
+  * Tenant
+
 # Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
