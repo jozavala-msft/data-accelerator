@@ -12,5 +12,18 @@ Learn how to use [Data Accelerator](data-accelerator) step by step and get start
 
 [Tutorials](Tutorials) will walk you through the tools, step by step, how to create a Flow.
 
+# Contributing
+If you are interested in fixing issues and contributing to the code base, we would love to partner with you. Try things out, join in the design conversations and make pull requests. 
+* [Download the latest stable or in-development releases](https://github.com/Microsoft/data-accelerator/wiki)
+* [Build and Debug Data Accelerator source code](CONTRIBUTING.md#build-and-run)
+
+# Feedback
+* Request new features on [GitHub](https://github.com/Microsoft/data-accelerator/blob/master/CONTRIBUTING.md)
+* Open a new issue on [GitHub](https://github.com/Microsoft/data-accelerator/issues)
+* Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/data-accelerator)
+* Check out the [contributing page](CONTRIBUTING.md) to see the best places to log issues and start discussions.
+
+Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
+
 # FAQ
 For common issues and questions, check out our [FAQ](FAQ).
