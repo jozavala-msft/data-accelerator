@@ -24,7 +24,8 @@ You now have the pipeline running with your custom data! And you are able to see
 Following data generation hints are supported (in local mode) based on data type via metadata tag:
 
 Numbers (int, long, float, double)
-```
+
+```javascript
   "metadata": {
         "minValue": 5.1,
         "maxValue": 100.1
