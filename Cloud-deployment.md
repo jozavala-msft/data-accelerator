@@ -2,7 +2,7 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
 
 # Prerequisites
  - Install Azure CLI from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
- - Download the scripts and templates locally via this link: https://github.com/Microsoft/data-accelerator/DeploymentCloud/
+ - Download the scripts and templates locally via this link: [template](https://github.com/Microsoft/data-accelerator/tree/stable/DeploymentCloud)
 
 # Deployment
 1. Open common.parameters.txt under DeploymentCloud/Deployment.DataX, **only** provide **TenantId** and **SubscriptionId**.  (See FAQ section below on how to use other parameters.)
