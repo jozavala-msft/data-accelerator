@@ -5,6 +5,7 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 [Tutorials](Tutorials) will walk you through both, the local mode as well as the cloud mode, step by step.
 
 ## Local mode:
+1. [Running samples](Local-running-sample)
 1. [Create a pipeline locally with no cloud dependencies in 5 minutes!](Local-Tutorial-Creating-your-first-Flow-in-local-mode)
 1. [Set up simple alert without writing any code](Local-Tutorial-Add-an-Alert)
 1. [Set up aggregated alert without writing any code](Local-Tutorial-Advanced-Aggregate-alerts)
