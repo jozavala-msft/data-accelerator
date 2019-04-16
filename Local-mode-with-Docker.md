@@ -10,7 +10,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
       ```
 # Deployment
-   - Run the below commands as admin in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
 
         ```
         docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
@@ -28,7 +28,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
             docker image rm <ImageId>  
             ````
 # Deployment With Security using Basic Auth
-   - Run the below commands as admin in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
    - Refer to [Nginx readme](https://hub.docker.com/r/beevelop/nginx-basic-auth/) 
         ```
         docker run --rm --name dataxlocal -d -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
@@ -40,12 +40,13 @@ Run Data Accelerator locally by downloading and running docker container. Even t
         If you wish to use a different username and password, visit [here](http://www.htaccesstools.com/htpasswd-generator/) to generate the **HTPASSWD** value
    - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
 
-       - Run this command:
+       - Run these commands (in case you haven't already done so):
             ```
+            docker stop dataxlocal
+            docker stop auth
             docker images -a
             ```
-       - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine.
-          - Also remove the images listed for repository beevelop/nginx-basic-auth and remove them as well
+       - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine. Also remove the images listed for repository beevelop/nginx-basic-auth and remove them as well:
             ````
             docker image rm <ImageId>  
             ````
