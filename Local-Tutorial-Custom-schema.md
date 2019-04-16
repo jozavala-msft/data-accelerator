@@ -48,7 +48,84 @@ String , Array, Map (control the length of data generated)
         "maxLength": 9
       }
 ```
-Apart from these data types, boolean and struct data types are also supported in local mode.
+Apart from these data types, boolean and struct data types are also supported in local mode. Example:
+
+```javascript
+{
+  "type": "struct",
+  "fields": [
+    {
+      "name": "deviceDetails",
+      "type": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "deviceId",
+            "type": "long",
+            "nullable": false,
+            "metadata": {
+              "allowedValues": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          {
+            "name": "deviceType",
+            "type": "string",
+            "nullable": false,
+            "metadata": {
+              "allowedValues": [
+                "DoorLock",
+                "WindowLock",
+                "Heating"
+              ]
+            }
+          },
+          {
+            "name": "eventTime",
+            "type": "long",
+            "nullable": false,
+            "metadata": {
+              "useCurrentTimeMillis": true
+            }
+          },
+          {
+            "name": "homeId",
+            "type": "long",
+            "nullable": false,
+            "metadata": {
+              "allowedValues": [
+                32,
+                150,
+                25,
+                81
+              ]
+            }
+          },
+          {
+            "name": "status",
+            "type": "long",
+            "nullable": false,
+            "metadata": {
+              "allowedValues": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "nullable": false,
+      "metadata": {}
+    }
+  ]
+}
+```
 
 * [Next Tutorial : Scaling the host](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Scaling-the-docker-host)
 
