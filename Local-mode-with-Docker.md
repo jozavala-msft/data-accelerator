@@ -11,19 +11,18 @@ Run Data Accelerator locally by downloading and running docker container. Even t
       ```
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
-
         ```
         docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
         ```
 
    - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
 
-       - Run this command:
+       - Run these commands (in case you haven't already done so):
             ```
+            docker stop dataxlocal            
             docker images -a
             ```
        - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine:
-
             ````
             docker image rm <ImageId>  
             ````
@@ -31,7 +30,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
 
 * Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 
-# Deployment With Security using Basic Auth
+# Deployment with Basic Auth
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
    - Refer to [Nginx readme](https://hub.docker.com/r/beevelop/nginx-basic-auth/) 
         ```
