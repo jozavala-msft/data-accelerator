@@ -5,7 +5,8 @@ Once you have completed the [local deployment](https://github.com/Microsoft/data
 2. Switch to the 'Flows' tab. You will notice 2 Flows 
 3. Click on any one of them (say, BasicLocal)
 4. Switch to Query tab and make an edit (example: enter a space in the editor). This will enable the Deploy button 
-5. Hit the Deploy button. That's it! The data pipeline is setup and data is flowing through Data Accelerator, being processed and outputted to the Metrics tab.
+5. Hit the Deploy button. That's it! The data pipeline is setup and data is flowing through Data Accelerator, being processed and outputted to the Metrics tab.<br />
+ ![Deploy](./tutorials/images/Deploy.PNG)<br/>
 
 # View the output
 1. Switch over to the Metrics tab
