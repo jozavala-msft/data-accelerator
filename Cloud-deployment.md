@@ -13,7 +13,7 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
  deploy.bat 
 ```
 
-1. If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
+3. If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
 
 ```
 runAdminSteps.bat
