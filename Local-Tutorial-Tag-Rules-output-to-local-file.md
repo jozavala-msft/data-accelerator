@@ -20,7 +20,10 @@ In this tutorial, you'll learn to:
  ![Rules Query](./tutorials/images/localsimplerule.PNG)
  - Click Deploy
 
-T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  You can view the data flowing in the location defined in the [previous tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).
+T1 will now contain the DataXProcessedInput data, along with tags from the rules set in this Flow.  
+
+# View the data
+You can view the data flowing in the location defined in the [previous tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).
 
 * [Next tutorial : Aggregate Tags](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Tag-Aggregate-to-metrics)
 
