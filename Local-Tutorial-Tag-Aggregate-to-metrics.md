@@ -89,7 +89,7 @@ In the previous tutorial we saw how to Tag streaming data when certain condition
 - In the Query tab, call ProcessAggregateRules() API and route the data to your desired output sink.
 
 ```sql
-	--DataXQuery--<br/>
+	--DataXQuery--
 	T2 = ProcessAggregateRules(DataXProcessedInput);
 
         OUTPUT T2 TO myOutput;
@@ -101,6 +101,9 @@ T2 will now contain the DataXProcessedInput data, along with tags from the rule 
 
 * Click "Deploy" button. That's it! You have now created an aggregate rule for tagging that will be output to disk.  <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
+
+# View the data
+You can view the tagged data flowing in the location as defined in the [previous tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).
 
 * [Next tutorial : SQL Queries](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Adding-SQL-to-your-flow-and-outputs-to-Metrics-dashboard)
 
