@@ -100,7 +100,7 @@ OUTPUT DeviceInfo TO myCosmosDB;
 
 You can now continue to iterate on your query to add more logic and validate the changes on the Metrics dashboard.
 
-* [Next tutorial : Add Metric](https://github.com/Microsoft/data-accelerator/wiki/Local-add-metric)
+* [Next tutorial : Create Metric](https://github.com/Microsoft/data-accelerator/wiki/Local-create-metric)
 
 # Other Links
 * [Tutorials](Tutorials)
