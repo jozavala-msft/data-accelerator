@@ -8,7 +8,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
 **Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**<br/>
 **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
-      ```
+
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
         ```
