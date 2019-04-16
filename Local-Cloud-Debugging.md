@@ -1,6 +1,6 @@
 Following steps will guide you through the steps that need to be followed in order to locally debug the projects
 
-# DataX Services
+# Data Accelerator Services
 You will need to import the certificate used by your Service Fabric cluster to your local box. On azure portal, open the SF keyvault and download the primary/reverseProxy/SSL certificate. Then, import the cert to both - local computer and current user. After the cert has been imported to Local computer, right click on the cert -> select 'All task' -> Manage private keys -> Add 'NETWORK SERVICE'.
 
 To view the parameters set for each service in your DataX environment, open your service fabric resource in azure portal and click on the service fabric explorer link. Expand a service, in this instance lets expand DataX.FlowType and select fabric:/DataX.Flow. On details TAB you should now see the parameters set for DataX.Flow service. Similarly you can view the parameters for the rest of the services.
@@ -44,7 +44,7 @@ RolesCheck.EnsureReader(Request, _isLocal);
 * Set the platform for the solution to x64 and F5
 * If prompted, grant Visual Studio permission
 
-# Website: DataX Website
+# Website: Data Accelerator Website
 
 ### Environment Setup
 1. Install NodeJs from http://nodejs.org, version 10.6.0 or later
@@ -101,7 +101,7 @@ Run this command which will automatically rebuild website if it detects that any
 npm run devwatch
 ```
 
-# Website: DataX NPM Packages
+# Website: Data Accelerator NPM Packages
 
 ### Quick start to developing this package
 
