@@ -54,7 +54,7 @@ Run Data Accelerator locally by downloading and running docker container. Even t
             ````
             docker image rm <ImageId>  
             ````
-* Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+* Open the portal at: http://localhost:49080/home to start Data Accelerator. You will be prompted for username and password. The default username is foo and password is bar. Once logged in, create your first Flow and / or checkout the samples
 
 * Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 
