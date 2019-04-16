@@ -42,5 +42,5 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 1. [Generate custom data with the Simulator](Cloud-Simulator)
 1. [Customize a Cloud Deployment](Arm-Parameters)
 1. [Use input EventHub/IotHub in a different tenant](Use-Input-in-different-tenant)
-1. [Local Cloud Debugging] (Local-Cloud-Debugging)
+1. [Local Cloud Debugging](Local-Cloud-Debugging)
 
