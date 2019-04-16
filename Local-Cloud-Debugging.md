@@ -1,6 +1,7 @@
 Following steps will guide you through the steps that need to be followed in order to locally debug the projects
 
-# DataX.Flow
+# Services
+## DataX.Flow
 * Open DataX.Flow.sln in VisualStudio (Run Visual Studio as admin)
 * In DataX.Flow project, open Local.1Node.xml file under ApplicationParameters folder
 * Set values for the following parameters:
@@ -10,6 +11,9 @@ Following steps will guide you through the steps that need to be followed in ord
   * cosmosDBConfigDatabaseName - Eg.: keyvault://<your services keyvault name>/configgen-configgenconfigsdatabasename
   * ServiceKeyvaultName - Eg.: kvServicesdx123
   * AzureServicesAuthConnectionString - Look for a secret called 'configgen-azureservicesauthconnectionstring'. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
+* In Flow.ManagementService project, open FlowManagementController.cs file
+* Within GetAllFlowsMin method comment out the following line 
+  * // RolesCheck.EnsureReader(Request, _isLocal);
 
 # Links
 * [Tutorials](Tutorials)
