@@ -6,7 +6,9 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
 
 # Deployment
 1. Open common.parameters.txt under DeploymentCloud/Deployment.DataX, **only** provide **TenantId** and **SubscriptionId**.  (See FAQ section below on how to use other parameters.)
-1. For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX:
+
+1. For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX and run :
+
 ```
  deploy.bat 
 ```
