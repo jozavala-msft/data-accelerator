@@ -12,8 +12,12 @@ Following steps will guide you through the steps that need to be followed in ord
   * ServiceKeyvaultName - Eg.: kvServicesdx123
   * AzureServicesAuthConnectionString - Look for a secret called 'configgen-azureservicesauthconnectionstring'. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
 * In Flow.ManagementService project, open FlowManagementController.cs file
-* Within GetAllFlowsMin method comment out the following line 
-  * // RolesCheck.EnsureReader(Request, _isLocal);
+* Within GetAllFlowsMin method comment out the following line
+```C#
+RolesCheck.EnsureReader(Request, _isLocal);
+```
+* Make sure to download the cert used in AzureServicesAuthConnectionString parameter above to 
+* Set the platform for the solution to x64 and F5
 
 # Links
 * [Tutorials](Tutorials)
