@@ -27,7 +27,28 @@ Run Data Accelerator locally by downloading and running docker container. Even t
             ````
             docker image rm <ImageId>  
             ````
+# Deployment With Security using Basic Auth
+   - Run the below commands as admin in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+   - Refer to [Nginx readme](https://hub.docker.com/r/beevelop/nginx-basic-auth/) 
+        ```
+        docker run --rm --name dataxlocal -d -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
+        ```
+        Try accessing and logging in with username foo and password bar.
+        ```
+        docker run --rm -d -e HTPASSWD='foo:$apr1$odHl5EJN$KbxMfo86Qdve2FH4owePn.' -e FORWARD_PORT=2020 --link dataxlocal:web -p 127.0.0.1:49080:80 --name auth beevelop/nginx-basic-auth
+        ```
+        If you wish to use a different username and password, visit [here](http://www.htaccesstools.com/htpasswd-generator/) to generate the **HTPASSWD** value
+   - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
 
+       - Run this command:
+            ```
+            docker images -a
+            ```
+       - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine.
+          - Also remove the images listed for repository beevelop/nginx-basic-auth and remove them as well
+            ````
+            docker image rm <ImageId>  
+            ````
 * Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
 
 * Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
@@ -50,10 +71,11 @@ Run Data Accelerator locally by downloading and running docker container. Even t
       docker exec -it dataxlocal /bin/bash
       ```
 
-# Stopping the docker container
+# Stopping the docker container and cleaning images
  - When finished with the container, run the following stop the container to free up used resources.
     ```
     docker stop dataxlocal
+    docker stop auth
     ```
     ###### See the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#cleaning-up) to learn more how to remove all the dangling images.
 
