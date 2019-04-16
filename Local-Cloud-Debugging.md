@@ -40,6 +40,7 @@ RolesCheck.EnsureReader(Request, _isLocal);
 * In DataX.SimulatedData project, open Local.1Node.xml file under ApplicationParameters folder
 * Set values of the parameters same as that is being used for DataX.SimulatedData in service fabric explorer
 * For 'AzureServicesAuthConnectionString' - Look for a secret called 'configgen-azureservicesauthconnectionstring' in your serviceKeyVault. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
+* **Note:** If you are already using the existing IoTHub to simulate data then you might want to consider to spin up another IoTHub to avoid any data duplication
 * Set the platform for the solution to x64 and F5
 * If prompted, grant Visual Studio permission
 
