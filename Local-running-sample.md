@@ -8,6 +8,8 @@ Once you have completed the [local deployment](https://github.com/Microsoft/data
 5. Hit the Deploy button. That's it! The data pipeline is setup and data is flowing through Data Accelerator, being processed and outputted to the Metrics tab.<br />
  ![Deploy](./tutorials/images/Deploy.PNG)<br/>
 
+Note: Local mode supports running only 1 flow at a time. If you want to try different samples, please stop other jobs first. You can start/stop jobs in the 'Jobs' tab. 
+
 # View the output
 1. Switch over to the Metrics tab
 2. After about a minute, you should see basic stats (such as number of events per minute, and per second) flowing through the pipeline, along with any custom charts that are outputted by the flow.  <br/>
