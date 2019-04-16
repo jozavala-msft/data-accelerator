@@ -16,6 +16,7 @@ To view the parameters set for each service in your DataX environment, open your
 RolesCheck.EnsureReader(Request, _isLocal);
 ```
 * Set the platform for the solution to x64 and F5
+* If prompted, grant Visual Studio permission
 * On browser open - http://localhost:8461/api/flow/getall/min
 
 ## DataX.Gateway
@@ -24,8 +25,23 @@ RolesCheck.EnsureReader(Request, _isLocal);
 * Set values of the parameters same as that is being used for DataX.Gateway in service fabric explorer
 * For 'AzureServicesAuthConnectionString' - Look for a secret called 'configgen-azureservicesauthconnectionstring' in your serviceKeyVault. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
 * F5
+* If prompted, grant Visual Studio permission
 
-##
+## DataX.Metrics
+* Open DataX.Metrics.sln in VisualStudio (Run Visual Studio as admin)
+* In DataX.Metrics project, open Local.1Node.xml file under ApplicationParameters folder
+* Set values of the parameters same as that is being used for DataX.Metrics in service fabric explorer
+* For 'AzureServicesAuthConnectionString' - Look for a secret called 'configgen-azureservicesauthconnectionstring' in your serviceKeyVault. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
+* Set the platform for the solution to x64 and F5
+* If prompted, grant Visual Studio permission
+
+## DataX.SimulatedData
+* Open DataX.SimulatedData.sln in VisualStudio (Run Visual Studio as admin)
+* In DataX.SimulatedData project, open Local.1Node.xml file under ApplicationParameters folder
+* Set values of the parameters same as that is being used for DataX.SimulatedData in service fabric explorer
+* For 'AzureServicesAuthConnectionString' - Look for a secret called 'configgen-azureservicesauthconnectionstring' in your serviceKeyVault. Only copy the 'Value' part here. (eg.: RunAs=App;AppId=<some GUID>;TenantId=<some GUID>;CertificateThumbprint=<Cert Thumbprint>;CertificateStoreLocation=LocalMachine)
+* Set the platform for the solution to x64 and F5
+* If prompted, grant Visual Studio permission
 
 # Links
 * [Tutorials](Tutorials)
