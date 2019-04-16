@@ -13,6 +13,12 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
  deploy.bat 
 ```
 
+1. If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
+
+```
+runAdminSteps.bat
+```
+
 Once the deployment finishes, open the Data Accelerator Portal via http://_name_.azurewebsites.net (Url available from the command prompt or via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL)
    
 # Troubleshooting and FAQ
