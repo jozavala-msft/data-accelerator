@@ -25,8 +25,8 @@ RolesCheck.EnsureReader(Request, _isLocal);
 * Open DataX.Gateway.sln in VisualStudio (Run Visual Studio as admin)
 * In DataX.Gateway project, open Local.1Node.xml file under ApplicationParameters folder
 * Set values for the following parameters:
-  * AllowedUserRoles
-  * AppInsightsIntrumentationKey
+  * AllowedUserRoles - DataXReader,DataXWriter
+  * AppInsightsIntrumentationKey - configgen-aiInstrumentationKey
   * Audience
   * ClientId
   * ReverseProxySslThumbprint
