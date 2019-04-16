@@ -29,7 +29,7 @@ In this tutorial, you'll learn to:
 ```
  - Click Deploy
 
-Your data now has reference data joined to it.  You can view the results by looking at the local file output.  
+Your data now has reference data joined to it.  You can view the results by looking at the local file output as described in this [tutorial](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Outputs-to-disk).  
 
 * [Next tutorial : Windowing](https://github.com/Microsoft/data-accelerator/wiki/Windowing-functions)
 
