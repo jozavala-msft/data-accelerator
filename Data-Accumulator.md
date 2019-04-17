@@ -72,8 +72,12 @@ Accumulator tables are persisted in memory, and on disk of the HDInsight cluster
   - Make sure to use unique names for the Accumulator tables between Flows. 
   - Once you have set a schema for an Accumulator table, you can no longer change it. You'll have to change name or delete the table.  See below.
 
-To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line:
+To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line. Here are the steps to do this:
+ - Go to the HDInsight cluster on the Azure portal in your resource group.  Open the SSH + Cluster login to get the SSH connection string.
  - SSH into the head node of the HDInsight cluster ( Use either putty or other SSH utility tools. Instructions on how to SSH is at https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-linux-ambari-ssh-tunnel)
+ - The password will be in the kvSparkRDP<product name> keyvault
+
+Then you can run the following commands to view the HDFS files in your cluster:
  - View Data Accelerator files
 ```
 	hdfs dfs -ls hdfs://mycluster/datax/
