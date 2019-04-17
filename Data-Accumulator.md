@@ -74,22 +74,26 @@ Accumulator tables are persisted in memory, and on disk of the HDInsight cluster
 
 To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line:
  - SSH into the head node of the HDInsight cluster ( Use either putty or other SSH utility tools. Instructions on how to SSH is at https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-linux-ambari-ssh-tunnel)
- - View files
+ - View Data Accelerator files
 ```
-	>hdfs dfs -ls hdfs://mycluster/datax/<flowName>/<accumulationTableName>/
+	hdfs dfs -ls hdfs://mycluster/datax/
+```
+ - View files for a Flow
+```
+	hdfs dfs -ls hdfs://mycluster/datax/<flowName>/
 ```
  - Download files
 ```
-	>hdfs dfs -get hdfs://mycluster/<path>   <local path>
+	hdfs dfs -get hdfs://mycluster/<path>   <local path>
 ```
  - Upload file
 ```
-	>hdfs dfs -put <local path>   <remote path>
+	hdfs dfs -put <local path>   <remote path>
 ```
 
- - Delete hdfs folder
+ - Delete hdfs folder (i.e. a path to a Flow's accumulator to delete it)
 ```
-	>hdfs dfs -rm -r <hdfs folder path>
+	hdfs dfs -rm -r <hdfs folder path>
 ```
 
 Example:
