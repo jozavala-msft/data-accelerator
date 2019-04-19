@@ -11,7 +11,7 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
 * Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide TenantId and SubscriptionId.
 * Open a shell / command prompt
 * Run Powershell Core
-* Follow rest steps to set up a DataX environment
+* Follow the steps below to set up a DataX environment
 
 ## Resource Deployment
 * Run deployResources.ps1
