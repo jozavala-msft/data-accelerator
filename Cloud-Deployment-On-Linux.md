@@ -13,14 +13,14 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
 * Run Powershell Core
 * Follow rest steps to set up a DataX environment
 
-## Resources Deployment
+## Resource Deployment
 * Run deployResources.ps1
 * After the script is finished, the following steps should be done
-   * Setup secrets in KVs
-   * Run script actions for HDInsights
-   * Setup CosmosDB
-   * Setup KVAccess
-   * Setup ServiceFabric
+  * Setup secrets in KVs
+  * Run script actions for HDInsights
+  * Setup CosmosDB
+  * Setup KVAccess
+  * Setup ServiceFabric
 
 ## App Deployment
 * Run deployApps.ps1
