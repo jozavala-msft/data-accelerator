@@ -1,4 +1,4 @@
-Currently The ARM deployment for DataX doesn't support multiplatforms (Linux and Mac). We have a plan to release it in the next release.
+The ARM deployment for DataX currently support only Windows. We have a plan to support multiplatforms (Linux and Mac) in the next release.
 
 # Prerequisite
 * Install Powershell Core
@@ -42,9 +42,11 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
     Please refer to https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint#open-port-443-in-the-azure-load-balancer 
 
 ## App Deployment
-* Make sure nuget and mono have been installed locally. Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
+* Make sure nuget and mono have been installed locally. 
+  Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
 * Run deployApps.ps1
 
 ## Sample Deployment
-* Make sure nuget and mono have been installed locally. Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
+* Make sure nuget and mono have been installed locally. 
+  Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
 * Run deploySample.ps1
