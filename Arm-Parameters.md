@@ -86,7 +86,9 @@
 		  * redisCacheSize=Premium_P_3
 		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
 
+### Scale up by using bigger / high performance resources
+* For Linux and Mac, [Cloud Deployment On Linux](Cloud-Deployment-On-Linux) 
+
 # Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 
-* [Cloud Deployment On Linux](Cloud-Deployment-On-Linux) 
