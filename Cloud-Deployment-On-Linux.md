@@ -36,11 +36,15 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
         * SparkManagedIdentity
         * Virtual Machine Scale Set
   * Setup ServiceFabric
-        * Install SSL certificate on cluster nodes. Please refer to https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint#install-certificate-on-cluster-nodes
-        * Open port 443 in the Azure load balancer. Please refer to https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint#open-port-443-in-the-azure-load-balancer 
+    * Install SSL certificate on cluster nodes. 
+    Please refer to https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint#install-certificate-on-cluster-nodes
+    * Open port 443 in the Azure load balancer. 
+    Please refer to https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint#open-port-443-in-the-azure-load-balancer 
 
 ## App Deployment
+* Make sure nuget and mono have been installed locally. Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
 * Run deployApps.ps1
 
 ## Sample Deployment
+* Make sure nuget and mono have been installed locally. Please refer to https://docs.microsoft.com/en-us/nuget/tools/nuget-exe-cli-reference
 * Run deploySample.ps1
