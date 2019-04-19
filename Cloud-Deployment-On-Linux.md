@@ -8,13 +8,19 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
 # Deployment Steps
-The following is a list steps that need to be done to set up a DataX environment.
 * Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide TenantId and SubscriptionId.
 * Open a shell / command prompt
 * Run Powershell Core
+* Follow rest steps to set up a DataX environment
 
 ## Resources Deployment
 * Run deployResources.ps1
+* After the script is finished, the following steps should be done
+   * Setup secrets in KVs
+   * Run script actions for HDInsights
+   * Setup CosmosDB
+   * Setup KVAccess
+   * Setup ServiceFabric
 
 ## App Deployment
 * Run deployApps.ps1
