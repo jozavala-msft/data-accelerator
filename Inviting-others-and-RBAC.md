@@ -20,7 +20,7 @@ With Data Accelerator, you can invite others to view or create data pipelines in
 - If you see the following, click on 'View all applications' button<br/>
 ![invite](./tutorials/images/aad4.PNG)<br/>
 
-- You will see 2 applications: clientapp-* and serviceapp-*. For each app in turn, do the following:
+- You will see 2 applications: clientapp-* and serviceapp-*. For each app in turn, do the following (if there are more than 2 apps, refer to [Find AppId/Name](Find-AADApplicationId-For-Your-Environment) to identify which ones are used):
     - Click on the app name
     - Click on the app name under Managed application in local directory<br/>
 ![invite](./tutorials/images/aad5.png)<br/>
