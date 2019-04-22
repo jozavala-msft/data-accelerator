@@ -1,11 +1,11 @@
-For DataX processing, we need two AAD apps clientapp-* and serviceapp-*.
+To function, Data Accelerator uses two AAD apps clientapp-* and serviceapp-*.
 
-To see the details on your apps, please follow the steps below.
+To see the details on a particular Data Accelerator instance's apps, please follow the steps below:
 
 # Find Application Id
 1. Open Azure Portal https://ms.portal.azure.com
 2. Click All services and select Resource groups
-3. Select your DataX resource group. You will see 5 Key vault resources.
+3. Select the DataX resource group. You will see 5 Key vault resources.
 4. Select the one starts with kvServices
 5. Once the Key vault page is opened, select Secrets. You will see two secrets which have clientId: **configgen-clientId** and **web-clientId**
 6. To get the appId for the service app, select **configgen-clientId**.
