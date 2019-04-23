@@ -86,6 +86,11 @@
 		  * redisCacheSize=Premium_P_3
 		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
 
+ ### Cloud deployment on Linux and Mac
+* The ARM deployment for DataX currently support only Windows. We have a plan to support multiplatforms (Linux and Mac) in the next release.
+
+For details, please see [Cloud Deployment On Linux](https://github.com/Microsoft/data-accelerator/wiki/Cloud-Deployment-On-Linux)
+
 # Links
 * [Tutorials](Tutorials)
 * [Wiki Home](Home) 

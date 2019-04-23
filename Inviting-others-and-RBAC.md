@@ -20,7 +20,7 @@ With Data Accelerator, you can invite others to view or create data pipelines in
 - If you see the following, click on 'View all applications' button<br/>
 ![invite](./tutorials/images/aad4.PNG)<br/>
 
-- You will see 2 applications: clientapp-* and serviceapp-*. For each app in turn, do the following:
+- You will see 2 applications: clientapp-* and serviceapp-*. For each app in turn, do the following (if there are more than 2 apps, refer to [Find AppId/Name](Find-Applications-For-Your-Environment) to identify which ones are used):
     - Click on the app name
     - Click on the app name under Managed application in local directory<br/>
 ![invite](./tutorials/images/aad5.png)<br/>
@@ -28,7 +28,7 @@ With Data Accelerator, you can invite others to view or create data pipelines in
     - Select User and then the Role (DataXReader or DataXWriter). DataXReader gives read permissions ony, while DataXWriter has both read and write permssions.
     - Make sure to repeat the above steps for both clientapp-* and serviceapp-*
 
-- Now you have successfully invited other users to your deployment of Data Accelerator and controlled what they are able to do. Make sure to ask them to sign-out and sign-in to the Data Accelerator portal for them to be able to pick up the new role changes. 
+- Now you have successfully invited other users to your deployment of Data Accelerator and controlled what they are able to do. Make sure to ask them to sign-out and sign-in to the Data Accelerator portal for them to be able to pick up the new role changes (deleting cookie for the site also works).
 
 # Links
 * [Tutorials](Tutorials)

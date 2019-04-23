@@ -5,30 +5,57 @@ Run Data Accelerator locally by downloading and running docker container. Even t
 # Prerequisites:
  - [docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (To get more info on this, see the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#how-do-i-install-docker)).
   - Once docker is installed and running, update the docker Settings (Note if you run the docker with less resources, your experience may be degraded or processing may lag particularly around the sample Flow): <br/> 
-**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 4 GB (4096 MB).**<br/>
+**Right click on docker in the System Tray-->Settings-->Advanced-->CPU: 6 cores; Memory: at least 5 GB (5120 MB).**<br/>
 **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**<br/>
  - PowerShell (Windows has this by default, Linux users will have to install from [this location](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-6)). Mac users can use Terminal which is available by default.
-      ```
+
 # Deployment
    - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
-     - **To get the latest docker image, delete the one you have downloaded previously. To do so, follow these steps:**
-        ```
-        docker images -a
-        ```
-          1. This will list all the images on your box. 
-          1. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal
-          1. Run the following command for each of the **ImageId** in step b to remove them from the machine:
-
-        ```
-        docker image rm <ImageId>  
-        ```
- 
-     -  **Run docker container. This will now bring down the latest image. If you didn't remove image as described above, then it will use the image you have downloaded already.**    
         ```
         docker run --rm --name dataxlocal -d -p 127.0.0.1:49080:2020 -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
         ```
-   - Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
-   - Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+
+   - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
+
+       - Run these commands (in case you haven't already done so):
+            ```
+            docker stop dataxlocal            
+            docker images -a
+            ```
+       - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine:
+            ````
+            docker image rm <ImageId>  
+            ````
+* Open the portal at: http://localhost:49080/home to start Data Accelerator and create your first Flow and / or checkout the samples
+
+* Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
+
+# Deployment with Basic Auth
+   - Run the below commands in Powershell on Windows (and approve subsequent elevation request) or in Terminal on Mac
+   - Refer to [Nginx readme](https://hub.docker.com/r/beevelop/nginx-basic-auth/) 
+        ```
+        docker run --rm --name dataxlocal -d -p 127.0.0.1:4040:4040 mcr.microsoft.com/datax/dataxlocal:v1
+        ```
+        Try accessing and logging in with username foo and password bar.
+        ```
+        docker run --rm -d -e HTPASSWD='foo:$apr1$odHl5EJN$KbxMfo86Qdve2FH4owePn.' -e FORWARD_PORT=2020 --link dataxlocal:web -p 127.0.0.1:49080:80 --name auth beevelop/nginx-basic-auth
+        ```
+        If you wish to use a different username and password, visit [here](http://www.htaccesstools.com/htpasswd-generator/) to generate the **HTPASSWD** value
+   - If you want to get the latest docker image, delete the one you have downloaded previously and then run the above command. To delete already downloaded image, follow these steps:
+
+       - Run these commands (in case you haven't already done so):
+            ```
+            docker stop dataxlocal
+            docker stop auth
+            docker images -a
+            ```
+       - This will list all the images on your box. Note the **ImageId** for all images listed where the repository equals msint.azurecr.io/datax/dataxlocal and then run the following command for each of the **ImageId** to remove them from the machine. Also remove the images listed for repository beevelop/nginx-basic-auth and remove them as well:
+            ````
+            docker image rm <ImageId>  
+            ````
+* Open the portal at: http://localhost:49080/home to start Data Accelerator. You will be prompted for username and password. The default username is foo and password is bar. Once logged in, create your first Flow and / or checkout the samples
+
+* Check out step by [step tutorials]( https://github.com/Microsoft/data-accelerator/wiki/Tutorials) for local mode
 
 # Running a job
  - To try out the sample:  Go to http://localhost:49080/config, select "BasicLocal" flow. 
@@ -48,10 +75,11 @@ Run Data Accelerator locally by downloading and running docker container. Even t
       docker exec -it dataxlocal /bin/bash
       ```
 
-# Stopping the docker container
+# Stopping the docker container and cleaning images
  - When finished with the container, run the following stop the container to free up used resources.
     ```
     docker stop dataxlocal
+    docker stop auth
     ```
     ###### See the [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#cleaning-up) to learn more how to remove all the dangling images.
 

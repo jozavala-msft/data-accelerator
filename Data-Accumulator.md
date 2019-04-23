@@ -30,8 +30,7 @@ GarageDoorAccumulator = SELECT
                             homeId,
                             eventTime,
                             status
-                        FROM iotdevicesample_GarageDoor_accumulated_tutorial
-                        WHERE hour(eventTime) = hour(current_timestamp());
+                        FROM iotdevicesample_GarageDoor_accumulated_tutorial;
 ```
 
 - Next, save this temp table above which has the accumulated data back to our persistent accumulator table as shown below.
@@ -65,7 +64,7 @@ OUTPUT House150GarageTotalTimeOpen TO Metrics;
  ![Deploy](./tutorials/images/Deploy.PNG)
 
 # View Metrics
-Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeOpen, which shows the total time the garage door has been open in the hour. Also notice, that it will reset to 0 at the start of the hour. <br/>
+Now, switch over to the Metrics tab and check chart for House150GarageTotalTimeOpen, which shows the total time the garage door has been open in the hour. <br/>
  ![Alert](./tutorials/images/accumulatorchart.PNG)
 
 # Persistence
@@ -73,24 +72,32 @@ Accumulator tables are persisted in memory, and on disk of the HDInsight cluster
   - Make sure to use unique names for the Accumulator tables between Flows. 
   - Once you have set a schema for an Accumulator table, you can no longer change it. You'll have to change name or delete the table.  See below.
 
-To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line:
+To remove an existing Accumulator table, you must connect to the head node of the HDInsight Spark Cluster from the command line. Here are the steps to do this:
+ - Go to the HDInsight cluster on the Azure portal in your resource group.  Open the SSH + Cluster login to get the SSH connection string.
  - SSH into the head node of the HDInsight cluster ( Use either putty or other SSH utility tools. Instructions on how to SSH is at https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-linux-ambari-ssh-tunnel)
- - View files
+ - The password will be in the kvSparkRDP<product name> keyvault
+
+Then you can run the following commands to view the HDFS files in your cluster:
+ - View Data Accelerator files
 ```
-	>hdfs dfs -ls hdfs://mycluster/datax/<flowName>/<accumulationTableName>/
+	hdfs dfs -ls hdfs://mycluster/datax/
+```
+ - View files for a Flow
+```
+	hdfs dfs -ls hdfs://mycluster/datax/<flowName>/
 ```
  - Download files
 ```
-	>hdfs dfs -get hdfs://mycluster/<path>   <local path>
+	hdfs dfs -get hdfs://mycluster/<path>   <local path>
 ```
  - Upload file
 ```
-	>hdfs dfs -put <local path>   <remote path>
+	hdfs dfs -put <local path>   <remote path>
 ```
 
- - Delete hdfs folder
+ - Delete hdfs folder (i.e. a path to a Flow's accumulator to delete it)
 ```
-	>hdfs dfs -rm -r <hdfs folder path>
+	hdfs dfs -rm -r <hdfs folder path>
 ```
 
 Example:

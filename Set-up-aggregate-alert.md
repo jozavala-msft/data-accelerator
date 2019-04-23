@@ -19,7 +19,7 @@ In the previous example we walked through how to set up a simple alert. At times
 
 # View Metrics
 Now, switch over to the Metrics tab and notice that there is a new table for 'CLOSEAlert', which will be fired each time the door of house number 150 is locked.<br/>
- ![Alert](./tutorials/images/closecountalert.PNG)
+ ![Alert](./tutorials/images/closecountalert.png)
 
 # Links
 * [Tutorials](Tutorials)
