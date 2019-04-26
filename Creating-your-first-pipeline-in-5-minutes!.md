@@ -1,4 +1,4 @@
-One you have completed the deployment of Data Accelerator to your subscription, you are ready to create your first Flow! In this tutorial you will learn how to:
+One you have completed the [deployment of Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment) to your subscription, you are ready to create your first Flow! In this tutorial you will learn how to:
 * Create a new Flow
 * Configure input source of data, either Eventhub or IoTHub
 * Inspect schema of incoming data
