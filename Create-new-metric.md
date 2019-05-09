@@ -15,7 +15,7 @@ T1 = Select COUNT(deviceDetails.deviceId) AS deviceCount
 - Now use **CreateMetric()** API to create the metric. This API takes as input the table and column that has the information to plot on the Metrics dashboard. It returns a table which you want to output to the Metrics dashboard.
 
 ```sql
-DeviceCount = CreateMetrics(T1, deviceCount);
+DeviceCount = CreateMetric(T1, deviceCount);
 
 OUTPUT DeviceCount TO Metrics;
 ``` 
