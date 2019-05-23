@@ -30,7 +30,8 @@ T1 = SELECT * FROM DataXProcessedInput;
 
 # Notes
  - Live Query does not support the aliases like CreateMetrics or ProcessRules.  
- - If you see a 404 error or 'session # not found', please use the "Refresh" button to instanciate a new kernel
+ - Live Query returns the top 20 items of the resulting query.
+ - If you see a 404 error or 'session # not found', please use the "Refresh" button to instantiate a new kernel.
 
 # Feedback
 Let us know what you think about this feature, what worked, and what else you would like to see. 
