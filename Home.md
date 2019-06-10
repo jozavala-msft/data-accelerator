@@ -12,6 +12,11 @@ Learn how to use [Data Accelerator](data-accelerator) step by step and get start
 
 [Tutorials](Tutorials) will walk you through the tools, step by step, how to create a Flow.
 
+# Versions
+Here you'll find the list of versions along with what is new with each release and a description of the changes you need to apply to migrate to the new version.  
+* 1.1 - Kafka support
+* 1.0 - Initial release
+
 # Contributing
 If you are interested in fixing issues and contributing to the code base, we would love to partner with you. Try things out, join in the design conversations and make pull requests. 
 * [Download the latest stable or in-development releases](https://github.com/Microsoft/data-accelerator/wiki)
