@@ -18,6 +18,8 @@ _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
  ![Input](./tutorials/images/InputIoT.PNG)<br/>
+_Input type:Kafka_<br/>
+ ![Input](./tutorials/images/inputkafka.png)<br/>
 
 - If the IoThub or Eventhub that you are connecting to lives in another resourcegroup, or in another subscription but same tenant, please provide the Subscription Id and Resource group name as well. <br /><br />
  ![Schema](./tutorials/images/subresource.PNG)<br/>
