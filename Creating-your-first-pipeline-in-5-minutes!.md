@@ -1,6 +1,6 @@
 One you have completed the [deployment of Data Accelerator](https://github.com/Microsoft/data-accelerator/wiki/Cloud-deployment) to your subscription, you are ready to create your first Flow! In this tutorial you will learn how to:
 * Create a new Flow
-* Configure input source of data, either Eventhub or IoTHub
+* Configure input source of data (Supported today: Eventhub, IoTHub, Kafka and Kafka eventhub)
 * Inspect schema of incoming data
 * Deploy and run the Flow
 
@@ -12,7 +12,8 @@ One you have completed the [deployment of Data Accelerator](https://github.com/M
 
 * Switch to the Input tab and select input type you want to receive data from. Data Accelerator supports Eventhub and IoThub
 
-* Enter the Connection string for Eventhub, or Eventhub-Compatible Name and Endpoint for IotHub. To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the 'Built-in endpoints' of the IoThub to get the needed information. Note, sample data is already flowing into this IoThub. <br /><br />
+* Enter the Connection string for an Eventhub or Kafka Event Hub, or Eventhub-Compatible Name and Endpoint for an IotHub. For Kafka and kafka event hub, you can provide the topics separated by commas.  For Kafka, the url:port information of each node can be provided separated by a comma.  
+* To get this information login to the [Azure portal](https://portal.azure.com). In the subscription where you deployed Data Accelerator, check the resources and you will notice that an IoThub has also been provisioned that you can use for this example. Open the 'Built-in endpoints' of the IoThub to get the needed information. Note, sample data is already flowing into this IoThub. <br /><br />
 _Input type:Eventhub_<br/>
  ![Input](./tutorials/images/InputEventhub.PNG)<br /><br />
 _Input type:IoThub_<br/>
