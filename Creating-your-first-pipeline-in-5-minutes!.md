@@ -23,6 +23,7 @@ _Input type:Kafka_<br/>
 
 - If the IoThub or Eventhub that you are connecting to lives in another resourcegroup, or in another subscription but same tenant, please provide the Subscription Id and Resource group name as well. <br /><br />
  ![Schema](./tutorials/images/subresource.PNG)<br/>
+- If the Kafka input exists in another Vnet, you need to enable IP Advertising.  See [here](https://docs.microsoft.com/en-us/azure/hdinsight/kafka/apache-kafka-connect-vpn-gateway)
 
 - If the IoThub or Eventhub lives in another tenant instead, then follow [these steps](https://github.com/Microsoft/data-accelerator/wiki/Use-Input-in-different-tenant) before proceeding.  
 
