@@ -14,8 +14,8 @@ Learn how to use [Data Accelerator](data-accelerator) step by step and get start
 
 # Versions
 Here you'll find the list of versions along with what is new with each release and a description of the changes you need to apply to migrate to the new version.  
-* 1.1 - Kafka support
-* 1.0 - Initial release
+* [1.1 - Kafka support](https://github.com/microsoft/data-accelerator/releases/tag/1.1)
+* [1.0 - Initial release](https://github.com/microsoft/data-accelerator/releases/tag/1.0)
 
 # Contributing
 If you are interested in fixing issues and contributing to the code base, we would love to partner with you. Try things out, join in the design conversations and make pull requests. 
