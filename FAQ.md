@@ -46,7 +46,9 @@ To copy files out of the container, use the following
 docker cp dataxlocal:/app/aspnetcore/myfile.txt myfile.txt
 ```
 ## Look at Spark Logs
-   - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-6-Debugging-using-Spark-logs)
+   - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Spark-logs)
+   - [Spark logs local](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Debugging-using-Spark-logs)
+
 #  ARM Deployment FAQ
 ## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
