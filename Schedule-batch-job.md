@@ -20,6 +20,8 @@ In this tutorial you will learn how to:
 
 ![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
 
+* Click "GetSchema" button. This reads the blobs from the given path and infer the schema. <br />
+
 * Switch to the schedule tab and click Add button. There are two types of scheduling.
    - Recurring
       This creates a job based on the given recurrence. e.g. If Recurrence is 1 day, it will create one job per day.
