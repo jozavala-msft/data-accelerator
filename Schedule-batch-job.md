@@ -17,7 +17,7 @@ In this tutorial you will learn how to:
   - The Connection string
   - The Blob Path. This should be a wasbs URL format. If your path contains date and time, you can use DateTime pattern with curly brackets '{' and '}'  
       e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}.<br />
- ![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
+![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
 
 * Click "GetSchema" button. This reads the blobs from the given path and infer the schema. <br />
 
