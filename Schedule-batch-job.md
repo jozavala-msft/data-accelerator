@@ -12,3 +12,7 @@ In this tutorial you will learn how to:
  ![New Flow](./tutorials/images/Tutorial1-1.png)
 
 * Switch to the Input tab and select Batching for Mode and Azure Blob for Type. Data Accelerator currently supports only Blob for Batching
+
+* Enter the Connection string for a blob that you want to use as an input
+_Input type:Blob_<br/>
+ ![Input](./tutorials/images/batchBlobInput.PNG)<br /><br />
