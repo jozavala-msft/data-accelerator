@@ -16,9 +16,9 @@ In this tutorial you will learn how to:
 * Provide the following information of the blob you want to use as an input
   - The Connection string
   - The Blob Path. This should be a wasbs URL format. If your path contains date and time, you can use DateTime pattern with curly brackets '{' and '}'  
-      e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}
+      e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}.
 
- ![Input](./tutorials/images/Tutorial1-1.PNG)<br />
+![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
 
 * Switch to the schedule tab and click Add button. There are two types of scheduling.
   - Recurring
@@ -31,13 +31,13 @@ In this tutorial you will learn how to:
 
 ![Scheduling](./tutorials/images/batchOneTime.PNG)<br />
 
-Recurrence
+- Recurrence
 It specifies an interval between jobs. The available values are day, hour and minute.
 
-Delay
+- Delay
 It specifies an offset for a job. The offset is negative so an actual start time will be calculated by subtracting offset from the original start time. The available values are day, hour and minute.
 
-Window
+- Window
 It specifies how much a job will look back. The available values are day, hour and minute. 
 
 * Click "Save" button to save the Flow. Once it's saved, the jobs will be created and be running by the scheduler. Currently the interval of the scheduler is 1 hour.
