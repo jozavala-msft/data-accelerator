@@ -26,7 +26,7 @@ In this tutorial you will learn how to:
    - Recurring
       This creates a job based on the given recurrence. e.g. If Recurrence is 1 day, it will create one job per day.
 
-![Scheduling](./tutorials/images/batchRecurring.PNG)<br />
+![Scheduling](./tutorials/images/batchRecurring.PNG)<br /><br />
 
    - One Time
       This creates all jobs for the given the date range at once (between the start time and the end time). And once all jobs are scheduled, the schedule will be disabled and read-only.
