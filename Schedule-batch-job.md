@@ -19,4 +19,4 @@ In this tutorial you will learn how to:
       e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}
 
 _Input type:Blob_<br/>
- ![Input](./tutorials/images/batchBlobInput.PNG)<br /><br />
+ ![Input](./tutorials/images/Tutorial1-1.PNG)<br /><br />
