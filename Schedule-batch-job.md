@@ -16,22 +16,19 @@ In this tutorial you will learn how to:
 * Provide the following information of your input Azure blob
   - The Connection string
   - The Blob Path. This should be a wasbs URL format. If your path contains date and time, you can use DateTime pattern with curly brackets '{' and '}'  
-      e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}.
-
-![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
+      e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}.<br />
+ ![Scheduling](./tutorials/images/batchBlobInput.PNG)<br />
 
 * Click "GetSchema" button. This reads the blobs from the given path and infer the schema. <br />
 
 * Switch to the schedule tab and click Add button. There are two types of scheduling.
    - Recurring
-      This creates a job based on the given recurrence. e.g. If Recurrence is 1 day, it will create one job per day.
-
-![Scheduling](./tutorials/images/batchRecurring.PNG)<br /><br />
+      This creates a job based on the given recurrence. e.g. If Recurrence is 1 day, it will create one job per day.<br />
+ ![Scheduling](./tutorials/images/batchRecurring.PNG)<br />
 
    - One Time
-      This creates all jobs for the given the date range at once (between the start time and the end time). And once all jobs are scheduled, the schedule will be disabled and read-only.
-
-![Scheduling](./tutorials/images/batchOneTime.PNG)<br />
+      This creates all jobs for the given the date range at once (between the start time and the end time). And once all jobs are scheduled, the schedule will be disabled and read-only.<br />
+ ![Scheduling](./tutorials/images/batchOneTime.PNG)
 
   - **Recurrence**:
     It specifies an interval between jobs. The available values are day, hour and minute. <br/>
