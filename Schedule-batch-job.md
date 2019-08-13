@@ -31,13 +31,13 @@ In this tutorial you will learn how to:
 
 ![Scheduling](./tutorials/images/batchOneTime.PNG)<br />
 
-     * Recurrence:
+  * **Recurrence**:
     It specifies an interval between jobs. The available values are day, hour and minute. <br/>
 
-     * Delay:
+  * **Delay**:
     It specifies an offset for a job. The offset is negative so an actual start time will be calculated by subtracting offset from the original start time. The available values are day, hour and minute.
 
-     * Window:
+  * **Window**:
     It specifies how much a job will look back. The available values are day, hour and minute. 
 
 * Click "Save" button to save the Flow. Once it's saved, the jobs will be created and be running by the scheduler. Currently the interval of the scheduler is 1 hour.
