@@ -18,5 +18,28 @@ In this tutorial you will learn how to:
   - The Blob Path. This should be a wasbs URL format. If your path contains date and time, you can use DateTime pattern with curly brackets '{' and '}'  
       e.g. wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/<folder_name>/{yyyy-MM-dd}
 
-_Input type:Blob_<br/>
- ![Input](./tutorials/images/Tutorial1-1.PNG)<br /><br />
+ ![Input](./tutorials/images/Tutorial1-1.PNG)<br />
+
+* Switch to the schedule tab and click Add button. There are two types of scheduling.
+  - Recurring
+    This creates a job based on the given recurrence. e.g. If Recurrence is 1 day, it will create one job per day.
+
+![Scheduling](./tutorials/images/batchRecurring.PNG)<br />
+
+  - One Time
+    This creates all jobs for the given the date range at once (between the start time and the end time). And once all jobs are scheduled, the schedule will be disabled and read-only.
+
+![Scheduling](./tutorials/images/batchOneTime.PNG)<br />
+
+Recurrence
+It specifies an interval between jobs. The available values are day, hour and minute.
+
+Delay
+It specifies an offset for a job. The offset is negative so an actual start time will be calculated by subtracting offset from the original start time. The available values are day, hour and minute.
+
+Window
+It specifies how much a job will look back. The available values are day, hour and minute. 
+
+* Click "Save" button to save the Flow. Once it's saved, the jobs will be created and be running by the scheduler. Currently the interval of the scheduler is 1 hour.
+
+* For details on other tabs, please check this https://github.com/Microsoft/data-accelerator/wiki/Creating-your-first-pipeline-in-5-minutes!
