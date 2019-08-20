@@ -1,7 +1,7 @@
 Data Accelerator environment can now be set up to run jobs on either Databricks or HDInsight. During the time of setting up the Data Accelerator environment, you can choose the platform on which you would want to run the spark jobs – Databricks or HDInsight. 
 
 In this tutorial we will go over:
-* How to setup Data Accelerator environment that uses Databricks
+* [How to setup Data Accelerator environment that uses Databricks](#data-accelerator-with-databricks-environment-setup)
 * How to run Data Accelerator flows on Databricks
 
 # Data Accelerator with Databricks Environment Setup
