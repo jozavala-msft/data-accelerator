@@ -67,7 +67,7 @@ dbfs ls dbfs:/datax -l –absolute
 We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
 ```
 $clusterName = '<Enter your databricks workspace name here eg:dx123>'
-$defaultVaultName = '<Enter spark keyvault name that was used to create secret scope eg:kvSpark123>'
+$defaultVault = '<Enter SparkKeyVault name that was used to create secret scope eg:kvSpark123>'
 
 $jsonCommand = '{
 	\"cluster_name\": \"' + $clusterName + '\",
@@ -84,7 +84,7 @@ $jsonCommand = '{
 		\"spark.sql.hive.metastore.jars\": \"builtin\"
 	},
 	\"spark_env_vars\": {
-		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVaultName + '\"
+		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVault + '\"
 	}
 }'
 $clusterId = (databricks clusters create --json $jsonCommand | ConvertFrom-Json).cluster_id
