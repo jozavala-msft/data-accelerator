@@ -44,4 +44,59 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
   * Resource ID
   * ![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
 
+### Upload jar files to DBFS
+We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
+* Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
+* Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
+```
+dbfs cp -r <path of extracted Microsoft.DataX.Spark>\lib dbfs:/datax
+```
+* To verify that all the jars got uploaded, you can run following and it will list out the files
+```
+dbfs ls dbfs:/datax -l –absolute
+```
 
+### Create Databricks Cluster for Live Query
+We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
+```
+$clusterName = '<Enter your databricks workspace name here eg: dx123456>'
+$defaultVaultName = '<Enter spark keyvault name here that was used to create secret scope eg: kvSpark123456>'
+
+$jsonCommand = '{
+	\"cluster_name\": \"' + $clusterName + '\",
+	\"spark_version\": \"5.3.x-scala2.11\",
+	\"node_type_id\": \"Standard_DS3_v2\",
+	\"autoscale\": {
+		\"min_workers\": \"2\",
+		\"max_workers\": \"8\"
+	},
+	\"autotermination_minutes\": \"0\",
+	\"spark_conf\": {
+		\"spark.databricks.delta.preview.enabled\": true,
+		\"spark.sql.hive.metastore.version\": \"1.2.1\",
+		\"spark.sql.hive.metastore.jars\": \"builtin\"
+	},
+	\"spark_env_vars\": {
+		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVaultName + '\"
+	}
+}'
+
+$clusterId = (databricks clusters create --json $jsonCommand | ConvertFrom-Json).cluster_id
+
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/applicationinsights-core-2.2.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-documentdb-1.16.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-1.2.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-spark_2.11-2.3.6.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-keyvault-webkey-1.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-sqldb-spark-1.0.2.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-core_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-host_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-keyvault_2.4_2.11-1.2.0-with-dependencies.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-udf-samples_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-utility_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/java-uuid-generator-3.1.5.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/kafka-clients-2.0.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/proton-j-0.31.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/scala-java8-compat_2.11-0.9.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/spark-streaming-kafka-0-10_2.11-2.4.0.jar
+```
