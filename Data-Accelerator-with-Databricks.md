@@ -15,7 +15,7 @@ In this tutorial we will go over:
 * Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide **TenantId** and **SubscriptionId**. Also set **useDatabricks** = y 
 * For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX and run :
 ```
- deploy.bat 
+deploy.bat 
 ```
 * If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
 ```
@@ -24,7 +24,7 @@ runAdminSteps.bat
 The above steps will setup the azure resources required by Data Accelerator. A Databricks resource will also be created. To finish setting up databricks resource you will further need to generate databricks token, create a secret scope, upload jars to DBFS which are required to run spark jobs and finally create a databricks cluster for live query.
 
 ### Generate Databricks Token
-The following steps will instruct you through the steps required to create a Databricks token. This databricks token will be required to run Databricks CLI commands which we will go over later in the setup process and for running flows on databricks. 
+The following steps will instruct you through the steps required to create a Databricks token. This databricks token will be required to run Databricks CLI commands which we will go over later in the setup process and for running flows on databricks.   
 * On https://portal.azure.com, go to the ‘Azure Databricks Service’ resource created by the ARM deployment step and click on ‘Launch Workspace’.
 ![DatabricksAzurePortal](./tutorials/images/DatabricksAzurePortal.jpg)
 * On Databricks portal, click on Account and select User Settings. Then click on the ‘Generate New Token’ button. 
@@ -48,17 +48,17 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
 We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
 * Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
 * Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
-```powershell
+```
 dbfs cp -r <path of extracted Microsoft.DataX.Spark>\lib dbfs:/datax
 ```
 * To verify that all the jars got uploaded, you can run following and it will list out the files
-```powershell
+```
 dbfs ls dbfs:/datax -l –absolute
 ```
 
 ### Create Databricks Cluster for Live Query
 We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
-```powershell
+```
 $clusterName = '<Enter your databricks workspace name here eg: dx123456>'
 $defaultVaultName = '<Enter spark keyvault name here that was used to create secret scope eg: kvSpark123456>'
 
@@ -80,9 +80,7 @@ $jsonCommand = '{
 		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVaultName + '\"
 	}
 }'
-
 $clusterId = (databricks clusters create --json $jsonCommand | ConvertFrom-Json).cluster_id
-
 databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/applicationinsights-core-2.2.1.jar
 databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-documentdb-1.16.1.jar
 databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-1.2.1.jar
@@ -100,3 +98,15 @@ databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/proton-j-
 databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/scala-java8-compat_2.11-0.9.0.jar
 databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/spark-streaming-kafka-0-10_2.11-2.4.0.jar
 ```
+It can take about 10 minutes for the cluster to start
+
+# Run Data Accelerator Flows on Databricks
+Open Data Accelerator Portal via https://_name_.azurewebsites.net (Url available via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL). Click on the Flows TAB to see the list of sample flows and select any sample flow
+
+### Set Databricks Token
+On the Info TAB, you will notice a 'Databricks Token' textbox which is specific for databricks environment and does not show up on HDInsight environment. Enter your databricks token generated using [these steps](https://github.com/microsoft/data-accelerator/wiki/Data-Accelerator-with-Databricks#generate-databricks-token) here.
+![DatabricksFlowToken](./tutorials/images/DatabricksFlowToken.jpg)
+
+### Set Scale
+Switch to Scale TAB and here you can enable/disable Autoscale and also set number of workers for each flow. Once deployed, each flow will run on its own databricks cluster. If Autoscale is enabled then the cluster will autoscale between the min and max no. or workers (as specified in the flow) depending upon the cluster load. If autoscale is disabled then the cluster will continue to use a constant number of workers irrespective of the cluster load. 
+![DatabricksFlowScale](./tutorials/images/DatabricksFlowScale.jpg)  
