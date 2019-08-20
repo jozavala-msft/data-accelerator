@@ -45,14 +45,14 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
     * Name
     * DNS Name
     * Resource ID
-* Go to https://<your_azure_databricks_url>#secrets/createScope (for example, https://eastus.azuredatabricks.net#secrets/createScope) and paste the info copied from above step:
+* Go to https://<your_azure_databricks_url>#secrets/createScope (for example, https://_eastus_.azuredatabricks.net#secrets/createScope) and paste the info copied from above step:
   * Key Vault Name as ‘Scope Name’
   * DNS Name
   * Resource ID
 ![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
 
 ### Upload jar files to DBFS
-We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-the-cli) if you have not done so (**Note:** It is recommended to use the latest python version when installing databricks CLI) and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) by running following command in command prompt 'databricks configure --token'. (when prompted, enter 'https://<your_azure_databricks_url>' as the host eg: https://eastus.azuredatabricks.net and use the databricks token that we generated in the previous step when prompted for token).
+We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-the-cli) if you have not done so (**Note:** It is recommended to use the latest python version when installing databricks CLI) and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) by running following command in command prompt 'databricks configure --token'. (when prompted, enter 'https://<your_azure_databricks_url>' as the host eg: https://_eastus_.azuredatabricks.net and use the databricks token that we generated in the previous step when prompted for token).
 * Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
 * Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
 ```
