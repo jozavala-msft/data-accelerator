@@ -49,7 +49,7 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
   * Key Vault Name as ‘Scope Name’
   * DNS Name
   * Resource ID
-  * ![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
+![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
 
 ### Upload jar files to DBFS
 We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
@@ -108,12 +108,12 @@ databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/spark-str
 It can take about 10 minutes for the cluster to start
 
 # Run Data Accelerator Flows on Databricks
-Open Data Accelerator Portal via https://_name_.azurewebsites.net (Url available via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL). Click on the Flows TAB to see the list of sample flows and select any sample flow
+Open Data Accelerator Portal via https://_name_.azurewebsites.net (Url available via the Azure Portal under the deployed App Service. To find this, go to App Services in https://portal.azure.com, click on the app service called "dx*", and open the URL). Click on the Flows TAB to see the list of sample flows and select any sample flow
 
 ### Set Databricks Token
 On the Info TAB, you will notice a 'Databricks Token' textbox which is specific for databricks environment and does not show up on HDInsight environment. Enter your databricks token generated using [these steps](#generate-databricks-token) here.
 ![DatabricksFlowToken](./tutorials/images/DatabricksFlowToken.jpg)
 
 ### Set Scale
-Switch to Scale TAB and here you can enable/disable Autoscale and also set number of workers for each flow. Once deployed, each flow will run on its own databricks cluster. If Autoscale is enabled then the cluster will autoscale between the min and max no. or workers (as specified in the flow) depending upon the cluster load. If autoscale is disabled then the cluster will continue to use a constant number of workers irrespective of the cluster load. 
+Switch to Scale TAB. Here you can enable/disable Autoscale and also set number of workers for each flow. Once deployed, each flow will run on its own databricks cluster. If Autoscale is enabled then the cluster will autoscale between the min and max no. of workers (as specified in the flow) depending upon the cluster load. If autoscale is disabled then the cluster will continue to use a constant number of workers irrespective of the cluster load. 
 ![DatabricksFlowScale](./tutorials/images/DatabricksFlowScale.jpg)  
