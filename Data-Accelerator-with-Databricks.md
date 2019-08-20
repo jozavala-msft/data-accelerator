@@ -12,12 +12,12 @@ In this tutorial we will go over:
 * Download the scripts and templates locally via this link: [template](https://github.com/Microsoft/data-accelerator/tree/stable/DeploymentCloud)
 
 ### ARM Deployment
-1. Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide **TenantId** and **SubscriptionId**. Also set **useDatabricks** = y 
-2. For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX and run :
+* Open common.parameters.txt under DeploymentCloud/Deployment.DataX, provide **TenantId** and **SubscriptionId**. Also set **useDatabricks** = y 
+* For Windows OS, open a command prompt as an admin under the downloaded folder DeploymentCloud/Deployment.DataX and run :
 ```
  deploy.bat 
 ```
-3. If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
+* If you are not the admin of the tenant (typically when using AAD account), then please copy over the DeploymentCloud folder to your admin's machine and ask your admin to run the following command:
 ```
 runAdminSteps.bat
 ```
@@ -25,5 +25,78 @@ The above steps will setup the azure resources required by Data Accelerator. A D
 
 ### Generate Databricks Token
 The following steps will instruct you through the steps required to create a Databricks token. This databricks token will be required to run Databricks CLI commands which we will go over later in the setup process and for running flows on databricks. 
-1. On https://portal.azure.com, go to the ‘Azure Databricks Service’ resource created by the ARM deployment step and click on ‘Launch Workspace’.
+* On https://portal.azure.com, go to the ‘Azure Databricks Service’ resource created by the ARM deployment step and click on ‘Launch Workspace’.
+![DatabricksAzurePortal](./tutorials/images/DatabricksAzurePortal.jpg)
+* On Databricks portal, click on Account and select User Settings. Then click on the ‘Generate New Token’ button. 
+![DatabricksUserSettings](./tutorials/images/DatabricksUserSettings.jpg)
+* You can set the lifetime of token here or choose the default lifetime and click ‘Generate’. Please copy the token as this token will be required later and you will not be able to see the token again.
 
+### Create secret scope
+Here we will be creating an Azure Key Vault-backed secret scope which will be required to read secrets from Azure Key Vault. 
+* On https://portal.azure.com, go to the ‘Key vault’ resource named ‘kvSpark****’. **Note**: Do not go to the key vault that has RDP in the name.
+  * Click on Properties blade and copy following. 
+    * Name
+    * DNS Name
+    * Resource ID
+* Go to https://<your_azure_databricks_url>#secrets/createScope (for example, https://eastus.azuredatabricks.net#secrets/createScope) and paste the info copied from above step:
+  * Key Vault Name as ‘Scope Name’
+  * DNS Name
+  * Resource ID
+  * ![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
+
+### Upload jar files to DBFS
+We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
+* Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
+* Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
+```powershell
+dbfs cp -r <path of extracted Microsoft.DataX.Spark>\lib dbfs:/datax
+```
+* To verify that all the jars got uploaded, you can run following and it will list out the files
+```powershell
+dbfs ls dbfs:/datax -l –absolute
+```
+
+### Create Databricks Cluster for Live Query
+We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
+```powershell
+$clusterName = '<Enter your databricks workspace name here eg: dx123456>'
+$defaultVaultName = '<Enter spark keyvault name here that was used to create secret scope eg: kvSpark123456>'
+
+$jsonCommand = '{
+	\"cluster_name\": \"' + $clusterName + '\",
+	\"spark_version\": \"5.3.x-scala2.11\",
+	\"node_type_id\": \"Standard_DS3_v2\",
+	\"autoscale\": {
+		\"min_workers\": \"2\",
+		\"max_workers\": \"8\"
+	},
+	\"autotermination_minutes\": \"0\",
+	\"spark_conf\": {
+		\"spark.databricks.delta.preview.enabled\": true,
+		\"spark.sql.hive.metastore.version\": \"1.2.1\",
+		\"spark.sql.hive.metastore.jars\": \"builtin\"
+	},
+	\"spark_env_vars\": {
+		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVaultName + '\"
+	}
+}'
+
+$clusterId = (databricks clusters create --json $jsonCommand | ConvertFrom-Json).cluster_id
+
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/applicationinsights-core-2.2.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-documentdb-1.16.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-1.2.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-spark_2.11-2.3.6.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-keyvault-webkey-1.1.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-sqldb-spark-1.0.2.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-core_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-host_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-keyvault_2.4_2.11-1.2.0-with-dependencies.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-udf-samples_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-utility_2.4_2.11-1.2.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/java-uuid-generator-3.1.5.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/kafka-clients-2.0.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/proton-j-0.31.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/scala-java8-compat_2.11-0.9.0.jar
+databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/spark-streaming-kafka-0-10_2.11-2.4.0.jar
+```
