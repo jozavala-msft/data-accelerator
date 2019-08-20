@@ -52,7 +52,7 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
 ![DatabricksSecretScope](./tutorials/images/DatabricksSecretScope.jpg)
 
 ### Upload jar files to DBFS
-We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
+We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-the-cli) if you have not done so (**Note:** It is recommended to use the latest python) and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) by running following command in command prompt - 'databricks configure --token'. (when prompted, enter 'https://<your_azure_databricks_url>' as the host eg: https://eastus.azuredatabricks.net and use the databricks token that we generated in the previous step when prompted for token).
 * Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
 * Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
 ```
