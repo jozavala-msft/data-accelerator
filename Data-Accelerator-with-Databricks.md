@@ -7,7 +7,9 @@ In this tutorial we will go over:
   * [Create secret scope](#create-secret-scope)
   * [Upload jar files to DBFS](#upload-jar-files-to-dbfs)
   * [Create Databricks Cluster for Live Query](#create-databricks-cluster-for-live-query)
-* How to run Data Accelerator flows on Databricks
+* [How to run Data Accelerator flows on Databricks](#run-data-accelerator-flows-on-databricks)
+  * [Set Databricks Token](#set-databricks-token)
+  * [Set Scale](#set-scale)
 
 # Data Accelerator with Databricks Environment Setup
 
