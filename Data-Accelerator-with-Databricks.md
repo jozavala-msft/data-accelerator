@@ -88,22 +88,10 @@ $jsonCommand = '{
 	}
 }'
 $clusterId = (databricks clusters create --json $jsonCommand | ConvertFrom-Json).cluster_id
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/applicationinsights-core-2.2.1.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-documentdb-1.16.1.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-1.2.1.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-eventhubs-spark_2.11-2.3.6.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-keyvault-webkey-1.1.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/azure-sqldb-spark-1.0.2.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-core_2.4_2.11-1.2.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-host_2.4_2.11-1.2.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-keyvault_2.4_2.11-1.2.0-with-dependencies.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-udf-samples_2.4_2.11-1.2.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/datax-utility_2.4_2.11-1.2.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/java-uuid-generator-3.1.5.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/kafka-clients-2.0.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/proton-j-0.31.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/scala-java8-compat_2.11-0.9.0.jar
-databricks libraries install --cluster-id $clusterId --jar dbfs:/datax/spark-streaming-kafka-0-10_2.11-2.4.0.jar
+$dbfsFiles = (dbfs ls dbfs:/datax --absolute)
+foreach($dbfsFile in $dbfsFiles) {
+    databricks libraries install --cluster-id $clusterId --jar $dbfsFile
+}
 ```
 It can take about 10 minutes for the cluster to start
 
