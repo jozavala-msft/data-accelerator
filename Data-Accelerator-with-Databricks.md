@@ -105,3 +105,5 @@ On the Info TAB, you will notice a 'Databricks Token' textbox which is specific 
 ### Set Scale
 Switch to Scale TAB. Here you can enable/disable Autoscale and also set number of workers for each flow. Once deployed, each flow will run on its own databricks cluster. If Autoscale is enabled then the cluster will autoscale between the min and max no. of workers (as specified in the flow) depending upon the cluster load. If autoscale is disabled then the cluster will continue to use a constant number of workers irrespective of the cluster load. 
 ![DatabricksFlowScale](./tutorials/images/DatabricksFlowScale.jpg)  
+
+Click the deploy button and this will start the job on Databricks. You can view the charts on the Metrics TAB of Data Accelerator Portal.
