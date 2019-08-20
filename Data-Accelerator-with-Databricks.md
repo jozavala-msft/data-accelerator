@@ -66,8 +66,8 @@ dbfs ls dbfs:/datax -l –absolute
 ### Create Databricks Cluster for Live Query
 We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
 ```
-$clusterName = '<Enter your databricks workspace name here eg: dx123456>'
-$defaultVaultName = '<Enter spark keyvault name here that was used to create secret scope eg: kvSpark123456>'
+$clusterName = '<Enter your databricks workspace name here eg:dx123>'
+$defaultVaultName = '<Enter spark keyvault name that was used to create secret scope eg:kvSpark123>'
 
 $jsonCommand = '{
 	\"cluster_name\": \"' + $clusterName + '\",
