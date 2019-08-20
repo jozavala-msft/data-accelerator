@@ -5,15 +5,11 @@ In a [previous tutorial](Set-up-new-outputs) we had seen how to set up a new out
 
 * Open the Output tab and add a new output sink. Select Azure SQL Database<br/>
 ![New Rule](./tutorials/images/sqlOuputSelection.png)<br/>
-
 * Configure the Azure SQL Database, by specifying the alias, JDBC connection string and write mode. In this example we choose Append mode <br/>
 ![New Rule](./tutorials/images/sqlOutputConfig.png)<br/>
-
 * Switch to the Query tab and at the end add following line using the OUTPUT keyword.<br/>
-
 OUTPUT T1 TO mySqlOutput; <br/>
 ![New Output](./tutorials/images/simpleruleSqlOut.png)<br/>
-
 * Click "Deploy" button. That's it! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
 
