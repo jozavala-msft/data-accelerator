@@ -60,7 +60,7 @@ dbfs cp -r <path of extracted Microsoft.DataX.Spark>\lib dbfs:/datax
 ```
 * To verify that all the jars got uploaded, you can run following and it will list out the files
 ```
-dbfs ls dbfs:/datax -l –absolute
+dbfs ls dbfs:/datax --absolute
 ```
 
 ### Create Databricks Cluster for Live Query
