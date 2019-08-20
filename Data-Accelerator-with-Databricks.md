@@ -2,6 +2,11 @@ Data Accelerator environment can now be set up to run jobs on either Databricks 
 
 In this tutorial we will go over:
 * [How to setup Data Accelerator environment that uses Databricks](#data-accelerator-with-databricks-environment-setup)
+  * [ARM Deployment](#arm-deployment)
+  * [Generate Databricks Token](#generate-databricks-token)
+  * [Create secret scope](#create-secret-scope)
+  * [Upload jar files to DBFS](#upload-jar-files-to-dbfs)
+  * [Create Databricks Cluster for Live Query](#create-databricks-cluster-for-live-query)
 * How to run Data Accelerator flows on Databricks
 
 # Data Accelerator with Databricks Environment Setup
@@ -104,7 +109,7 @@ It can take about 10 minutes for the cluster to start
 Open Data Accelerator Portal via https://_name_.azurewebsites.net (Url available via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL). Click on the Flows TAB to see the list of sample flows and select any sample flow
 
 ### Set Databricks Token
-On the Info TAB, you will notice a 'Databricks Token' textbox which is specific for databricks environment and does not show up on HDInsight environment. Enter your databricks token generated using [these steps](https://github.com/microsoft/data-accelerator/wiki/Data-Accelerator-with-Databricks#generate-databricks-token) here.
+On the Info TAB, you will notice a 'Databricks Token' textbox which is specific for databricks environment and does not show up on HDInsight environment. Enter your databricks token generated using [these steps](#generate-databricks-token) here.
 ![DatabricksFlowToken](./tutorials/images/DatabricksFlowToken.jpg)
 
 ### Set Scale
