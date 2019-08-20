@@ -48,17 +48,17 @@ Here we will be creating an Azure Key Vault-backed secret scope which will be re
 We will be running DBFS CLI command to upload the jar files to Databricks File System. These jars are required by Data Accelerator spark jobs. To run the following steps, first [Install Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#install-the-cli) if you have not done so and then [set up authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) using the databricks token that we generated in the previous step.
 * Unpack [Microsoft.DataX.Spark](https://www.nuget.org/packages/Microsoft.DataX.Spark) Nuget package 
 * Open powershell. Enter the folder path of extracted nuget package in the command below and run it.
-```
+```powershell
 dbfs cp -r <path of extracted Microsoft.DataX.Spark>\lib dbfs:/datax
 ```
 * To verify that all the jars got uploaded, you can run following and it will list out the files
-```
+```powershell
 dbfs ls dbfs:/datax -l –absolute
 ```
 
 ### Create Databricks Cluster for Live Query
 We will now create a dedicated cluster to run live queries. In the following script, set values of $clusterName and $defaultVaultName in the first two lines and run the script.
-```
+```powershell
 $clusterName = '<Enter your databricks workspace name here eg: dx123456>'
 $defaultVaultName = '<Enter spark keyvault name here that was used to create secret scope eg: kvSpark123456>'
 
