@@ -26,4 +26,5 @@ The above steps will setup the azure resources required by Data Accelerator. A D
 ### Generate Databricks Token
 The following steps will instruct you through the steps required to create a Databricks token. This databricks token will be required to run Databricks CLI commands which we will go over later in the setup process and for running flows on databricks. 
 1. On https://portal.azure.com, go to the ‘Azure Databricks Service’ resource created by the ARM deployment step and click on ‘Launch Workspace’.
+![DatabricksAzurePortal](./tutorials/images/DatabricksAzurePortal.jpg)
 
