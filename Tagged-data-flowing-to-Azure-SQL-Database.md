@@ -9,7 +9,7 @@ In a [previous tutorial](Set-up-new-outputs) we had seen how to set up a new out
 ![New Rule](./tutorials/images/sqlOutputConfig.png)<br/>
 * Switch to the Query tab and at the end add following line using the OUTPUT keyword.<br/>
 OUTPUT T1 TO mySqlOutput; <br/>
-![New Output](./tutorials/images/simpleruleSqlOut.png)<br/>
+![New Output](./tutorials/images/simpleruleSqlOut.PNG)<br/>
 * Click "Deploy" button. That's it! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
 
