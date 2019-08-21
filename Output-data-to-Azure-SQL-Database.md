@@ -9,7 +9,7 @@ In this tutorial you will learn how to ouput the dataset defined in code to a Az
 ![New Rule](./tutorials/images/sqlOutputConfig.png)<br/>
 * Switch to the Query tab and at the end add following line using the OUTPUT keyword.<br/>
 OUTPUT T1 TO mySqlOutput; <br/>
-![New Output](./tutorials/images/simpleruleSqlOut.png)<br/>
+![New Output](./tutorials/images/simpleruleSqlOut.PNG)<br/>
 * Create a table in the Azure SQL Database named taggedResult with the schema of the data you want to write
 * Click "Deploy" button. That's it! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
