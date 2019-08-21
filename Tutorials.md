@@ -45,4 +45,5 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 1. [Use input EventHub/IotHub in a different tenant](Use-Input-in-different-tenant)
 1. [Local Cloud Debugging](Local-Cloud-Debugging)
 1. [Schedule a batch job](Schedule-batch-job)
+1. [Tagged data flowing to Azure SQL Database](Tagged-data-flowing-to-Azure-SQL-Database)
 
