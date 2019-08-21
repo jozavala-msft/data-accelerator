@@ -1,7 +1,7 @@
-In a [previous tutorial](Set-up-new-outputs) we had seen how to set up a new output sink and direct alerts to that output sink. In this tutorial you will learn how to direct any dataset defined in code to a Azure SQL Database sink using the OUTPUT keyword. 
+In this tutorial you will learn how to ouput the dataset defined in code to a Azure SQL Database sink using the OUTPUT keyword. 
 
 # Steps to follow
-* Open the flow created in the [Tagging tutorial](Tagging-simple-rules)
+* Create a flow using [first tutorial to create a pipeline in 5 minutes](Creating-your-first-pipeline-in-5-minutes!)
 
 * Open the Output tab and add a new output sink. Select Azure SQL Database<br/>
 ![New Rule](./tutorials/images/sqlOuputSelection.png)<br/>
@@ -10,6 +10,7 @@ In a [previous tutorial](Set-up-new-outputs) we had seen how to set up a new out
 * Switch to the Query tab and at the end add following line using the OUTPUT keyword.<br/>
 OUTPUT T1 TO mySqlOutput; <br/>
 ![New Output](./tutorials/images/simpleruleSqlOut.PNG)<br/>
+* Create a table in the Azure SQL Database named taggedResult with the schema of the data you want to write
 * Click "Deploy" button. That's it! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
 
