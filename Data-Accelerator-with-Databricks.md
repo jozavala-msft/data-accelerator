@@ -68,6 +68,7 @@ We will now create a dedicated cluster to run live queries. In the following scr
 ```
 $clusterName = '<Enter your databricks workspace name here eg:dx123>'
 $defaultVault = '<Enter SparkKeyVault name that was used to create secret scope eg:kvSpark123>'
+$defaultStorageAccount = '<Enter the default storage account name that has created by ARM template eg:saspark1234xd123>'
 
 $jsonCommand = '{
 	\"cluster_name\": \"' + $clusterName + '\",
@@ -81,9 +82,14 @@ $jsonCommand = '{
 	\"spark_conf\": {
 		\"spark.databricks.delta.preview.enabled\": true,
 		\"spark.sql.hive.metastore.version\": \"1.2.1\",
+                \"spark.driver.userClassPathFirst\": true,
+                \"spark.executor.userClassPathFirst\": true,
 		\"spark.sql.hive.metastore.jars\": \"builtin\"
 	},
 	\"spark_env_vars\": {
+                \"DATAX_AZURESTORAGEJARPATH\": \"/datax/bin/azure-storage-3.1.0.jar\",
+                \"DATAX_DEFAULTCONTAINER\": \"defaultdx\",
+                \"DATAX_DEFAULTSTORAGEACCOUNT\": \"' + $defaultStorageAccount + '\",
 		\"DATAX_DEFAULTVAULTNAME\": \"' + $defaultVault + '\"
 	}
 }'
