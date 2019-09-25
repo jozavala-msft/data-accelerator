@@ -22,7 +22,7 @@ runAdminSteps.bat
 Once the deployment finishes, open the Data Accelerator Portal via http://_name_.azurewebsites.net (Url available from the command prompt or via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL)
 
  ### Cloud deployment on Linux and Mac
-* The ARM deployment for DataX currently support only Windows. We have a plan to support multiplatforms (Linux and Mac) in the next release.
+* The ARM deployment for DataX currently support only Windows. If you are looking for multiplatform support (Linux and Mac) please reach out to discuss options.
 
 For details, please see [Cloud Deployment On Linux](https://github.com/Microsoft/data-accelerator/wiki/Cloud-Deployment-On-Linux)
    
