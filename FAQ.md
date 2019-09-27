@@ -1,6 +1,7 @@
 # Index
 * [Local deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#local-deployment-faq)
 * [Cloud deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#cloud-deployment-faq)
+* [Other FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#other-faq)
 
 # Local Deployment FAQ
 ### How do I install docker? 
@@ -95,5 +96,14 @@ You need to be a contributor of the tenant, please speak to your admin to gain a
  - If you redeploy the same product and there are any missing resources, ARM template will create them. And for the ones in bad state, it depends on the type of the issue. E.g. for any missing secrets in keyvault or missing files in blob, The powershell scripts can fix them.
 
 
+# Other FAQ
 
+### How do I know which version of Data Accelerator am I running?  
+The Data Processing components will have the version built in, i.e. datax-utility_2.4_2.11-1.2.0-....jar means
+ - Targets Spark 2.4, 
+ - Data Accelerator version 1.2.0
 
+Similarly, the web components have the version built in, i.e.  "name": "datax-home", "version": "1.3.0-...",
+ - Data Accelerator web component 1.3.0
+
+The Services have the version built into the file properties.
