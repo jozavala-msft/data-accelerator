@@ -2,7 +2,7 @@
 * [Local deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#local-deployment-faq)
 * [Cloud deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#cloud-deployment-faq)
 
-﻿##  Local Deployment FAQ
+# Local Deployment FAQ
 ### How do I install docker? 
  - Go to hub.docker.com to sign up and login if you have not done so already.
  - Install the docker client
