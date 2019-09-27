@@ -63,9 +63,11 @@ adminSteps.ps1
 ````
  - If you see an error related to AAD app admin consent policies (i.e. Unexpected End of JSON), please see step above  Please ask your tenant admin to run admin steps
  - If you see an error related to Azure login, your deployment may occur on a different account. Please make sure you log in Azure with the right information
- - I am a guest of a tenant, how can I deploy DataX?  You need to be a contributor of the tenant, please speak to your admin to gain access.
- - How many resources does the ARM template create?  We create 1 resource group for all 24 resources.
- - The same resource group can host 1 or more products but we recommend separate subscription for each instance for now
+ ### I am a guest of a tenant, how can I deploy DataX?  
+You need to be a contributor of the tenant, please speak to your admin to gain access.
+ ### How many resources does the ARM template create?  
+ The ARM template creates 1 resource group for all 24 resources.
+ The same resource group can host 1 or more products but we recommend separate subscription for each instance for now
 
 		e.g.
 		If your product name is A and the resource  group name is RG_A, the ARM template will create them like below:
@@ -83,9 +85,10 @@ adminSteps.ps1
 			B_2
 			B_3
  
- - Will ARM reuse any resources across product if I deploy in the same group?  No, the ARM template will create another set of resources for your new product. We don’t re-use any resources from other products.
+ ### Will ARM reuse any resources across product if I deploy in the same group? 
+ No, the ARM template will create another set of resources for your new product. We don’t re-use any resources from other products.
  
- - What if I run the ARM template a second time, will it create any duplicate resources?  Will it detect any broken/missing/deleted resources to fix bad states?
+ ### What if I run the ARM template a second time, will it create any duplicate resources?  Will it detect any broken/missing/deleted resources to fix bad states?
 	
  - If you redeploy the same product, ARM template will just update existing resources. We don’t create any dups for the same product.
  
