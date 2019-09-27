@@ -1,3 +1,7 @@
+Index
+* [Local deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#local-deployment-faq)
+* [Cloud deployment FAQs](https://github.com/microsoft/data-accelerator/wiki/FAQ#cloud-deployment-faq)
+
 ﻿#  Local Deployment FAQ
 ## How do I install docker? 
  - Go to hub.docker.com to sign up and login if you have not done so already.
@@ -49,7 +53,7 @@ docker cp dataxlocal:/app/aspnetcore/myfile.txt myfile.txt
    - [Spark Logs](https://github.com/Microsoft/data-accelerator/wiki/Spark-logs)
    - [Spark logs local](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Debugging-using-Spark-logs)
 
-#  ARM Deployment FAQ
+#  Cloud Deployment FAQ
 ## Trouble shooting
  - If Scripts are not enabled and you get an error running deploy.bat, you can update the policy with "Set-ExecutionPolicy" in a Powershell prompt, i.e. by running the following: Set-ExecutionPolicy Unrestricted
  - If you are not an admin of the subscription, please ask your subscription admin to complete these steps manually post deployment: 
