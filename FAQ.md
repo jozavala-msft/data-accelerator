@@ -107,3 +107,6 @@ Similarly, the web components have the version built in, i.e.  "name": "datax-ho
  - Data Accelerator web component 1.3.0
 
 The Services have the version built into the file properties.
+
+### How do I log a good issue?  
+See these issues for a couple of examples. [here](https://github.com/microsoft/data-accelerator/issues/25). Make sure to have as much info as possible to enable the team to reproduce and understand your expected behavior.  
