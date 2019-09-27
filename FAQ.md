@@ -17,7 +17,7 @@
    **![docker Advanced Settings](https://github.com/Microsoft/data-accelerator/wiki/tutorials/images/AdvancedDockerSettings.PNG)**
 ### Other useful commands
  - Visit the [docker documentation](https://docs.docker.com/engine/reference/commandline/docker/) for detailed commands
-### Cleaning up:
+### How do I clean up:
  - If you wish to delete all dangling images from your machine and images that are not attached to any container
    ```
    docker image prune -af
