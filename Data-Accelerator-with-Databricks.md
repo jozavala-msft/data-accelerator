@@ -97,3 +97,6 @@ foreach($dbfsFile in $dbfsFiles) {
 }
 ```
 It can take about 10 minutes for the cluster to start
+
+# Run Data Accelerator Flows on Databricks
+Please see [Run Data Accelerator Flows on Databricks](Run-Data-Accelerator-Flows-on-Databricks) for instructions around how to run Data Accelerator flows on Databricks
