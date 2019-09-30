@@ -17,7 +17,7 @@ Licensed under the MIT License
     <Parameter Name="AppInsightsIntrumentationKey" Value="configgen-aiInstrumentationKey" />
     <Parameter Name="CACertificateLocation" Value="keyvault://kvServices76dx2779122/configgen-cacertificatelocation" />
     <Parameter Name="SparkType" Value="" />
-    <Parameter Name="TestClientId" Value="" />
+    <Parameter Name="TestClientId" Value="configgen-testClientId" />
     <Parameter Name="MefStorageAccountName" Value="" />
     <Parameter Name="MefContainerName" Value="" />
     <Parameter Name="MefBlobDirectory" Value="" />
