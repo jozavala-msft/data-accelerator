@@ -1,4 +1,3 @@
-# Run Data Accelerator Flows on Databricks
 Open Data Accelerator Portal via https://_name_.azurewebsites.net (Url available via the Azure Portal under the deployed App Service. To find this, go to App Services in https://portal.azure.com, click on the app service called "dx*", and open the URL). Click on the Flows TAB to see the list of sample flows and select any sample flow
 
 ### Set Databricks Token
