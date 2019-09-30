@@ -9,16 +9,16 @@ Licensed under the MIT License
     <Parameter Name="Auth_MinReplicaSetSize" Value="2" />
     <Parameter Name="Auth_TargetReplicaSetSize" Value="3" />
     <Parameter Name="Api_InstanceCount" Value="-1" />
-    <Parameter Name="SSL_Cert_Thumbprint" Value="" />
-    <Parameter Name="ClientId" Value="" />
-    <Parameter Name="Audience" Value="" />
-    <Parameter Name="ReverseProxySslThumbprint" Value="" />
-    <Parameter Name="AllowedUserRoles" Value="" />
+    <Parameter Name="SSL_Cert_Thumbprint" Value="44895A5AFE25BA6EC52E8D3108F3EF80FAD7B115" />
+    <Parameter Name="ClientId" Value="a5a97370-04d0-4101-8740-78d78be1ad7c" />
+    <Parameter Name="Audience" Value="https://microsoft.onmicrosoft.com/configgen3" />
+    <Parameter Name="ReverseProxySslThumbprint" Value="7ADCEBA585DB450F7135A37812CB815F3B0F007B" />
+    <Parameter Name="AllowedUserRoles" Value="DataXReader,DataXWriter" />
     <Parameter Name="AzureServicesAuthConnectionString" Value="" />
-    <Parameter Name="Tenant" Value="" />
-    <Parameter Name="ServiceKeyvaultName" Value="" />
-    <Parameter Name="AppInsightsIntrumentationKey" Value="" />
-    <Parameter Name="TestClientId" Value="" />
+    <Parameter Name="Tenant" Value="microsoft.onmicrosoft.com" />
+    <Parameter Name="ServiceKeyvaultName" Value="kvServices76dx2779122" />
+    <Parameter Name="AppInsightsIntrumentationKey" Value="configgen-aiInstrumentationKey" />
+    <Parameter Name="TestClientId" Value="configgen-testClientId" />
     <Parameter Name="EnableUserInfoLogging" Value="" />
   </Parameters>
 </Application>

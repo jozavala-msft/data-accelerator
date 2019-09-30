@@ -20,9 +20,15 @@ Licensed under the MIT License
                                     StoreName="My" />
 
   -->
-  <ClusterConnectionParameters />
+  <ClusterConnectionParameters ConnectionEndpoint="dx679717222-sf.eastus.cloudapp.azure.com:19000"
+                           X509Credential="true"
+                           ServerCertThumbprint="BFA53D2ADF3CF2FCFD2D728BD5C7388BC70A6661"
+                           FindType="FindByThumbprint"
+                           FindValue="BFA53D2ADF3CF2FCFD2D728BD5C7388BC70A6661"
+                           StoreLocation="CurrentUser"
+                           StoreName="My" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
-  <UpgradeDeployment Mode="Monitored" Enabled="true">
+  <UpgradeDeployment Mode="Monitored" Enabled="false">
     <Parameters FailureAction="Rollback" Force="True" />
   </UpgradeDeployment>
 </PublishProfile>
