@@ -46,4 +46,5 @@ To unleash the full power Data Accelerator, [deploy to Azure](Cloud-deployment) 
 1. [Local Cloud Debugging](Local-Cloud-Debugging)
 1. [Schedule a batch job](Schedule-batch-job)
 1. [Output data to Azure SQL Database](Output-data-to-Azure-SQL-Database)
+1. [Run Data Accelerator Flows on Databricks](Run-Data-Accelerator-Flows-on-Databricks)
 
