@@ -12,7 +12,7 @@ In several cases, you want to be alerted when certain condition is met in the da
 
 * Use the intuitive UI to set up the condition for firing an alert as shown above. For this example, the data ingested is home automation data. We want to be alerted anytime door for house number 150 is locked. Note, deviceDetails.status of 1 means locked, 0 means unlocked.  
 
-* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In future tutorials we will walkthrough how to set up other outputs. 
+* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In the next few tutorials we will walk through how to set up other outputs. 
 
 * Click "Deploy" button. That's it! You have now created an alert, which will be fired each time the condition is met i.e. door of house number 150 is locked! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
