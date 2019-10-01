@@ -90,7 +90,7 @@ In the previous example we walked through how to set up a simple alert. At times
 
 * Use the intuitive UI to set up the condition for firing an alert as shown above. For this example, the data ingested is home automation data. We want to be alerted anytime door for house number 150 is locked. Note, deviceDetails.status of 1 means locked, 0 means unlocked.  
 
-* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In future tutorials we will walkthrough how to set up other outputs. 
+* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In the next few tutorials we will walk through how to set up other outputs. 
 
 * Click "Deploy" button. That's it! You have now created an aggregated alert, which will be fired each time the condition is met. <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)<br/>
