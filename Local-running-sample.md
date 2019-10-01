@@ -1,4 +1,4 @@
-Once you have completed the [local deployment](https://github.com/Microsoft/data-accelerator/wiki/Local-mode-with-Docker), and open the Data Accelerator portal, you will notice there are 2 samples under the 'Flows' tab. In this tutorial you will learn how to run the sample and in the future tutorials we will walk through the different features that are used by these samples. 
+Once you have completed the [local deployment](https://github.com/Microsoft/data-accelerator/wiki/Local-mode-with-Docker), and open the Data Accelerator portal, you will notice there are 2 samples under the 'Flows' tab. In this tutorial you will learn how to run the sample and in the next few tutorials we will walk through the different features that are used by these samples. 
 
 # Steps to follow
 1. Open the Data Accelerator portal at http://localhost:49080/home
@@ -16,7 +16,7 @@ Note: Local mode supports running only 1 flow at a time. If you want to try diff
 	![Metrics](./tutorials/images/Tutorial1-4.png)<br/>
 
 # So what is really happening? 
-Data Accelerator is simulating events/messages which are flowing through the Data Accelerator's engine, and the stats are being plotted on the Metrics dashboard. If you click on the 'Flows' tab, and open up the flow and look at the 'Input' tab, you will notice the schema in JSON format. That is the format of the events being simulated. And the 'Query' tab shows the processing being run on the data. 'Rules' tab shows the rules and alerts set up (you will learn more about these in the future tutorials, and how to set up your own data pipeline with custom processing.). 
+Data Accelerator is simulating events/messages which are flowing through the Data Accelerator's engine, and the stats are being plotted on the Metrics dashboard. If you click on the 'Flows' tab, and open up the flow and look at the 'Input' tab, you will notice the schema in JSON format. That is the format of the events being simulated. And the 'Query' tab shows the processing being run on the data. 'Rules' tab shows the rules and alerts set up (you will learn more about these in the  next few tutorials, and how to set up your own data pipeline with custom processing.). 
 
 * [Next tutorial : Create your first flow](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Creating-your-first-Flow-in-local-mode)
 
