@@ -20,7 +20,7 @@ Unleash the full power of [Data Accelerator](Data-accelerator) by deploying it i
 runAdminSteps.bat
 ```
 
-For 
+4. For 
 * Data Accelerator with **HDInsight** environment - Once the deployment finishes, open the Data Accelerator Portal via http://_name_.azurewebsites.net (Url available from the command prompt or via the Azure Portal under the deployed App Service. To find this, go to App Services in http://portal.azure.com, click on the app service called "dx*", and open the URL)
 
 * Data Accelerator with **Databricks** environment - If useDatabricks was set to y in common.parameters.txt file before running deploy.bat then the above steps will setup the azure resources required by Data Accelerator including a Databricks resource. To finish setting up databricks resource you will further need to generate databricks token, create a secret scope, upload jars to DBFS which are required to run spark jobs and finally create a databricks cluster for live query. Please refer [Data Accelerator with Databricks Environment Setup](./Data-Accelerator-with-Databricks#data-accelerator-with-databricks-environment-setup) for complete instructions. 
