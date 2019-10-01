@@ -3,7 +3,7 @@ Up until now we have focused on doing processing and setting up alerts without h
 # Steps to follow
 - Open a Flow or create a new one using [first tutorial to create a pipeline in 5 minutes](Creating-your-first-pipeline-in-5-minutes!)
 
-- Switch to the Query tab. This is where you can write all your SQL code. Data Accelerator supports full Spark SQL, and enhances it with few more keywords that you will learn about in future tutorials. For now, write a statement such as:<br/>
+- Switch to the Query tab. This is where you can write all your SQL code. Data Accelerator supports full Spark SQL, and enhances it with few more keywords that you will learn about in the next few tutorials. For now, write a statement such as:<br/>
 
 ```sql
 --DataXQuery--
