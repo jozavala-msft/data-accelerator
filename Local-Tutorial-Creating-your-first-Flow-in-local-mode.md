@@ -21,7 +21,7 @@ In this tutorial, you'll learn to:
 You have now created a pipeline with visualization of the incoming data!
 
 # So what is really happening? 
-Data Accelerator is simulating events/messages which are flowing through the Data Accelerator's engine (which currently is not doing any processing on the events, since we haven't specified any yet!), and the stats are being plotted on the Metrics dashboard. If you click on the 'Flows' tab, and open up 'MyFlow' and look at the 'Input' tab, you will notice the schema in JSON format. That is the format of the events being simulated. In future tutorials you will learn how to change the schema of the events being generated, and of course how to add processing to your pipeline.
+Data Accelerator is simulating events/messages which are flowing through the Data Accelerator's engine (which currently is not doing any processing on the events, since we haven't specified any yet!), and the stats are being plotted on the Metrics dashboard. If you click on the 'Flows' tab, and open up 'MyFlow' and look at the 'Input' tab, you will notice the schema in JSON format. That is the format of the events being simulated. In the next few tutorials you will learn how to change the schema of the events being generated, and of course how to add processing to your pipeline.
 
 * [Next tutorial : Alerts](https://github.com/Microsoft/data-accelerator/wiki/Local-Tutorial-Add-an-Alert/)
 
