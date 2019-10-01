@@ -12,7 +12,7 @@ In the previous example we walked through how to set up a simple alert. At times
 
 * Use the UI to set up the condition for firing an alert as shown above. For this example, if a lock is closed more than 3 times for a house then an alert is fired. This is done by selecting **COUNT(deviceDetails.status) > 3**. In addition to this, you can specify additional aggregations to perform, such as COUNT(deviceDetails.deviceId). Finally, specify the columns to GROUP BY. We have chosen to group by homeId. Note, deviceDetails.status of 1 means locked, 0 means unlocked.  
 
-* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In future tutorials we will walkthrough how to set up other outputs. 
+* Set 'Do you want to be alerted?' to Yes, and choose Output sink as 'Metrics'. This is the default output sink. In the next few tutorials we will walk through how to set up other outputs. 
 
 * Click "Deploy" button. That's it! You have now created an alert, which will be fired each time the condition is met i.e. door of house number 150 is locked! <br/>
  ![Deploy](./tutorials/images/Deploy.PNG)
