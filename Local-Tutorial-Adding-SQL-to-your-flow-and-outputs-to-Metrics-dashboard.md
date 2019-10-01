@@ -6,7 +6,7 @@ In this tutorial you will learn how to:
 # SQL query
 - Create a new flow and use the schema from HomeAutomationLocal sample.
 
-- Switch to the Query tab. This is where you can write all your SQL code. Data Accelerator supports full Spark SQL, and enhances it with few more keywords that you will learn about in future tutorials. For now, write a statement such as:<br/>
+- Switch to the Query tab. This is where you can write all your SQL code. Data Accelerator supports full Spark SQL, and enhances it with few more keywords that you will learn about in the next few tutorials. For now, write a statement such as:<br/>
 
 ```sql
 --DataXQuery--
