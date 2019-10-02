@@ -64,7 +64,10 @@ namespace ScenarioTester
         /// <returns>The response for the request as a string</returns>
         public static string Get(string url, string bearerToken = null)
         {
-            WebRequest req = WebRequest.Create(url);
+            //WebRequest req = WebRequest.Create(url);
+            var req = (HttpWebRequest)WebRequest.Create(url);
+            req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
+            req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
             req.Method = "GET";
             req.Timeout = _RequestTimeout;
             if (bearerToken != null)
@@ -129,6 +132,7 @@ namespace ScenarioTester
         private static string PostPut(string requestMethod, string url, RequestContent content, string bearerToken = null, Dictionary<string, string> additionalHeaders = null)
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
+            req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
             req.Method = requestMethod;
             req.Timeout = _RequestTimeout;
             req.ContentLength = content.Data.Length;
