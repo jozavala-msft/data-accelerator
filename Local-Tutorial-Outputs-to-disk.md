@@ -25,6 +25,8 @@ maxTemperature = CreateMetric(events, maxTemp);
 OUTPUT maxTemperature TO Metrics;
 OUTPUT events TO myOutput;
 ```
+
+Query window will look like below:
  ![New output](./tutorials/images/outputcode.PNG)<br/>
  - Click Deploy.  
 
