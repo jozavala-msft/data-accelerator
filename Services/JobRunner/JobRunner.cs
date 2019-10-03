@@ -198,6 +198,7 @@ namespace JobRunner
                     ? (jobKey + DateTime.UtcNow.Ticks.ToString())
                     : (jobKey + messageId)
             };
+            Console.WriteLine("Enqueuing message: " + message.MessageId);
             if (useTestQueue)
             {
                 await _testQueueClient.SendAsync(message);
@@ -218,10 +219,13 @@ namespace JobRunner
         private async Task HandleQueuedJobAsync(Message message, CancellationToken token)
         {
             var body = Encoding.UTF8.GetString(message.Body);
+            Console.WriteLine("Running job");
+            Console.WriteLine(body);
             var payload = JsonConvert.DeserializeObject<JobQueueMessage>(body);
             var job = CreateJobByKey(payload.JobKey);
 
             _logger.LogInformation("ReceivedJobRunnerJob: " + payload.JobKey.ToString());
+            Console.WriteLine("Start Job: " + payload.JobKey.ToString());
             try
             {
                 var jobTask = job.RunAsync();
@@ -235,6 +239,11 @@ namespace JobRunner
             catch (Exception e)
             {
                 _logger.LogError(e, $"JobRunnerJobFailure: JobType: {payload.JobKey}; Error: {e.Message}");
+                Console.Write(e);
+            }
+            finally
+            {
+                Console.WriteLine($"End of {payload.JobKey.ToString()} Job");
             }
 
             await StorageUtils.RetryOnConflictAsync(
@@ -254,16 +263,19 @@ namespace JobRunner
         {
             var scheduledJobs = await this.ScheduledJobTable.RetrieveAllAsync();
             _logger.LogInformation($"JobRunnerFetchedScheduledJobs: {scheduledJobs.Count()}");
+            Console.WriteLine("Try to schedule a job into the queue: " + scheduledJobs.Count());
             foreach (var schedule in scheduledJobs)
             {
                 if (schedule.ShouldRun)
                 {
                     _logger.LogInformation($"JobRunnerEnqueuingScheduledJob: JobKey: {schedule.JobKey} DeduplicationKey: {schedule.DeduplicationId}");
+                    Console.WriteLine($"Pushing {schedule.JobKey} to the queue");
                     await EnqueueJobByKeyAsync(schedule.JobKey, schedule.UseTestQueue, schedule.DeduplicationId);
                     schedule.IncrementLastRunAt();
                     await this.ScheduledJobTable.ReplaceAsync(schedule);
                 }
             }
+            Console.WriteLine("Finishing trying to schedule jobs");
         }
 
         /// <summary>
@@ -271,12 +283,12 @@ namespace JobRunner
         /// </summary>
         private void RegisterScheduledJobs()
         {
-            this.ScheduledJobTable.CreateOrUpdateScheduledJobAsync(
+            /*this.ScheduledJobTable.CreateOrUpdateScheduledJobAsync(
                 "TESTSCHEDULEDJOB",
                 GetJobKey<TestJob>(),
                 new DateTime(2019, 1, 1, 1, 1, 1),
                 new TimeSpan(0, 5, 0),
-                useTestQueue: true).Wait();
+                useTestQueue: true).Wait();*/
 
             // run DataX Schema and Query job every few minutes
             this.ScheduledJobTable.CreateOrUpdateScheduledJobAsync(
@@ -287,12 +299,12 @@ namespace JobRunner
                 useTestQueue: true).Wait();
 
             //run DataX mainline job every few minutes.
-            this.ScheduledJobTable.CreateOrUpdateScheduledJobAsync(
+            /*this.ScheduledJobTable.CreateOrUpdateScheduledJobAsync(
                 "DataXDeployJob",
                 GetJobKey<DataXDeployJob>(),
                 new DateTime(2019, 1, 1, 1, 1, 1),
                 new TimeSpan(0, _Minutes, 0),
-                useTestQueue: true).Wait();
+                useTestQueue: true).Wait();*/
         }
 
         /// <summary>
@@ -314,7 +326,7 @@ namespace JobRunner
             _ActiveQueueClient.RegisterMessageHandler(HandleQueuedJobAsync, options);
 
             var lastHeartbeat = DateTime.UtcNow;
-            var heartbeatInterval = new TimeSpan(0, 1, 0);
+            var heartbeatInterval = new TimeSpan(0, 0, 5);
             while (!cancellationToken.IsCancellationRequested)
             {
                 if (DateTime.UtcNow - lastHeartbeat > heartbeatInterval)

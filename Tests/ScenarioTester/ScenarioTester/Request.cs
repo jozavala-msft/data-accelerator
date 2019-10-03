@@ -64,9 +64,9 @@ namespace ScenarioTester
         /// <returns>The response for the request as a string</returns>
         public static string Get(string url, string bearerToken = null)
         {
+            Console.WriteLine("Get: " + url);
             //WebRequest req = WebRequest.Create(url);
             var req = (HttpWebRequest)WebRequest.Create(url);
-            req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
             req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
             req.Method = "GET";
             req.Timeout = _RequestTimeout;
@@ -96,6 +96,7 @@ namespace ScenarioTester
                     returned = "Response is " + we.Response;
                 }
 
+                Console.WriteLine($"Error (${we.Message}) posting to: {url} {returned} {GetErrorResponse(we)}");
                 throw new Exception(
                     Invariant($"Error (${we.Message}) posting to: {url} {returned} {GetErrorResponse(we)}"),
                     we
@@ -113,6 +114,7 @@ namespace ScenarioTester
         /// <returns>The response for the request as a string</returns>
         public static string Post(string url, RequestContent content, string bearerToken = null, Dictionary<string, string> additionalHeaders = null)
         {
+            Console.WriteLine("Post");
             return PostPut("POST", url, content, bearerToken, additionalHeaders);
         }
 
@@ -126,11 +128,13 @@ namespace ScenarioTester
         /// <returns>The response for the request as a string</returns>
         public static string Put(string url, RequestContent content, string bearerToken = null, Dictionary<string, string> additionalHeaders = null)
         {
+            Console.WriteLine("Put");
             return PostPut("PUT", url, content, bearerToken, additionalHeaders);
         }
 
         private static string PostPut(string requestMethod, string url, RequestContent content, string bearerToken = null, Dictionary<string, string> additionalHeaders = null)
         {
+            Console.WriteLine("PostPut: " + url);
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.ServerCertificateValidationCallback = (message, cert, chain, errors) => { return true; };
             req.Method = requestMethod;
@@ -151,6 +155,8 @@ namespace ScenarioTester
 
             using (var reqStream = req.GetRequestStream())
             {
+                //Console.WriteLine(JsonConvert.SerializeObject(req, Formatting.Indented, JsonSerializerSettings.));
+                Console.WriteLine(System.Text.Encoding.Default.GetString(content.Data));
                 reqStream.Write(content.Data, 0, content.Data.Length);
             }
             try

@@ -31,6 +31,7 @@ namespace JobRunner
 
         public async Task<ScheduledJobEntity> CreateOrUpdateScheduledJobAsync(string name, string jobKey, DateTimeOffset startAt, TimeSpan interval, bool useTestQueue = false)
         {
+            Console.WriteLine("Persisting job: " + name);
             Ensure.Equals(string.IsNullOrWhiteSpace(jobKey), false);
             Ensure.Equals(string.IsNullOrWhiteSpace(name), false);
             var newSchedule = new ScheduledJobEntity(name, jobKey, startAt, interval, useTestQueue);

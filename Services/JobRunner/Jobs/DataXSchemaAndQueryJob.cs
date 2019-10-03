@@ -96,6 +96,8 @@ namespace JobRunner.Jobs
 
                 foreach (var result in results)
                 {
+                    Console.WriteLine("Failed? " + result.Failed);
+
                     string scenarioResult = result.Failed ? "failed" : "succeeded";
 
                     // log failed steps.

@@ -43,11 +43,13 @@ namespace ScenarioTester
         /// </summary>
         public void Run(ScenarioContext context)
         {
+            Console.WriteLine("Running " + Scenario.Description);
             // TODO: Log the start-end time.
             var startTime = _Watch.ElapsedMilliseconds;
 
             foreach (var step in this.Scenario.Steps)
             {
+                Console.WriteLine("Step start");
                 var stepStart = _Watch.ElapsedMilliseconds;
 
                 try
@@ -59,6 +61,7 @@ namespace ScenarioTester
                 }
                 catch (Exception e)
                 {
+                    Console.Write(e);
                     this.Failed = true;
 
                     var stepName = step.Method.GetCustomAttribute<StepAttribute>().Name;
@@ -66,6 +69,10 @@ namespace ScenarioTester
                     var stepEnd = _Watch.ElapsedMilliseconds;
                     // break; Don't fail but continue to allow any cleanups to happen.
                     // TODO: make this configurable
+                }
+                finally
+                {
+                    Console.WriteLine("Step end");
                 }
             }
 
