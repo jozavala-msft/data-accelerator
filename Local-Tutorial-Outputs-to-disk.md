@@ -13,9 +13,17 @@ In this tutorial, you'll learn to:
  - Format will be JSON
  - You can decide to use GZIP compression or none as well <br/>
  ![New output](./tutorials/images/outputaddlocalinfo.PNG)<br/>
- - Go back to the Query tab and input a new OUTPUT statement at the end: <br/>
+ - Go back to the Query tab and input a new OUTPUT statement at the end to output to local filesystem: <br/>
 ```sql 
-OUTPUT extendedTemperature TO myOutput;
+--DataXQuery--
+events = SELECT MAX(temperature) as maxTemp
+	 FROM 
+	 DataXProcessedInput;
+
+maxTemperature = CreateMetric(events, maxTemp);
+
+OUTPUT maxTemperature TO Metrics;
+OUTPUT events TO myOutput;
 ```
  ![New output](./tutorials/images/outputcode.PNG)<br/>
  - Click Deploy.  
