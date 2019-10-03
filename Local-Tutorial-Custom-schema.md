@@ -2,7 +2,7 @@ Data Accelerator allows you to simulate the data of your desired schema, so you 
  
 # Update the Schema of generated data
 
- - Open existing flow
+ - Open existing flow (e.g. BasicLocal sample)
  - Go to Input tab
  - In the schema section, edit the text.  To add a value, add the following:
     - name : name of the column
