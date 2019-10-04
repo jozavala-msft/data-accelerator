@@ -9,7 +9,15 @@ In this tutorial, you'll learn to:
  - Add a new CSV/TSV file <br/>
 ![Add Reference file](./tutorials/images/referenceadd.png)
  - Given a csv file that looks as such located in /app/myRefData.csv in the container. (See [FAQ](https://github.com/Microsoft/data-accelerator/wiki/FAQ#copy-files-into-or-from-a-docker-container) how to upload a file to your docker.)<br/>
-![Add Reference file](./tutorials/images/referencetemp.PNG)
+![Add Reference file](./tutorials/images/referencetemp.PNG)<br/>
+You can use the following example:
+```
+temperature	tempDescription
+32      	freezing
+70      	balmy
+98      	body
+212     	boiling
+```
  - Set up your CSV by setting up:
     - Alias: this will be how to use the reference data in your query, for example: myRefData
     - Path: where to load the reference data from, for example '/app/myRefData.csv';
