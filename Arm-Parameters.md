@@ -32,7 +32,7 @@
 		 	* Set randomizeProductName=n
 		* Run the deploy,bat to build a new one
 	* And the other way is you can try to patch the environment but there is no guarantee that this will fix the problem in your environment.  
-		* Delete the problematic resources is not working
+		* Delete the problematic resources which are not working
 		* Use the same product name
 			* Use the product name to productName property
 			* Set randomizeProductName=n
@@ -87,9 +87,7 @@
 		  * For details, please refer to https://azure.microsoft.com/en-us/pricing/details/cache/``
 
  ### Cloud deployment on Linux and Mac
-* The ARM deployment for DataX currently support only Windows. We have a plan to support multiplatforms (Linux and Mac) in the next release.
-
-For details, please see [Cloud Deployment On Linux](https://github.com/Microsoft/data-accelerator/wiki/Cloud-Deployment-On-Linux)
+* The ARM deployment for DataX currently support only Windows.
 
 # Links
 * [Tutorials](Tutorials)
