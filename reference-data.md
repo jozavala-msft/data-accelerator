@@ -16,7 +16,7 @@ In this tutorial, you'll learn to:
     - Path: where to load the reference data from
     - Delimiter: data can be comma or tab limited
     - Header: if your data has a header row<br/>
-![Add Reference file](./tutorials/images/referencesmyref.PNG)
+![Add Reference file](./tutorials/images/referencesmyrefcloud.PNG)
  - Open the Query tab of your flow
  - You can now join your streaming data to the reference data by doing a JOIN: <br/>
     - JOIN myRefData ON myRefData.<columnName><br/>
