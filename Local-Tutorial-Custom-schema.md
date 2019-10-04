@@ -2,7 +2,7 @@ Data Accelerator allows you to simulate the data of your desired schema, so you 
  
 # Update the Schema of generated data
 
- - Open existing flow (e.g. BasicLocal sample)
+ - Open BasicLocal sample flow
  - Go to Input tab
  - In the schema section, edit the text.  To add a value, add the following:
     - name : name of the column
@@ -12,12 +12,46 @@ Data Accelerator allows you to simulate the data of your desired schema, so you 
       - minValue : for decimals, floor value for which the generated data will stay above,
       - maxValue : for decimals, ceiling value for which the generated data will stay under
 
+For this sample flow, lets add 'airPressure' field to the schema of double type. Below is the snippet of the updated schema file
+
+```javascript
+{
+  "type": "struct",
+  "fields": [
+    {
+      "name": "temperature",
+      "type": "double",
+      "nullable": false,
+      "metadata": {
+        "minValue": 5.1,
+        "maxValue": 100.1
+      }
+    },
+    {
+      "name": "eventTime",
+      "type": "long",
+      "nullable": false,
+      "metadata": { "useCurrentTimeMillis": true }
+    },
+    {
+      "name": "airPressure",
+      "type": "double",
+      "nullable": false,
+      "metadata": {
+        "minValue": 10.1,
+        "maxValue": 20.1
+      }
+    }
+  ]
+}
+```
+
 NOTE: For double datatype, value should be double value like 15.1. Also due to issue with JSON editor which rounds off 0s after decimal, make sure the value after decimal is > 0. ie. 15.0 won't work, make it 15.1.
 	![Flow Schema](./tutorials/images/Tutorial1-5.png)
 
  - Click Deploy
 	
-You now have the pipeline running with your custom data! And you are able to see basic stats on the Metrics dashboard. You can add Rules, Alerts, SQL processing, etc. to customize the processing of your data.  
+You now have the pipeline running with your updated schema! The data simulator will generate the data to match the new schema and data generated will contain the new 'airPressure' field. You can see the basic stats on the Metrics dashboard. You can add Rules, Alerts, SQL processing, etc. to customize the processing of your data.  
 
 # Data generation hints
 
