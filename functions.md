@@ -19,12 +19,13 @@ That's it! You can now use the Azure Function in your query using the Alias as s
 # Adding a Scala User Defined Function
 Similarly, to set up a user-defined function or UDF:
  - Open your Flow and go to the Functions Tab
+![function](./tutorials/images/udfsel.PNG)<br/>
  - Select UDF from the drop down in the Function tab.
  - You will need to provide following (this example is also included in the home automation sample)
     - an alias (in the example below we use **whoOpened**), 
     - Path to the jar file that implement the jUDF interface.  See an example below.  Note this jar file needs to be uploaded under the default container of the default blob of the Spark cluster.
     - The class name is the fully qualified path and classname, i.e. datax.sample.udf.UdfHelloWorld
-
+![function](./tutorials/images/udffun.PNG)<br/>
 ```scala
 package datax.sample.udf
 
@@ -55,8 +56,9 @@ DeviceNotWindowedInputWithNameAndWho = SELECT
 Similar to UDF, you can set up a UDAF (user-defined aggregated function):
  - Open your Flow and go to the Functions Tab
  - Select UDAF from the drop down.  
+![function](./tutorials/images/udafsel.PNG)<br/>
  - Similar settings as with UDF need to be provided.  The jar file also needs to be updated under the default container of the default blob of the Spark cluster
-
+![function](./tutorials/images/udaffun.PNG)<br/>
 To use the UDAF, you can pass in an array to the UDAF alias:
 
 ```sql
